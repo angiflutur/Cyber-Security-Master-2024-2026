@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<!-- saved from url=(0108)https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-7-lucru-cu-segmente/ -->
+<html lang="ro-RO"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://www.itcsolutions.eu/xmlrpc.php">
+<title>Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com/">
+<link rel="alternate" type="application/rss+xml" title="IT&amp;C Solutions » Feed" href="https://www.itcsolutions.eu/ro/feed/">
+<link rel="alternate" type="application/rss+xml" title="IT&amp;C Solutions » Comments Feed" href="https://www.itcsolutions.eu/ro/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="IT&amp;C Solutions » Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente Comments Feed" href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-7-lucru-cu-segmente/feed/">
+<script type="text/javascript" async="" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/analytics.js.download"></script><script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.itcsolutions.eu\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/style.min.css" type="text/css" media="all">
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="twenty-minutes-font-css" href="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="twenty-minutes-basic-style-css" href="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="twenty-minutes-responsive-css" href="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/responsive.css" type="text/css" media="all">
+<link rel="stylesheet" id="twenty-minutes-default-css" href="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/default.css" type="text/css" media="all">
+<link rel="stylesheet" id="enlighterjs-css" href="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/enlighterjs.min.css" type="text/css" media="all">
+<script type="text/javascript" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/jquery.min.j.download" id="jquery-core-js"></script>
+<script type="text/javascript" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/jquery-migra.download" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/jquery.nivo..download" id="jquery-nivo-slider-js"></script>
+<script type="text/javascript" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/custom.js.download" id="twenty-minutes-custom-js"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+
+<!-- Google Analytics snippet added by Site Kit -->
+<script type="text/javascript" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/js" id="google_gtagjs-js" async=""></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["www.itcsolutions.eu"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-5DFFMXJ");
+/* ]]> */
+</script>
+
+<!-- End Google tag (gtag.js) snippet added by Site Kit -->
+<link rel="https://api.w.org/" href="https://www.itcsolutions.eu/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.itcsolutions.eu/wp-json/wp/v2/posts/1187"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.itcsolutions.eu/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.6.2">
+<link rel="canonical" href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-7-lucru-cu-segmente/">
+<link rel="shortlink" href="https://www.itcsolutions.eu/?p=1187">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.itcsolutions.eu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.itcsolutions.eu%2Fro%2Ftutorial-limbaj-de-asamblare-assembler-intel-8086-partea-7-lucru-cu-segmente%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.itcsolutions.eu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.itcsolutions.eu%2Fro%2Ftutorial-limbaj-de-asamblare-assembler-intel-8086-partea-7-lucru-cu-segmente%2F&amp;format=xml">
+<meta name="generator" content="Site Kit by Google 1.138.0"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/js(1)"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-9065880-1');
+</script>
+
+<script data-ad-client="ca-pub-8545818972391308" async="" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/f.txt"></script>	<style type="text/css"> 
+		a,	#sidebar ul li a:hover,
+		.post_lists h5 a:hover,
+		.logo h1 span,
+		.postmeta a:hover,
+		.copyright-wrapper a:hover	,
+		.sitenav ul li a:hover, .sitenav ul li.current_page_item a,
+		.current{ color:#da3813;}
+		.pagination ul li .current, .pagination ul li a:hover, 
+		#commentform input#submit:hover,
+		.toggle a,
+		#sidebar .search-form input.search-submit,
+		.pagination .nav-links span.current, 
+		.pagination .nav-links a:hover,
+		.wpcf7 input[type='submit']{ background-color:#da3813;}
+	</style> 
+
+<!-- Google AdSense meta tags added by Site Kit -->
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+<!-- End Google AdSense meta tags added by Site Kit -->
+	<style type="text/css">
+			.header{
+			background: url() no-repeat;
+			background-position: center top;
+		}
+		.logo h1 a { color:#111111;}
+		
+	</style>
+    
+    
+<!-- Google AdSense snippet added by Site Kit -->
+<script type="text/javascript" async="async" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/f(1).txt" crossorigin="anonymous"></script>
+
+<!-- End Google AdSense snippet added by Site Kit -->
+		<style type="text/css" id="wp-custom-css">
+			.contentbox p {
+	line-height: 1.5;
+	font-size: 1rem;
+}
+
+.contentbox ul {
+	line-height: 1.5;
+	font-size: 1rem;
+	padding-bottom: 0.5rem;
+}
+
+.contentbox ol {
+	line-height: 1.5;
+	font-size: 1rem;
+	padding-bottom: 0.5rem;
+}
+
+.entry-content h2 {
+	padding-top:1.5rem;
+}
+
+.entry-content h3 {
+	padding-top:1.5rem;
+}
+
+.entry-content h4 {
+	padding-top:1.5rem;
+}
+
+.google-auto-placed {
+	padding-bottom:30px;
+	padding-top: 30px;
+}		</style>
+		<script src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/wp-emoji-rel.download" defer=""></script></head>
+<body class="post-template-default single single-post postid-1187 single-format-standard group-blog">
+  <div class="header">
+    <div class="container">
+      <div class="logo">
+  			          <h1><a href="https://www.itcsolutions.eu/ro/">IT&amp;C <span>Solutions</span></a></h1>
+                    <p>Solutions and tutorials for IT&amp;C development</p>
+              </div><!-- logo -->
+        <div class="header_right">             
+                          
+                    
+        <div class="clear"></div>
+      </div><!-- header_right -->
+      <div class="clear"></div>
+    </div><!-- container -->
+  </div><!--.header -->
+  <div id="menubar">
+    <div class="container">
+      <div class="toggle">
+        <a class="toggleMenu" href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-7-lucru-cu-segmente/#" style="display: none;">Menu</a>
+      </div><!-- toggle --> 
+      <div class="sitenav">
+        <div class="menu-main-menu-ro-container"><ul id="menu-main-menu-ro" class="menu"><li id="menu-item-3410" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3410"><a href="https://www.itcsolutions.eu/ro/echipa-itcsolutions-eu/">Echipa itcsolutions.eu</a></li>
+</ul></div>      </div><!-- site-nav -->
+    </div>
+  </div><!--#menubar -->
+<div class="container">
+     <div class="pagewraps">     
+        <section class="site-content-wrap">
+           <div class="contentbox">            
+                                    <article id="post-1187" class="single-post post-1187 post type-post status-publish format-standard hentry category-assembler-8086-ro category-programare tag-assembler-ro tag-intel-8086-ro">
+  <header class="entry-header">
+    <h1 class="entry-title">Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente</h1>  </header> <!-- .entry-header -->
+  <div class="postmeta">
+    <div class="post-date">February 5, 2010 by Catalin B.</div><!-- post-date -->
+    <div class="post-comment"> <a href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-7-lucru-cu-segmente/#respond">No Comments</a></div>
+    <div class="clear"></div>
+  </div> <!-- postmeta -->
+    <div class="entry-content">
+    
+<p>In acest tutorial destinat limbajului de asamblare pentru procesoare din familia Intel 8086 sunt prezentate modalitățile de lucru cu segmente. Aceasta abordare permite realizarea de aplicații complexe în care datele și codul nu sunt limitate doar la un singur segment.<br></p>
+
+
+
+<span id="more-1187"></span>
+
+
+
+<h3 class="wp-block-heading"><strong>Arhitectura de segmente<br></strong></h3>
+
+
+
+<p>Familia de procesoare 8086 implementează o arhitectura de segmente prin faptul ca fiecare adresa fizica este reprezentata prin perechea adresa segment:offset.</p>
+
+
+
+<p>Generația de procesoare 8086/286 pe 16 biți permit lucru cu segmente mai mici de 64K (cea mai mare adresa posibila din cadrul unui segment – offset – este 2<sup>16</sup>).</p>
+
+
+
+<p>Procesoarele 90386/486 utilizează arhitectura pe 16 biti (segmente de maxim 64K) când prelucrează date în mod real, însa in mod protejat utilizează registre pe 32 de biți ce pot retine adrese de pana la 4 GBytes.</p>
+
+
+
+<p>Un segment fizic poate începe numai de la o adresa divizibila cu 16, aceste locații fiind numite (Intel) paragrafe.</p>
+
+
+
+<p>Modul în care sunt definite datele și codul nu are importanta la programele mici pentru ca acestea ocupa mai puțin de 64Kbytes fiind grupate în segmente individuale și sunt accesate prin intermediul offset-ului relativ la adresa de început a segmentului respectiv. Problema se complica în cazul programelor mari în care codul sau datele ocupa mai mult de 64K și atunci sunt segmentate. In aceasta situație, programatorul trebuie sa se asigure ca fiecare data sau secventa de cod referita poate fi accesata prin segment:adresa.</p>
+
+
+
+<p>Problema segmentarii datelor sau codului este mai puțin acuta în cazul procesoarelor pe 32 de biți pentru ca segmentele sunt destul de mari (4 GBytes) astfel încât și cele mai complexe aplicații sa se comporte asemenea programelor mici, compacte.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Segmentele logice<br></strong></h3>
+
+
+
+<p>Segmentele reprezinta seturi de date sau instrucțiuni ce sunt disponibile prin intermediul offset-ului relativ de adresa de început a segmentului.</p>
+
+
+
+<p>Adresele fizice ale segmentelor sunt cunoscute prin intermediul registrelor de segment:</p>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th class="has-text-align-center" data-align="center">Registru</th><th>Descriere</th></tr></thead><tbody><tr><td class="has-text-align-center" data-align="center"> <p><strong>DS</strong></p></td><td> <p><strong>– segmentul de date</strong></p></td></tr><tr><td class="has-text-align-center" data-align="center"> <p><strong>CS</strong></p></td><td> <p><strong>– segmentul de cod</strong></p></td></tr><tr><td class="has-text-align-center" data-align="center">
+<p><strong>SS</strong></p>
+</td><td>
+<p><strong>– segmentul de stiva</strong></p>
+</td></tr><tr><td class="has-text-align-center" data-align="center">
+<p><strong>ES</strong></p>
+</td><td>
+<p><strong>– segmentul extins</strong></p>
+</td></tr></tbody></table><figcaption>Registre pentru segmente</figcaption></figure>
+
+
+
+<p>, însă trebuie avut în vedere faptul ca, în cazul în care exista mai multe segmente definite de programator, numai unul dintre ele, la un moment dat, poate fi asociat cu segmentele logice de date, de cod, de stiva sau extins. &nbsp;</p>
+
+
+
+<p>La încărcarea în memorie a programului, sistemul inițializează registrul de segment CS cu prima adresa se segment disponibila instrucțiune, iar registrul IP cu adresa relativa din cadrul segmentului, a primei instrucțiuni ce trebuie executata. Segmentele logice se încarcă în memorie în ordinea cod, date, stiva.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Definirea segmentelor<br></strong></h3>
+
+
+
+<p>Segmentele logice contin cele tei componente ale unui program: cod, date si stiva. Modul in care pot fi specificate segmentele sunt:</p>
+
+
+
+<ul class="wp-block-list"><li><strong>definire simplificata;</strong></li><li><strong>definire completa a segmentelor.</strong></li></ul>
+
+
+
+<p>Definirea simplificata ascunde multe detalii ale definirii segmentelor si utilizează aceleași convenții implementate de Microsoft in limbajele de nivel înalt.</p>
+
+
+
+<p>Structura unui program ale cărui segmente sunt descrise utilizând definirea simplificata este: (descrisa si in <a title="Tutorial limbaj de asamblare - partea 1" rel="noopener noreferrer" href="http://www.itcsolutions.eu/2010/02/04/tutorial-limbaj-de-asamblare-assembler-intel-8086-%E2%80%93-partea-1-%E2%80%93-elemente-de-baza/" target="_blank">prima parte a tutorialului</a>)</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-text">.MODEL [tip_model] [conventia_de_limbaj] \    </span><span class="enlighter-co0">;declaratie obligatorie inainte de a </span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">[tip_stiva]                    </span><span class="enlighter-co0">;utiliza directivele simplificate de </span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">                                                </span><span class="enlighter-co0">;definire a unui segment</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">[.tip_procesor]            </span><span class="enlighter-co0">;definire tip procesor, implicit 8086 </span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">.STACK [expresie]            </span><span class="enlighter-co0">;definire segment de stiva, implicit 1KB (1024 </span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">                                                </span><span class="enlighter-co0">;de octeti)</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">.DATA                    </span><span class="enlighter-co0">;definire segment de date</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">.CODE                    </span><span class="enlighter-co0">;definire segment de cod</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k6">start:</span><span class="enlighter-text">                    </span><span class="enlighter-co0">;eticheta ce indica adresa de start a codului</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">END</span><span class="enlighter-text"> start                </span><span class="enlighter-co0">;indica sfarsit program - obligatoriu</span></div></div></div><div class="enlighter-raw">.MODEL [tip_model] [conventia_de_limbaj] \    ;declaratie obligatorie inainte de a 
+[tip_stiva]                    ;utiliza directivele simplificate de 
+                                                ;definire a unui segment
+[.tip_procesor]            ;definire tip procesor, implicit 8086 
+.STACK [expresie]            ;definire segment de stiva, implicit 1KB (1024 
+                                                ;de octeti)
+.DATA                    ;definire segment de date
+
+.CODE                    ;definire segment de cod
+start:                    ;eticheta ce indica adresa de start a codului
+
+END start                ;indica sfarsit program - obligatoriu</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">.MODEL [tip_model] [conventia_de_limbaj] \	;declaratie obligatorie inainte de a 
+[tip_stiva]			        ;utiliza directivele simplificate de 
+                                                ;definire a unui segment
+[.tip_procesor]			;definire tip procesor, implicit 8086 
+.STACK [expresie]			;definire segment de stiva, implicit 1KB (1024 
+                                                ;de octeti)
+.DATA					;definire segment de date
+
+.CODE					;definire segment de cod
+start:					;eticheta ce indica adresa de start a codului
+
+END start				;indica sfarsit program - obligatoriu
+</pre>
+
+
+
+<p>in care:</p>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td>
+<p style="text-align: center;"><strong>Optiune</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>Descriere</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>Valori posibile</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>tip_model</strong></p>
+</td><td>
+<p style="text-align: justify;">defineste modelul de memorie; determina dimensiunea codului si datelor (segmentelor) precum si a adreselor;</p>
+</td><td>
+<p><strong>TINY, SMALL, COMPACT, MEDIUM, LARGE, HUGE, FLAT</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>conventia_de_limbaj</strong></p>
+</td><td>
+<p style="text-align: justify;">faciliteaza compatibilitatea cu limbajele de nivel inalt prin determinarea codarii interne a numelor simbolurilor externe si publice;</p>
+</td><td>
+<p><strong>C, BASIC,FORTRAN, PASCAL, SYSCALL, STDCALL</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>tip_stiva</strong></p>
+</td><td>
+<p style="text-align: justify;">modul in care este definita stiva ca distanta fata de segmentul de date; NEARSTACK plaseaza stiva in acelasi segment fizic cu cel al datelor; pentru FARSTACK stiva are propriul ei segment fizic;</p>
+</td><td>
+<p><strong>NEARSTACK (implicit), FARSTACK</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>tip_procesor</strong></p>
+</td><td>
+<p style="text-align: justify;">odata selectat tipul procesorului se utilizeaza doar setul de instructiuni asociat;</p>
+</td><td>
+<p><strong>.186, .286, .386, .486</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>expresie</strong></p>
+</td><td>
+<p style="text-align: justify;">dimensiunea in octeti a stivei</p>
+</td><td>&nbsp;</td></tr></tbody></table></figure>
+
+
+
+<p>Pot fi utilizate o serie de simboluri predefinite pentru a descrie segmentele:</p>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th>Simbol</th><th>Descriere</th></tr></thead><tbody><tr><td>
+<p style="text-align: justify;"><strong>@Model</strong></p>
+</td><td>
+<p style="text-align: justify;"><strong>– intoarce modelul de memorie ca valoare intreaga cuprinsa intre 1 si 7;</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>@Data</strong></p>
+</td><td>
+<p style="text-align: justify;"><strong>– segmentul de date</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>@DataSize</strong></p>
+</td><td>
+<p style="text-align: justify;"><strong>– dimensiunea modelului de memorie</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>@CurSeg</strong></p>
+</td><td>
+<p style="text-align: justify;"><strong>– segmentul curent</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>@CodeSize</strong></p>
+</td><td>
+<p style="text-align: justify;"><strong>– tipul pointerilor: far sau near</strong></p>
+</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure>
+
+
+
+<p>Definirea completa a segmentelor utilizează sintaxa:</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">nume_segment</span><span class="enlighter-text"> SEGMENT [tip_aliniere] [READONLY] [tip_combinare] [tip_adresare] [clasa_segmente]</span></div></div><div class=""><div><span class="enlighter-text">………</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">nume_segment</span><span class="enlighter-text"> ENDS</span></div></div></div><div class="enlighter-raw">nume_segment SEGMENT [tip_aliniere] [READONLY] [tip_combinare] [tip_adresare] [clasa_segmente]
+………
+nume_segment ENDS</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="false" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">nume_segment SEGMENT [tip_aliniere] [READONLY] [tip_combinare] [tip_adresare] [clasa_segmente]
+………
+nume_segment ENDS</pre>
+
+
+
+<p>in care:</p>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th><strong>Element</strong></th><th><strong>Descriere</strong></th></tr></thead><tbody><tr><td>
+<p style="text-align: justify;"><strong>nume_segment</strong></p>
+</td><td>
+<p style="text-align: justify;"><strong>– defineste numele segmentului; in cadrul unui modul toate segmentele definite cu acelasi nume sunt considerate ca reprezentand acelasi segment; de asemenea sunt combinate si segmentele cu acelasi nume, dar care se gasesc in module diferite.</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>tip_aliniere</strong></p>
+</td><td>
+<p style="text-align: justify;"><strong>– descrie adresa la care incepe un segment nou</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>READONLY</strong></p>
+</td><td>
+<p style="text-align: justify;"><strong>– indica programului ca segmentul este de tip read-only si se genereaza eroare la incercarile de modifica valori; element optional;</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>tip_combinare</strong></p>
+</td><td>
+<p style="text-align: justify;"><strong>– indica modul in care sunt combinate segmentele cu acelasi nume dar din module separate la crearea executabilului;</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>tip_adresare</strong></p>
+</td><td>
+<p style="text-align: justify;"><strong>– descrie modul de lucru al procesoarelor (de la 386 in sus), fie pe 16 biti, fie pe 32 de biti;</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>clasa_segmente</strong></p>
+</td><td>
+<p style="text-align: justify;"><strong>– nume dat intre ” ce indica o clasa de segmente; segmentele din aceeasi clasa sunt aranjate secvential; utilizat pentru a indica ordinea de aranjare a segmentelor.</strong></p>
+</td></tr></tbody></table></figure>
+
+
+
+<p class="has-very-light-gray-background-color has-background"><strong>Atenție ! </strong>Nu se poate specifica mai mult de o valoarea pentru fiecare element.<strong><br></strong></p>
+
+
+
+<p>Un segment se poate închide cu <strong>ENDS</strong> si apoi redeschide ulterior doar cu directiva <strong>nume_segment SEGMENT</strong>, fără a modifica opțiunile din prima definire.</p>
+
+
+
+<h4 class="wp-block-heading"><code>[tip_aliniere]</code></h4>
+
+
+
+<ul class="wp-block-list"><li><div style="text-align: justify;">element opțional;</div></li><li><div style="text-align: justify;">definește mulțimea din care sa fie selectata adresa de la care este alocat segmentul;</div></li><li><div style="text-align: justify;">descrie faptul ca adresa fizica de început a segmentului este divizibila cu 1,2,4,16 sau 265;</div></li><li><div style="text-align: justify;">link-erul utilizează aceasta informație pentru a determina adresa relativa de start a fiecărui segment; sistemul determina adresa de start actuala când programul este încărcat;</div></li><li><div style="text-align: justify;">valorile pe care le poate lua:</div> </li></ul>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th><strong>Tip aliniere</strong></th><th><strong>Adresa de start</strong></th></tr></thead><tbody><tr><td>
+<p style="text-align: justify;"><strong>BYTE</strong></p>
+</td><td> <p style="text-align: justify;">– următoarea adresa de tip byte disponibila;</p> </td></tr><tr><td>
+<p style="text-align: justify;"><strong>WORD</strong></p>
+</td><td> <p style="text-align: justify;">– următoarea adresa de tip word disponibila;</p> </td></tr><tr><td>
+<p style="text-align: justify;"><strong>DWORD</strong></p>
+</td><td> <p style="text-align: justify;">– următoarea adresa de tip double disponibila;</p> </td></tr><tr><td>
+<p style="text-align: justify;"><strong>PARA</strong></p>
+</td><td> <p style="text-align: justify;">– următoarea adresa de tip paragraf (16 octeti) disponibila; valoare default</p> </td></tr><tr><td>
+<p style="text-align: justify;"><strong>PAGE</strong></p>
+</td><td> <p style="text-align: justify;">– următoarea adresa de tip pagina (256 octeti) disponibila;</p> </td></tr></tbody></table><figcaption>Tip aliniere</figcaption></figure>
+
+
+
+<h4 class="wp-block-heading"><code>[tip_combinare]</code></h4>
+
+
+
+<ul class="wp-block-list"><li><div style="text-align: justify;">element opțional;</div></li><li><div style="text-align: justify;">indica modul în care sunt combinate segmente cu același nume, dar care apar în module diferite; informație utilizata de link-er, nu de asamblor, pentru ca este necesara la crearea executabilului și nu la asamblarea fiecărui modul în parte;</div></li><li><div style="text-align: justify;">valorile pe care le poate lua:</div></li></ul>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th><strong>Tip combinare</strong></th><th><strong>Descriere</strong></th></tr></thead><tbody><tr><td>
+<p style="text-align: justify;"><strong>PRIVATE</strong></p>
+</td><td> <p style="text-align: justify;">– nu combina segmentul respectiv cu alte segmente (din alte module) ce au acelasi nume; optiune default;</p> </td></tr><tr><td>
+<p style="text-align: justify;"><strong>PUBLIC</strong></p>
+</td><td> <p style="text-align: justify;">– combina segmentele cu acelasi nume din module separate intr-o zona de memorie continua;</p> </td></tr><tr><td>
+<p style="text-align: justify;"><strong>COMMON</strong></p>
+</td><td> <p style="text-align: justify;">– combina segmentele cu acelasi nume din module separate suprapunandu-le pe aceeasi zona de memorie de marime egala cu dimensiunea celui mai mare segment;</p> </td></tr><tr><td>
+<p style="text-align: justify;"><strong>AT expresie</strong></p>
+</td><td> <p style="text-align: justify;">– segmentul este plasat la adresa indicata de <em>expresie</em>; nu se permite declararea de cod sau initializare de date; reprezinta o masca care se poate suprapune datelor si codului existent in memorie; asamblorul nu genereaza date sau cod pentru acest segment, insa permite adresarea in cadrul sau;</p> </td></tr><tr><td>
+<p style="text-align: justify;"><strong>MEMORY</strong></p>
+</td><td> <p style="text-align: justify;">– segmentul curent este asezat in memorie in spatiul ramas disponibil dupa alocarea celorlalte segmente (catre sfarsitul memoriei); utilizat si ca sinonim pentru PUBLIC;</p> </td></tr><tr><td>
+<p style="text-align: justify;"><strong>STACK</strong></p>
+</td><td> <p style="text-align: justify;">– concateneaza toate segmentele cu acelasi nume si pune in SS adresa de inceput a segmentului rezultat, iar SP pe sfarsitul sau; segmentul rezultat este asociat stivei;</p> </td></tr></tbody></table><figcaption>Tip combinare</figcaption></figure>
+
+
+
+<h4 class="wp-block-heading"><code>[tip_adresare]</code></h4>
+
+
+
+<ul class="wp-block-list"><li> element opțional; </li><li> reprezinta atributul modului de utilizare pentru procesoare, începând de la .386; </li><li> valorile pe care le poate lua: </li></ul>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th><strong>Tip adresare</strong></th><th><strong>Descriere</strong></th></tr></thead><tbody><tr><td>
+<p style="text-align: justify;"><strong>USE16</strong></p>
+</td><td> <p style="text-align: justify;">– indica faptul ca elementele din segment sunt adresate utilizand un offset pe 16 de biti; daca se specifica .386 sau .486 dupa de directiva .MODEL atunci default este modul USE16;</p> </td></tr><tr><td>
+<p style="text-align: justify;"><strong>USE32</strong></p>
+</td><td> <p style="text-align: justify;">– indica faptul ca elementele din segment sunt adresate utilizand un offset pe 32 de biti; daca se specifica .386 sau .486 inainte de directiva .MODEL atunci default este modul USE32;</p> </td></tr></tbody></table><figcaption>Tipuri de adresa</figcaption></figure>
+
+
+
+<h4 class="wp-block-heading"><code>[clasa_segmente]</code></h4>
+
+
+
+<ul class="wp-block-list"><li><div style="text-align: justify;">element opțional;</div></li><li><div style="text-align: justify;">indica <strong>modul de aranjare in memorie a segmentelor din aceeași clasa</strong>;</div></li><li><div style="text-align: justify;">doua segmente cu același nume, dar cu clase diferite nu sunt combinate;</div></li><li><div style="text-align: justify;">segmentele din aceeași clasa sunt aranjate secvențial în memorie în ordinea în care sunt întâlnite. </div></li></ul>
+
+
+
+<p>In mod normal, asamblorul aranjează segmentele in fișierul <code>.obj</code> in ordinea in care apar in codul sursa. In schimb, link-editorul procesează fișierele <code>.obj</code> in ordinea din linia de comanda. In cadrul fiecărui modul, acesta aloca memorie pentru segmente in ordinea apariției, apartenentei la un grup, clasa și cerințe date de modul de aranjare <code>.DOSSEG</code> (convenția de ordonare a segmentelor MS-DOS).</p>
+
+
+
+<p>Modul de aranjare a segmentelor este important atunci când e dorește ca anumite segmente sa apară la începutul sau sfârșitul unui program sau când se fac presupuneri în legătura cu ce segmente se găsesc lângă altele.</p>
+
+
+
+<p>Pentru a controla ordinea în care segmentele apar în memorie se utilizează directivele:</p>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th>Directiva</th><th>Descriere</th></tr></thead><tbody><tr><td>
+<p style="text-align: justify;"><strong>.SEQ</strong></p>
+</td><td> <p style="text-align: justify;">– in ordinea in care sunt declarate; modalitate implicita</p> </td></tr><tr><td>
+<p style="text-align: justify;"><strong>.ALPHA</strong></p>
+</td><td> <p style="text-align: justify;">– ordonare alfabetica a segmentelor dintr-un modul;</p> </td></tr><tr><td>
+<p style="text-align: justify;"><strong>.DOSSEG</strong></p>
+</td><td> <p style="text-align: justify;">– aranjeaza segmentele in ordinea standard a limbajelor Microsoft; nu se utilizeaza directiva in module apelate in cadrul altor module; ordinea segmentelor este cod, date, stiva.</p> </td></tr></tbody></table></figure>
+
+
+
+<h3 class="wp-block-heading">Inițializarea<strong> segmentelor de registru<br></strong></h3>
+
+
+
+<p>In cadrul programelor cu structura simplificata (.model) initializarea registrelor de segment (DS, SS, ES, CS) si asocierea lor cu segmentele de date, cod si stiva era realizata de asamblor si lnk-editor. In cadrul programelor a caror structura este definita de programator, initializarea acestora se face de catre acesta. Pasii ce trebuie urmati sunt:</p>
+
+
+
+<p class="has-very-light-gray-background-color has-background"><strong>Atenție !</strong><br><strong>Asocierea logica dintre registrul de segment și segmentul declarat se face prin intermediul directivei ASSUME. Aceasta informație este necesara asamblorului și link-editorului la transformarea programului in cod mașină.</strong></p>
+
+
+
+<p>Multe dintre instrucțiunile assembler presupun existenta unui segment implicit. Accesul la o zona de memorie din segmentul de date fie prin nume variabila, [registru index] sau [registru de baza][registru index] (toate reprezinta adrese offset) se realizează fata de adresa fizica conținută de registrul <code>DS</code>. Fiecare instrucțiune de citire/scriere cu stiva (POP/PUSH) se realizează implicit fata de <code>SS</code>. Instrucțiunile de salt condiționat/necondiționat reprezinta salturi la adrese offset în cadrul segmentului de cod, a carui adresa se gaseste in CS.</p>
+
+
+
+<p>De aceea în cazul programelor cu mai multe segmente este necesar sa se indice asocierea logica dintre segment și registru de segment pentru ca programul (mai precis asamblorul și link-editorul care transforma codul în cod mașină) sa știe unde (în ce segmente) se găsesc adresele respective (date sau instrucțiuni).</p>
+
+
+
+<p>Asocierea se realizează cu instrucțiunea</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">ASSUME</span><span class="enlighter-text"> registru_segment:nume_segment[,registru_segment:nume_segment]</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">ASSUME</span><span class="enlighter-text"> [registru_segment:] NOTHING [,registru_segment:NOTHING]</span></div></div></div><div class="enlighter-raw">ASSUME registru_segment:nume_segment[,registru_segment:nume_segment]
+ASSUME [registru_segment:] NOTHING [,registru_segment:NOTHING]</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">ASSUME registru_segment:nume_segment[,registru_segment:nume_segment]
+ASSUME [registru_segment:] NOTHING [,registru_segment:NOTHING]
+</pre>
+
+
+
+<p>Un <em>registru_segment</em> reprezinta unul dintre registrele de segment: <code>CS</code>, <code>DS</code>, <code>ES </code>sau <code>SS</code>; <em>nume_segment</em> reprezinta numele unui segment sau grup de segmente.</p>
+
+
+
+<p class="has-very-light-gray-background-color has-background"><strong>Atenție !</strong><br><strong>Odata ce s-a modificat unul dintre registrele <code>DS</code>, <code>ES </code>sau <code>SS </code>trebuie precizat acest lucru procesorului prin încărcarea registrului de segment utilizat implicit cu adresa noului segment.</strong> Daca segmentul utilizat reprezinta o zona de date inițializarea registrului <code>DS </code>se face prin secventa:</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX, nume_segment</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">mov</span><span class="enlighter-text"> DS, AX</span></div></div></div><div class="enlighter-raw">mov AX, nume_segment
+mov DS, AX</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">mov AX, nume_segment
+mov DS, AX
+</pre>
+
+
+
+<p>Daca segmentul reprezinta o zona de stiva inițializarea registrului <code>SS</code> se realizează prin:</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX, nume_segment</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">mov</span><span class="enlighter-text"> SS, AX</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">mov</span><span class="enlighter-text"> SP, offset baza_stiva    </span><span class="enlighter-co0">;pentru ca adresele in stiva scad trebuie ca SP sa fie         </span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">                                                </span><span class="enlighter-co0">;initializat cu offset-ul ultimei zone de memorie din stiva</span></div></div></div><div class="enlighter-raw">mov AX, nume_segment
+mov SS, AX
+mov SP, offset baza_stiva    ;pentru ca adresele in stiva scad trebuie ca SP sa fie         
+                                                ;initializat cu offset-ul ultimei zone de memorie din stiva</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">mov AX, nume_segment
+mov SS, AX
+mov SP, offset baza_stiva	;pentru ca adresele in stiva scad trebuie ca SP sa fie         
+                                                ;initializat cu offset-ul ultimei zone de memorie din stiva
+</pre>
+
+
+
+<p>Modul simplificat de definire a unui segment ce va fi utilizat pe post de stiva este:</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">Stiva</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">dw</span><span class="enlighter-text"> </span><span class="enlighter-n1">50</span><span class="enlighter-text"> </span><span class="enlighter-m0">dup</span><span class="enlighter-text"> (?)    </span><span class="enlighter-co0">;rezerv o zona de 50 * 2 octeti</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">baza_stiva</span><span class="enlighter-text"> label word</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Stiva</span><span class="enlighter-text"> ENDS</span></div></div></div><div class="enlighter-raw">Stiva SEGMENT
+    dw 50 dup (?)    ;rezerv o zona de 50 * 2 octeti
+    baza_stiva label word
+Stiva ENDS</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Stiva SEGMENT
+	dw 50 dup (?)	;rezerv o zona de 50 * 2 octeti
+	baza_stiva label word
+Stiva ENDS
+</pre>
+
+
+
+<p>Daca segmentul utilizat reprezinta o zona de date extinsa initializarea registrului ES se face prin secventa:</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX, nume_segment</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">mov</span><span class="enlighter-text"> ES, AX</span></div></div></div><div class="enlighter-raw">mov AX, nume_segment
+mov ES, AX</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">mov AX, nume_segment
+mov ES, AX
+</pre>
+
+
+
+<p>Se observa ca registrul CS nu trebuie încărcat. Acest lucru este realizat implicit (daca nu s-ar fi realizat acest lucru nu se putea executa nici o instrucțiune din program ,iar inițializările reprezinta de fapt secvente de instrucțiuni) prin indicarea punctului de start al programului (<strong>NU UITA</strong> de eticheta <strong><code>start:</code></strong> si de instrucțiunea de final <strong><code>end start</code></strong>) si prin asocierea logica <code>ASSUME CS:nume_segment</code>.</p>
+
+
+
+<p>Instrucțiunea ASSUME registru_segment:NOTHING șterge asocierea logica anterioara. Instrucțiunea <code>ASSUME NOTHING</code> șterge asocierile logice pentru toate registrele de segment.</p>
+
+
+
+<h4 class="wp-block-heading"><strong>Definirea grupurilor de segmente<br></strong></h4>
+
+
+
+<p>Un grup reprezinta o colecție de segmente ce nu trebuie sa depășească (cumulat !!!) mai mult de 64 KBytes pe arhitectura de 16 biți si nu mai mult de 4GBytes pe 32 de biți. Un grup permite asocierea dintre mai multe segmente definite logic si elimina repetarea instrucțiunilor de încărcare a registrelor de segment la schimbarea registrelor utilizate. De exemplu programul conține mai multe segmente de date iar accesul la ele implica schimbarea adresei din registrul <code>DS</code>. Gruparea acestor segmente într-un grup implica realizarea unui singur segment obținut prin concatenarea segmentelor din grup și încărcarea o singura data a registrului <code>DS</code> cu adresa grupului. Toate datele/codul este astfel accesibil relativ la adresa de început a grupului. Sintaxa de definire a grupului este:</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">nume_grup</span><span class="enlighter-text"> GROUP nume_segment [, nume_segment]</span></div></div></div><div class="enlighter-raw">nume_grup GROUP nume_segment [, nume_segment]</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">nume_grup GROUP nume_segment [, nume_segment]
+</pre>
+
+
+
+<p><strong>Atentie !</strong> Se are in vedere:</p>
+
+
+
+<ul class="wp-block-list"><li><div style="text-align: justify;">un segment nu poate fi definite in mai multe grupuri</div></li><li><div style="text-align: justify;">dimensiunea grupului nu trebuie sa depășească 65 KBytes pe 16 biți si 4 GBytes pe 32 de biți;</div></li><li><div style="text-align: justify;">nu indica modul de încărcare în memorie a segmentelor din grup și de aceea trebuie acordata atenție la modul de definire a segmentelor astfel încât segmente ce nu aparțin grupului sa nu fie alocate intre segmentele din grup, iar în final acesta sa depășească dimensiunea maxima admisa.</div> </li></ul>
+
+
+
+<p>De exemplu secventa de program:</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">Date1</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">a</span><span class="enlighter-text"> dw </span><span class="enlighter-n2">1234h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">b</span><span class="enlighter-text"> dw </span><span class="enlighter-n2">5678h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Date1</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Date2</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">vector</span><span class="enlighter-text"> dw </span><span class="enlighter-n1">5</span><span class="enlighter-text"> </span><span class="enlighter-m0">dup</span><span class="enlighter-text"> (</span><span class="enlighter-n1">9</span><span class="enlighter-text">)</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Date2</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Temporare</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">temp</span><span class="enlighter-text"> dw </span><span class="enlighter-n1">5</span><span class="enlighter-text"> </span><span class="enlighter-m0">dup</span><span class="enlighter-text"> (</span><span class="enlighter-n1">3</span><span class="enlighter-text">)</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Temporare</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Date3</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">c</span><span class="enlighter-text"> dw </span><span class="enlighter-n2">1111h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">d</span><span class="enlighter-text"> dw </span><span class="enlighter-n2">2222h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Date3</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Stiva</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">dw</span><span class="enlighter-text"> </span><span class="enlighter-n1">100</span><span class="enlighter-text"> </span><span class="enlighter-m0">dup</span><span class="enlighter-text">(?)</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">varf</span><span class="enlighter-text"> label word</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Stiva</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Date</span><span class="enlighter-text"> GROUP Date1, Date2, Date3</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Principal</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">ASSUME</span><span class="enlighter-text"> CS:Principal,SS:Stiva,DS</span><span class="enlighter-k0">:</span><span class="enlighter-k0">Date</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k6">start:</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,Date    </span><span class="enlighter-co0">;incarc in DS adresa grupului de segmente</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> DS,AX</span></div></div><div class=""><div><span class="enlighter-text">    </span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,Stiva    </span><span class="enlighter-co0">;incarc in SS adresa segmentului de stiva</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> SS,AX</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX, offset varf    </span><span class="enlighter-co0">;incarc SP</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> SP,AX</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX, b        </span><span class="enlighter-co0">;pun in AX valoarea din b</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX, vector    </span><span class="enlighter-co0">;pun in AX valoarea din vector[0]</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX, c        </span><span class="enlighter-co0">;pun in AX valoarea din c</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX, d        </span><span class="enlighter-co0">;pun in AX valoarea din d</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-co0">;se observa ca datele sunt accesibile fara a incarca de fiecare data DS cu adresa </span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-co0">;segmentului parinte</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,</span><span class="enlighter-n2">4c00h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">int</span><span class="enlighter-text"> </span><span class="enlighter-n2">21h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Principal</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">end</span><span class="enlighter-text"> start</span></div></div></div><div class="enlighter-raw">Date1 SEGMENT
+    a dw 1234h
+    b dw 5678h
+Date1 ENDS
+
+Date2 SEGMENT
+    vector dw 5 dup (9)
+Date2 ENDS
+
+Temporare SEGMENT
+    temp dw 5 dup (3)
+Temporare ENDS
+
+Date3 SEGMENT
+    c dw 1111h
+    d dw 2222h
+Date3 ENDS
+
+Stiva SEGMENT
+    dw 100 dup(?)
+    varf label word
+Stiva ENDS
+
+Date GROUP Date1, Date2, Date3
+
+Principal SEGMENT
+    ASSUME CS:Principal,SS:Stiva,DS:Date
+start:
+    mov AX,Date    ;incarc in DS adresa grupului de segmente
+    mov DS,AX
+    
+    mov AX,Stiva    ;incarc in SS adresa segmentului de stiva
+    mov SS,AX
+    mov AX, offset varf    ;incarc SP
+    mov SP,AX
+
+    mov AX, b        ;pun in AX valoarea din b
+    mov AX, vector    ;pun in AX valoarea din vector[0]
+    mov AX, c        ;pun in AX valoarea din c
+    mov AX, d        ;pun in AX valoarea din d
+    
+;se observa ca datele sunt accesibile fara a incarca de fiecare data DS cu adresa 
+;segmentului parinte
+    mov AX,4c00h
+    int 21h
+Principal ENDS
+
+end start</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Date1 SEGMENT
+	a dw 1234h
+	b dw 5678h
+Date1 ENDS
+
+Date2 SEGMENT
+	vector dw 5 dup (9)
+Date2 ENDS
+
+Temporare SEGMENT
+	temp dw 5 dup (3)
+Temporare ENDS
+
+Date3 SEGMENT
+	c dw 1111h
+	d dw 2222h
+Date3 ENDS
+
+Stiva SEGMENT
+	dw 100 dup(?)
+	varf label word
+Stiva ENDS
+
+Date GROUP Date1, Date2, Date3
+
+Principal SEGMENT
+	ASSUME CS:Principal,SS:Stiva,DS:Date
+start:
+	mov AX,Date	;incarc in DS adresa grupului de segmente
+	mov DS,AX
+	
+	mov AX,Stiva	;incarc in SS adresa segmentului de stiva
+	mov SS,AX
+	mov AX, offset varf	;incarc SP
+	mov SP,AX
+
+	mov AX, b		;pun in AX valoarea din b
+	mov AX, vector	;pun in AX valoarea din vector[0]
+	mov AX, c		;pun in AX valoarea din c
+	mov AX, d		;pun in AX valoarea din d
+	
+;se observa ca datele sunt accesibile fara a incarca de fiecare data DS cu adresa 
+;segmentului parinte
+	mov AX,4c00h
+	int 21h
+Principal ENDS
+
+end start
+</pre>
+
+
+
+<p>generează dispunerea in memorie a datelor astfel:</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-generic enlighter-hover "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-text">DS:</span><span class="enlighter-n4">0000</span><span class="enlighter-text">    </span><span class="enlighter-n1">34</span><span class="enlighter-text"> </span><span class="enlighter-n1">12</span><span class="enlighter-text"> </span><span class="enlighter-n1">78</span><span class="enlighter-text"> </span><span class="enlighter-n1">56</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text">    ;date segment Date1</span></div></div><div class=""><div><span class="enlighter-text">DS:</span><span class="enlighter-n1">0008</span><span class="enlighter-text">    </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text">    ;zona de date</span></div></div><div class=""><div><span class="enlighter-text">DS:</span><span class="enlighter-n4">0010</span><span class="enlighter-text">    </span><span class="enlighter-n1">09</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n1">09</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n1">09</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n1">09</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text">    ;date segment Date2</span></div></div><div class=""><div><span class="enlighter-text">DS:</span><span class="enlighter-n1">0018</span><span class="enlighter-text">    </span><span class="enlighter-n1">09</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text">    ;date segment Date2</span></div></div><div class=""><div><span class="enlighter-text">DS:</span><span class="enlighter-n4">0020</span><span class="enlighter-text">    </span><span class="enlighter-n4">03</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">03</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">03</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">03</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text">    ;date segment Temporare</span></div></div><div class=""><div><span class="enlighter-text">DS:</span><span class="enlighter-n1">0028</span><span class="enlighter-text">    </span><span class="enlighter-n4">03</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text">    ;date segment Temporare</span></div></div><div class=""><div><span class="enlighter-text">DS:</span><span class="enlighter-n4">0030</span><span class="enlighter-text">    </span><span class="enlighter-n1">11</span><span class="enlighter-text"> </span><span class="enlighter-n1">11</span><span class="enlighter-text"> </span><span class="enlighter-n1">22</span><span class="enlighter-text"> </span><span class="enlighter-n1">22</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text">    ;date segment Date3</span></div></div></div><div class="enlighter-raw">DS:0000    34 12 78 56 00 00 00 00    ;date segment Date1
+DS:0008    00 00 00 00 00 00 00 00    ;zona de date
+DS:0010    09 00 09 00 09 00 09 00    ;date segment Date2
+DS:0018    09 00 00 00 00 00 00 00    ;date segment Date2
+DS:0020    03 00 03 00 03 00 03 00    ;date segment Temporare
+DS:0028    03 00 00 00 00 00 00 00    ;date segment Temporare
+DS:0030    11 11 22 22 00 00 00 00    ;date segment Date3</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="false" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">DS:0000	34 12 78 56 00 00 00 00	;date segment Date1
+DS:0008	00 00 00 00 00 00 00 00	;zona de date
+DS:0010	09 00 09 00 09 00 09 00	;date segment Date2
+DS:0018	09 00 00 00 00 00 00 00	;date segment Date2
+DS:0020	03 00 03 00 03 00 03 00	;date segment Temporare
+DS:0028	03 00 00 00 00 00 00 00	;date segment Temporare
+DS:0030	11 11 22 22 00 00 00 00	;date segment Date3
+</pre>
+
+
+
+<p class="has-very-light-gray-background-color has-background"><strong>Atenție ! De ce fiecare segment pare ca ocupa 16 octeți (fiecare segment ocupa atâta spațiu cate date sunt definite in el, iar restul de octeți sunt nerezervați) ?</strong> Pentru ca implicit la definire tipul alinierii este PARA segmentele sunt alocate in memorie numai de la adrese divizibile cu 16. Restul de octeți (pana la al 16-lea) sunt nerezervați, dar pot fi accesați relativ fata de adresa de început a segmentului.</p>
+
+
+
+<p class="has-very-light-gray-background-color has-background">Atentie ! In exemplul anterior instrucțiunea <code>mov AX,offset </code>d va pune in <code>AX</code> valoarea 0002h si nu 0030h deoarece întoarce offset-ul fata de adresa segmentului părinte si nu fata de adresa de start a grupului.</p>
+
+
+
+<p>In Debugger (la dezasamblarea instrucțiunilor) se observa ca variabilele <code>b</code>, <code>vector</code>, <code>c</code> si <code>d</code> sunt referite prin offset-uri relative fata de adresa de început a grupului: 0002h, 0010h, 0030h, 0032h evidențiindu-se faptul ca intre segmentele grupului s-a intercalat segmentul Temporare (<strong>ordinea de alocare in memorie este implicit .SEQ</strong>). Pentru a evita situația:</p>
+
+
+
+<ul class="wp-block-list"><li><div style="text-align: justify;">se declara segmentul Temporare dupa declararea celor 3 segmente <code>Date1</code>, <code>Date2</code> și <code>Date3</code>;</div></li><li><div style="text-align: justify;">se utilizează o clasa de segmente ‘clasa_seg’ în care sunt puse segmentele Date1, Date2 si Date3.</div></li></ul>
+
+
+
+<p>De exemplu:</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">Date1</span><span class="enlighter-text"> SEGMENT </span><span class="enlighter-s0">'clasa_date'</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">a</span><span class="enlighter-text"> dw </span><span class="enlighter-n2">1234h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">b</span><span class="enlighter-text"> dw </span><span class="enlighter-n2">5678h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Date1</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Date2</span><span class="enlighter-text"> SEGMENT </span><span class="enlighter-s0">'clasa_date'</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">vector</span><span class="enlighter-text"> dw </span><span class="enlighter-n1">5</span><span class="enlighter-text"> </span><span class="enlighter-m0">dup</span><span class="enlighter-text"> (</span><span class="enlighter-n1">9</span><span class="enlighter-text">)</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Date2</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Temporare</span><span class="enlighter-text"> SEGMENT BYTE    </span><span class="enlighter-co0">;alocare la o adresa divizibila cu 1</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">temp</span><span class="enlighter-text"> dw </span><span class="enlighter-n1">5</span><span class="enlighter-text"> </span><span class="enlighter-m0">dup</span><span class="enlighter-text"> (</span><span class="enlighter-n1">3</span><span class="enlighter-text">)</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Temporare</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Date3</span><span class="enlighter-text"> SEGMENT </span><span class="enlighter-s0">'clasa_date'</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">c</span><span class="enlighter-text"> dw </span><span class="enlighter-n2">1111h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">d</span><span class="enlighter-text"> dw </span><span class="enlighter-n2">2222h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Date3</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Stiva</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">dw</span><span class="enlighter-text"> </span><span class="enlighter-n1">100</span><span class="enlighter-text"> </span><span class="enlighter-m0">dup</span><span class="enlighter-text">(?)</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">varf</span><span class="enlighter-text"> label word</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Stiva</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Date</span><span class="enlighter-text"> GROUP Date1, Date2, Date3</span></div></div><div class=""><div><span class="enlighter-text">.................</span></div></div></div><div class="enlighter-raw">Date1 SEGMENT 'clasa_date'
+    a dw 1234h
+    b dw 5678h
+Date1 ENDS
+
+Date2 SEGMENT 'clasa_date'
+    vector dw 5 dup (9)
+Date2 ENDS
+
+Temporare SEGMENT BYTE    ;alocare la o adresa divizibila cu 1
+    temp dw 5 dup (3)
+Temporare ENDS
+
+Date3 SEGMENT 'clasa_date'
+    c dw 1111h
+    d dw 2222h
+Date3 ENDS
+
+Stiva SEGMENT
+    dw 100 dup(?)
+    varf label word
+Stiva ENDS
+
+Date GROUP Date1, Date2, Date3
+.................</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Date1 SEGMENT 'clasa_date'
+	a dw 1234h
+	b dw 5678h
+Date1 ENDS
+
+Date2 SEGMENT 'clasa_date'
+	vector dw 5 dup (9)
+Date2 ENDS
+
+Temporare SEGMENT BYTE	;alocare la o adresa divizibila cu 1
+	temp dw 5 dup (3)
+Temporare ENDS
+
+Date3 SEGMENT 'clasa_date'
+	c dw 1111h
+	d dw 2222h
+Date3 ENDS
+
+Stiva SEGMENT
+	dw 100 dup(?)
+	varf label word
+Stiva ENDS
+
+Date GROUP Date1, Date2, Date3
+.................
+
+</pre>
+
+
+
+<p>In aceasta situatie segmentele sunt aranjate in memorie astfel:</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-generic enlighter-hover "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-text">DS:</span><span class="enlighter-n4">0000</span><span class="enlighter-text">    </span><span class="enlighter-n1">34</span><span class="enlighter-text"> </span><span class="enlighter-n1">12</span><span class="enlighter-text"> </span><span class="enlighter-n1">78</span><span class="enlighter-text"> </span><span class="enlighter-n1">56</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text">    ;date segment Date1</span></div></div><div class=""><div><span class="enlighter-text">DS:</span><span class="enlighter-n1">0008</span><span class="enlighter-text">    </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text">    ;zona de date</span></div></div><div class=""><div><span class="enlighter-text">DS:</span><span class="enlighter-n4">0010</span><span class="enlighter-text">    </span><span class="enlighter-n1">09</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n1">09</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n1">09</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n1">09</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text">    ;date segment Date2</span></div></div><div class=""><div><span class="enlighter-text">DS:</span><span class="enlighter-n1">0018</span><span class="enlighter-text">    </span><span class="enlighter-n1">09</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text">    ;date segment Date2</span></div></div><div class=""><div><span class="enlighter-text">DS:</span><span class="enlighter-n4">0020</span><span class="enlighter-text">    </span><span class="enlighter-n1">11</span><span class="enlighter-text"> </span><span class="enlighter-n1">11</span><span class="enlighter-text"> </span><span class="enlighter-n1">22</span><span class="enlighter-text"> </span><span class="enlighter-n1">22</span><span class="enlighter-text"> </span><span class="enlighter-n4">03</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">03</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text">    ;date segment Date3 si Temporare </span></div></div><div class=""><div><span class="enlighter-text">DS:</span><span class="enlighter-n1">0028</span><span class="enlighter-text">    </span><span class="enlighter-n4">03</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">03</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">03</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text"> </span><span class="enlighter-n4">00</span><span class="enlighter-text">    ;date segment Temporare</span></div></div></div><div class="enlighter-raw">DS:0000    34 12 78 56 00 00 00 00    ;date segment Date1
+DS:0008    00 00 00 00 00 00 00 00    ;zona de date
+DS:0010    09 00 09 00 09 00 09 00    ;date segment Date2
+DS:0018    09 00 00 00 00 00 00 00    ;date segment Date2
+DS:0020    11 11 22 22 03 00 03 00    ;date segment Date3 si Temporare 
+DS:0028    03 00 03 00 03 00 00 00    ;date segment Temporare</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="false" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">DS:0000	34 12 78 56 00 00 00 00	;date segment Date1
+DS:0008	00 00 00 00 00 00 00 00	;zona de date
+DS:0010	09 00 09 00 09 00 09 00	;date segment Date2
+DS:0018	09 00 00 00 00 00 00 00	;date segment Date2
+DS:0020	11 11 22 22 03 00 03 00	;date segment Date3 si Temporare 
+DS:0028	03 00 03 00 03 00 00 00	;date segment Temporare
+</pre>
+
+
+
+<p>Se observa ca indicând ca segmentul Temporare sa fie alocat la o adresa de tip BYTE el urmează dupa segmentul Date3 eliminându-se octeții nefolosiți.</p>
+        <div class="postmeta">
+      <div class="post-categories">
+        <ul class="post-categories">
+	<li><a href="https://www.itcsolutions.eu/ro/category/programare/assembler-8086-ro/" rel="category tag">Assembler 8086</a></li>
+	<li><a href="https://www.itcsolutions.eu/ro/category/programare/" rel="category tag">Programare</a></li></ul>      </div>
+      <div class="post-tags">
+       Tags: <a href="https://www.itcsolutions.eu/ro/tag/assembler-ro/" rel="tag">Assembler</a>, <a href="https://www.itcsolutions.eu/ro/tag/intel-8086-ro/" rel="tag">Intel 8086</a>      </div>
+      <div class="clear"></div>
+    </div><!-- postmeta --> 
+  </div><!-- .entry-content -->
+  
+  <footer class="entry-meta">
+      </footer> <!-- .entry-meta --> 
+  
+</article>                    
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-6-lucru-cu-fisiere/" rel="prev">Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 6 – Lucru cu fisiere</a></div><div class="nav-next"><a href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-8-lucru-in-virgula-mobila-valori-reale/" rel="next">Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 8 – Lucru in virgula mobila (valori reale)</a></div></div>
+	</nav>                    
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h2 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-7-lucru-cu-segmente/#respond" style="display:none;">Cancel reply</a></small></h2><p class="must-log-in">You must be <a href="https://www.itcsolutions.eu/wp-login.php?redirect_to=https%3A%2F%2Fwww.itcsolutions.eu%2Fro%2Ftutorial-limbaj-de-asamblare-assembler-intel-8086-partea-7-lucru-cu-segmente%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">Acest site folosește Akismet pentru a reduce spamul. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Află cum sunt procesate datele comentariilor tale</a>.</p>
+</div><!-- .comments-area -->                                <div class="clear"></div>
+            </div>          
+         </section>       
+        <div id="sidebar">    
+    <aside id="polylang-3" class="widget widget_polylang"><ul>
+	<li class="lang-item lang-item-793 lang-item-en no-translation lang-item-first"><a lang="en-US" hreflang="en-US" href="https://www.itcsolutions.eu/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAmVBMVEViZsViZMJiYrf9gnL8eWrlYkjgYkjZYkj8/PujwPybvPz4+PetraBEgfo+fvo3efkydfkqcvj8Y2T8UlL8Q0P8MzP9k4Hz8/Lu7u4DdPj9/VrKysI9fPoDc/EAZ7z7IiLHYkjp6ekCcOTk5OIASbfY/v21takAJrT5Dg6sYkjc3Nn94t2RkYD+y8KeYkjs/v7l5fz0dF22YkjWvcOLAAAAgElEQVR4AR2KNULFQBgGZ5J13KGGKvc/Cw1uPe62eb9+Jr1EUBFHSgxxjP2Eca6AfUSfVlUfBvm1Ui1bqafctqMndNkXpb01h5TLx4b6TIXgwOCHfjv+/Pz+5vPRw7txGWT2h6yO0/GaYltIp5PT1dEpLNPL/SdWjYjAAZtvRPgHJX4Xio+DSrkAAAAASUVORK5CYII=" alt="" width="16" height="11" style="width: 16px; height: 11px;"><span style="margin-left:0.3em;">English</span></a></li>
+	<li class="lang-item lang-item-794 lang-item-ro current-lang"><a lang="ro-RO" hreflang="ro-RO" href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-7-lucru-cu-segmente/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAbFBMVEUAJsgAFMT13wDyAgLqAAB4muX8/G3581z5Vlb3RkZagt78/Ef5+T/08Tn1NTX1KSlQe9709Ez5+TX36S71GxvkAABHdNv4+CvzDw8AA7lqjuFBcNn29h/05Rg6adnfAAAAAK3nvQDrwgDkqgALguDCAAAAX0lEQVR4ARXHtWEDQBAEwNmn4BMz9V+eIzsTS8c7EWqR2mQgkJDTYHIZ5cRRg7XJWjG9tLIypqmVV7k0aN8f1vTw3OXaNft5mwyyG7NTxi/5+WPFSdYpPA+fSG60/4074PMLPA8bHzoAAAAASUVORK5CYII=" alt="" width="16" height="11" style="width: 16px; height: 11px;"><span style="margin-left:0.3em;">Română</span></a></li>
+</ul>
+</aside><aside id="search-3" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://www.itcsolutions.eu/ro/">
+	<label>
+		<input type="search" class="search-field" placeholder="Search..." value="" name="s">
+	</label>
+	<input type="submit" class="search-submit" value="Search">
+</form></aside><aside id="categories-3" class="widget widget_categories"><h3 class="widget-title">Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-622"><a href="https://www.itcsolutions.eu/ro/category/dispozitive/">Dispozitive</a> (1)
+</li>
+	<li class="cat-item cat-item-630"><a href="https://www.itcsolutions.eu/ro/category/multimedia-ro/">Multimedia</a> (12)
+<ul class="children">
+	<li class="cat-item cat-item-635"><a href="https://www.itcsolutions.eu/ro/category/multimedia-ro/audio-ro/">Audio</a> (1)
+</li>
+	<li class="cat-item cat-item-642"><a href="https://www.itcsolutions.eu/ro/category/multimedia-ro/flash-ro/">Flash</a> (5)
+</li>
+	<li class="cat-item cat-item-652"><a href="https://www.itcsolutions.eu/ro/category/multimedia-ro/flex-ro/">Flex</a> (1)
+</li>
+	<li class="cat-item cat-item-654"><a href="https://www.itcsolutions.eu/ro/category/multimedia-ro/photoshop-ro/">Photoshop</a> (5)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-885"><a href="https://www.itcsolutions.eu/ro/category/office-ro/">Office Ro</a> (7)
+<ul class="children">
+	<li class="cat-item cat-item-831"><a href="https://www.itcsolutions.eu/ro/category/office-ro/access-2003-ro/">Access 2003</a> (4)
+</li>
+	<li class="cat-item cat-item-807"><a href="https://www.itcsolutions.eu/ro/category/office-ro/excel-2010-ro/">Excel 2010</a> (1)
+</li>
+	<li class="cat-item cat-item-887"><a href="https://www.itcsolutions.eu/ro/category/office-ro/vba-ro/">VBA</a> (2)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-628"><a href="https://www.itcsolutions.eu/ro/category/programare/">Programare</a> (87)
+<ul class="children">
+	<li class="cat-item cat-item-633"><a href="https://www.itcsolutions.eu/ro/category/programare/android-ro/">Android</a> (7)
+</li>
+	<li class="cat-item cat-item-875"><a href="https://www.itcsolutions.eu/ro/category/programare/asp-net-ro/">ASP.NET</a> (4)
+</li>
+	<li class="cat-item cat-item-678"><a href="https://www.itcsolutions.eu/ro/category/programare/assembler-8086-ro/">Assembler 8086</a> (8)
+</li>
+	<li class="cat-item cat-item-618"><a href="https://www.itcsolutions.eu/ro/category/programare/cpp-ro/">C++</a> (9)
+</li>
+	<li class="cat-item cat-item-682"><a href="https://www.itcsolutions.eu/ro/category/programare/css-ro/">CSS</a> (2)
+</li>
+	<li class="cat-item cat-item-684"><a href="https://www.itcsolutions.eu/ro/category/programare/html-ro/">HTML</a> (2)
+</li>
+	<li class="cat-item cat-item-771"><a href="https://www.itcsolutions.eu/ro/category/programare/j2me-ro/">J2ME</a> (7)
+</li>
+	<li class="cat-item cat-item-795"><a href="https://www.itcsolutions.eu/ro/category/programare/java-ro/">Java</a> (22)
+</li>
+	<li class="cat-item cat-item-625"><a href="https://www.itcsolutions.eu/ro/category/programare/structuri-de-date/">Structuri de Date</a> (13)
+</li>
+	<li class="cat-item cat-item-857"><a href="https://www.itcsolutions.eu/ro/category/programare/vb-net-ro/">VB.NET</a> (21)
+</li>
+	<li class="cat-item cat-item-617"><a href="https://www.itcsolutions.eu/ro/category/programare/visual-studio-2013-ro/">Visual Studio 2013</a> (1)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-797"><a href="https://www.itcsolutions.eu/ro/category/security-ro/">Securitate Cibernetica</a> (2)
+</li>
+	<li class="cat-item cat-item-918"><a href="https://www.itcsolutions.eu/ro/category/sisteme-operare/">Sisteme de Operare</a> (11)
+<ul class="children">
+	<li class="cat-item cat-item-799"><a href="https://www.itcsolutions.eu/ro/category/sisteme-operare/windows-ro/">Windows</a> (7)
+</li>
+	<li class="cat-item cat-item-819"><a href="https://www.itcsolutions.eu/ro/category/sisteme-operare/windows-7-ro/">Windows 7</a> (5)
+</li>
+	<li class="cat-item cat-item-789"><a href="https://www.itcsolutions.eu/ro/category/sisteme-operare/windows-mobile-ro/">Windows Mobile</a> (1)
+</li>
+	<li class="cat-item cat-item-849"><a href="https://www.itcsolutions.eu/ro/category/sisteme-operare/windows-vista-ro/">Windows Vista</a> (5)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-419"><a href="https://www.itcsolutions.eu/ro/category/uncategorized-ro/">Uncategorized</a> (9)
+</li>
+			</ul>
+
+			</aside><aside id="archives-3" class="widget widget_archive"><h3 class="widget-title">Archives</h3>
+			<ul>
+					<li><a href="https://www.itcsolutions.eu/ro/2014/01/">January 2014</a>&nbsp;(2)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2012/03/">March 2012</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/10/">October 2011</a>&nbsp;(3)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/09/">September 2011</a>&nbsp;(3)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/08/">August 2011</a>&nbsp;(3)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/07/">July 2011</a>&nbsp;(3)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/06/">June 2011</a>&nbsp;(5)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/05/">May 2011</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/04/">April 2011</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/03/">March 2011</a>&nbsp;(4)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/02/">February 2011</a>&nbsp;(8)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/01/">January 2011</a>&nbsp;(2)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/12/">December 2010</a>&nbsp;(9)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/11/">November 2010</a>&nbsp;(13)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/06/">June 2010</a>&nbsp;(2)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/04/">April 2010</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/03/">March 2010</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/02/">February 2010</a>&nbsp;(10)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/01/">January 2010</a>&nbsp;(6)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/11/">November 2009</a>&nbsp;(5)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/10/">October 2009</a>&nbsp;(6)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/08/">August 2009</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/07/">July 2009</a>&nbsp;(6)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/06/">June 2009</a>&nbsp;(22)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/05/">May 2009</a>&nbsp;(10)</li>
+			</ul>
+
+			</aside>	
+</div><!-- sidebar -->        <div class="clear"></div>
+    </div><!-- pagewraps -->
+</div><!-- container -->	
+<div id="footer-wrapper">
+	<div class="container">
+      	<p>IT&amp;C Solutions. All Rights Reserved</p>
+      	<p><a href="https://www.classictemplate.com/">Powered by WordPress</a></p>
+    </div><!--end .container-->
+</div><!--end .footer-wrapper-->
+<script type="text/javascript" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/comment-repl.download" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+<script type="text/javascript" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente – IT&amp;C Solutions_files/enlighterjs..download" id="enlighterjs-js"></script>
+<script type="text/javascript" id="enlighterjs-js-after">
+/* <![CDATA[ */
+!function(e,n){if("undefined"!=typeof EnlighterJS){var o={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":4,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":false,"textOverflow":"break","linenumbers":true,"theme":"enlighter","language":"generic","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""}};(e.EnlighterJSINIT=function(){EnlighterJS.init(o.selectors.block,o.selectors.inline,o.options)})()}else{(n&&(n.error||n.log)||function(){})("Error: EnlighterJS resources not loaded yet!")}}(window,console);
+/* ]]> */
+</script>
+
+</body></html>

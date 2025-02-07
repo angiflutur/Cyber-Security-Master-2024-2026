@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<!-- saved from url=(0111)https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-4-structuri-de-control/ -->
+<html lang="ro-RO"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://www.itcsolutions.eu/xmlrpc.php">
+<title>Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com/">
+<link rel="alternate" type="application/rss+xml" title="IT&amp;C Solutions » Feed" href="https://www.itcsolutions.eu/ro/feed/">
+<link rel="alternate" type="application/rss+xml" title="IT&amp;C Solutions » Comments Feed" href="https://www.itcsolutions.eu/ro/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="IT&amp;C Solutions » Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control Comments Feed" href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-4-structuri-de-control/feed/">
+<script type="text/javascript" async="" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/analytics.download"></script><script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.itcsolutions.eu\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/style.min.css" type="text/css" media="all">
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="twenty-minutes-font-css" href="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="twenty-minutes-basic-style-css" href="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="twenty-minutes-responsive-css" href="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/responsive.css" type="text/css" media="all">
+<link rel="stylesheet" id="twenty-minutes-default-css" href="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/default.css" type="text/css" media="all">
+<link rel="stylesheet" id="enlighterjs-css" href="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/enlighterjs.mi.css" type="text/css" media="all">
+<script type="text/javascript" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/jquery.mi.download" id="jquery-core-js"></script>
+<script type="text/javascript" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/jquery-mi.download" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/jquery.ni.download" id="jquery-nivo-slider-js"></script>
+<script type="text/javascript" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/custom.js.download" id="twenty-minutes-custom-js"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+
+<!-- Google Analytics snippet added by Site Kit -->
+<script type="text/javascript" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/js" id="google_gtagjs-js" async=""></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["www.itcsolutions.eu"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-5DFFMXJ");
+/* ]]> */
+</script>
+
+<!-- End Google tag (gtag.js) snippet added by Site Kit -->
+<link rel="https://api.w.org/" href="https://www.itcsolutions.eu/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.itcsolutions.eu/wp-json/wp/v2/posts/1169"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.itcsolutions.eu/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.6.2">
+<link rel="canonical" href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-4-structuri-de-control/">
+<link rel="shortlink" href="https://www.itcsolutions.eu/?p=1169">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.itcsolutions.eu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.itcsolutions.eu%2Fro%2Ftutorial-limbaj-de-asamblare-assembler-intel-8086-partea-4-structuri-de-control%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.itcsolutions.eu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.itcsolutions.eu%2Fro%2Ftutorial-limbaj-de-asamblare-assembler-intel-8086-partea-4-structuri-de-control%2F&amp;format=xml">
+<meta name="generator" content="Site Kit by Google 1.138.0"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/js(1)"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-9065880-1');
+</script>
+
+<script data-ad-client="ca-pub-8545818972391308" async="" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/f.txt"></script>	<style type="text/css"> 
+		a,	#sidebar ul li a:hover,
+		.post_lists h5 a:hover,
+		.logo h1 span,
+		.postmeta a:hover,
+		.copyright-wrapper a:hover	,
+		.sitenav ul li a:hover, .sitenav ul li.current_page_item a,
+		.current{ color:#da3813;}
+		.pagination ul li .current, .pagination ul li a:hover, 
+		#commentform input#submit:hover,
+		.toggle a,
+		#sidebar .search-form input.search-submit,
+		.pagination .nav-links span.current, 
+		.pagination .nav-links a:hover,
+		.wpcf7 input[type='submit']{ background-color:#da3813;}
+	</style> 
+
+<!-- Google AdSense meta tags added by Site Kit -->
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+<!-- End Google AdSense meta tags added by Site Kit -->
+	<style type="text/css">
+			.header{
+			background: url() no-repeat;
+			background-position: center top;
+		}
+		.logo h1 a { color:#111111;}
+		
+	</style>
+    
+    
+<!-- Google AdSense snippet added by Site Kit -->
+<script type="text/javascript" async="async" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/f(1).txt" crossorigin="anonymous"></script>
+
+<!-- End Google AdSense snippet added by Site Kit -->
+		<style type="text/css" id="wp-custom-css">
+			.contentbox p {
+	line-height: 1.5;
+	font-size: 1rem;
+}
+
+.contentbox ul {
+	line-height: 1.5;
+	font-size: 1rem;
+	padding-bottom: 0.5rem;
+}
+
+.contentbox ol {
+	line-height: 1.5;
+	font-size: 1rem;
+	padding-bottom: 0.5rem;
+}
+
+.entry-content h2 {
+	padding-top:1.5rem;
+}
+
+.entry-content h3 {
+	padding-top:1.5rem;
+}
+
+.entry-content h4 {
+	padding-top:1.5rem;
+}
+
+.google-auto-placed {
+	padding-bottom:30px;
+	padding-top: 30px;
+}		</style>
+		<script src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/wp-emoji-.download" defer=""></script></head>
+<body class="post-template-default single single-post postid-1169 single-format-standard group-blog">
+  <div class="header">
+    <div class="container">
+      <div class="logo">
+  			          <h1><a href="https://www.itcsolutions.eu/ro/">IT&amp;C <span>Solutions</span></a></h1>
+                    <p>Solutions and tutorials for IT&amp;C development</p>
+              </div><!-- logo -->
+        <div class="header_right">             
+                          
+                    
+        <div class="clear"></div>
+      </div><!-- header_right -->
+      <div class="clear"></div>
+    </div><!-- container -->
+  </div><!--.header -->
+  <div id="menubar">
+    <div class="container">
+      <div class="toggle">
+        <a class="toggleMenu" href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-4-structuri-de-control/#" style="display: none;">Menu</a>
+      </div><!-- toggle --> 
+      <div class="sitenav">
+        <div class="menu-main-menu-ro-container"><ul id="menu-main-menu-ro" class="menu"><li id="menu-item-3410" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3410"><a href="https://www.itcsolutions.eu/ro/echipa-itcsolutions-eu/">Echipa itcsolutions.eu</a></li>
+</ul></div>      </div><!-- site-nav -->
+    </div>
+  </div><!--#menubar -->
+<div class="container">
+     <div class="pagewraps">     
+        <section class="site-content-wrap">
+           <div class="contentbox">            
+                                    <article id="post-1169" class="single-post post-1169 post type-post status-publish format-standard hentry category-assembler-8086-ro category-programare tag-assembler-ro tag-intel-8086-ro">
+  <header class="entry-header">
+    <h1 class="entry-title">Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control</h1>  </header> <!-- .entry-header -->
+  <div class="postmeta">
+    <div class="post-date">February 5, 2010 by Catalin B.</div><!-- post-date -->
+    <div class="post-comment"> <a href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-4-structuri-de-control/#respond">No Comments</a></div>
+    <div class="clear"></div>
+  </div> <!-- postmeta -->
+    <div class="entry-content">
+    
+<p>In acest tutorial destinat limbajului de asamblare pentru procesoare din familia Intel 8086 sunt prezentate structurile de control:</p>
+
+
+
+<ul class="wp-block-list"><li>structura alternativa, sau structura IF</li><li>structura pre-conditionata, sau WHILE-DO</li><li>structura post-conditionata, sau DO-WHILE</li><li>structura alternativa multipla, sau CASE</li></ul>
+
+
+
+<span id="more-1169"></span>
+
+
+
+<h2 class="wp-block-heading"><strong>Structura alternativa IF<br></strong></h2>
+
+
+
+<p>In limbajele de nivel inalt structura de control alternativa este asociata cu expresia IF-THEN-ELSE. Implementarea structurii alternative presupune:</p>
+
+
+
+<ul class="wp-block-list"><li>evaluarea unei expresii;</li><li>compararea a doua valori.</li></ul>
+
+
+
+<p>In ambele cazuri sunt initializate flag-urile de conditie, prezentate in partea I a tutorialului – <a title="Tutorial limbaj de asamblare - Elemente de baza" href="http://www.itcsolutions.eu/2010/02/04/tutorial-limbaj-de-asamblare-assembler-intel-8086-%E2%80%93-partea-1-%E2%80%93-elemente-de-baza/" target="_blank" rel="noopener noreferrer">Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 1 – Elemente de baza</a>.</p>
+
+
+
+<p>Daca conditia evaluata este adevarata, atunci se executa secventa de instructiuni de pe ramura <em>true</em>; altfel expresiile de pe ramura <em>false</em> au prioritate.</p>
+
+
+
+<p>In Assembler se utilizeaza pentru a compara doi operanzi instructiunile</p>
+
+
+
+<ul class="wp-block-list"><li>CMP</li><li>CMPSB</li><li>CMPSW.</li></ul>
+
+
+
+<h2 class="wp-block-heading"><strong>Tipuri de salturi in limbaj de asamblare</strong></h2>
+
+
+
+<ul class="wp-block-list"><li>salturi neconditionate: JMP;</li><li>salturi conditionate: JA sau JNBE, JAE sau JNB, JB sau JNAE, JBE sau JNA, JC, JCXZ sau JECXZ, JE sau JZ, JG sau JNLE, JGE sau JNL, JL sau JNGE, JLE sau JNZ, JNC, JNE sau JNG, JNO, JNP sau JPO, LOOP, LOOPE sau LOOPZ, LOOPNE sau LOOPNZ.</li></ul>
+
+
+
+<p>Procesorul 8086 permite mai multe modalitati de a efectua un salt prin intermediul instructiunii <em>jmp</em>. Destinatia saltului poate fi in acelaşi segment (intrasegment) sau intr-un segment diferite (intersegment).</p>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-subtle-pale-blue-background-color has-background"><tbody><tr><td><strong>Tip jump</strong></td><td><strong>Forma interna</strong></td></tr><tr><td><strong>Jump intersegment</strong></td><td>5 octeti: 1 pentru codul operatiei (EAh), 2 pentru offset şi 2 pentru adresa segment.</td></tr><tr><td><strong>Jump intrasegment</strong></td><td>3 octeti: 1 pentru codul operatiei (E9h), 2 pentru offset.</td></tr><tr><td><strong>Jump-uri scurte (short jumps)</strong></td><td>2 octeti: 1 pentru codul operatiei (EBh), 1 pentru a reprezenta o valoare cu semn aferenta offset-ului. In acest caz, destinatia trebuie sa fie intre +127 şi -128 de octeti fata de instructiunea de salt.</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table><figcaption>Tipuri de salturi (jump-uri)</figcaption></figure>
+
+
+
+<h4 class="wp-block-heading"><strong>Instructiunea CMP<br></strong></h4>
+
+
+
+<p>Flag-urile (descrise in <a title="Tutorial limbaj de asamblare - Partea I - Elemente de baza" href="http://www.itcsolutions.eu/2010/02/04/tutorial-limbaj-de-asamblare-assembler-intel-8086-%E2%80%93-partea-1-%E2%80%93-elemente-de-baza/" target="_blank" rel="noopener noreferrer">Partea 1 – Elemente de baza</a>) modificate de rezultatul instructiunii CMP sunt:</p>
+
+
+
+<ul class="wp-block-list"><li>OF;</li><li>SF;</li><li>ZF;</li><li>AF;</li><li>PF;</li><li>CF;</li></ul>
+
+
+
+<p>Instructiunea CMP compara cei doi operanzi prin intermediul unei scaderi logice. Asta inseamna ca cei doi operanzi nu sunt modificati, insa bitii de flag sunt setati astfel incat sa indice rezultatul diferentei.</p>
+
+
+
+<p><strong>Exemplu</strong> de secventa de cod necesara compararii a doua valori intregi in limbaj de asamblare.</p>
+
+
+
+<pre class="wp-block-preformatted">CMP DX, BX;
+</pre>
+
+
+
+<ul class="wp-block-list"><li> Cand BX = 0004 şi DX = 0008, <p style="margin-left: 18pt;">DX – BX = 0004 (Atentie – aceasta scadere nu modifica operanzii)</p> – nu are loc overflow (OF=0) <p style="margin-left: 18pt;">– rezultatul este pozitiv (SF=0)</p> </li><li>Cand BX = 000A şi DX = 0008, <p style="margin-left: 18pt;">DX – BX = FFFE (- 2)</p>       – nu are loc overflow (OF=0) <p style="margin-left: 18pt;">– negativ (SF=1)</p> </li></ul>
+
+
+
+<p>Alte exemple pentru instructiunea assembler CMP</p>
+
+
+
+<ul class="wp-block-list"><li>se considera registrele si valorile AX = 10, BX = -12 (decimal)</li><li>CMP AX, BX</li></ul>
+
+
+
+<p>AX – BX = +22</p>
+
+
+
+<p>PL (positive, SF=0), CY (carry, CF=1), NV (no</p>
+
+
+
+<p>Overflow, OF=0), NZ (not zero, ZF=0)</p>
+
+
+
+<ul class="wp-block-list"><li>CMP BX, AX</li></ul>
+
+
+
+<p>BX – AX = -22</p>
+
+
+
+<p>NG (negative, SF=1), NC (no carry, CF=0), NV (no</p>
+
+
+
+<p>Overflow, OF=0), NZ (not zero, ZF=0)</p>
+
+
+
+<ul class="wp-block-list"><li>CMP AX, AX</li></ul>
+
+
+
+<p>AX – AX = 0</p>
+
+
+
+<p>PL (positive, SF=0), NC (no carry, CF=0;), NV (no</p>
+
+
+
+<p>Overflow, OF=0), ZR (zero, ZF=1)</p>
+
+
+
+<h4 class="wp-block-heading"><strong>Ce putem compara?</strong></h4>
+
+
+
+<ul class="wp-block-list"><li>registru cu registru: CMP AX, BX</li><li>registru cu memorie (variabile definite): CMP AX, mval</li><li>registru cu constante: CMP AX, 42</li><li>memorie cu registru: CMP mval, AX</li><li>memorie cu constanta (!) CMP mval, 42</li></ul>
+
+
+
+<h4 class="wp-block-heading"><strong>Ce nu putem compara?</strong></h4>
+
+
+
+<ul class="wp-block-list"><li>Nu se poate compara memorie cu memorie!!!</li><li>CMP a, b&nbsp;&nbsp;&nbsp;&nbsp;;instructiune gresita</li><li>Una dintre valori trebuie copiata intr-un registru inainte de a realiza comparatia.</li></ul>
+
+
+
+<h2 class="wp-block-heading"><strong>Salturi conditionate</strong></h2>
+
+
+
+<ul class="wp-block-list"><li>Salturile conditionate sunt utilizate pentru a trece la o alta locatie in segmentul de cod in fucntie de valorile anumitor biti de flag;</li><li>Numerele care sunt comparate pot reprezenta atat valori cu semn cat şi fara semn. Flag-uri diferite sunt verificate in functie de interpretarea valorilor.</li><li>Cum ştie procesorul cum interpreteaza utilizatorul valorile (fie cu semn, fie fara semn)?</li></ul>
+
+
+
+<p><strong>Raspuns</strong>: in functie de tipul instructiunii de salt.</p>
+
+
+
+<ul class="wp-block-list"><li>Salturi fara semn (valorile comparate sunt considerate fara semn) se refera prin cuvintele cheie “above” pentru mai mare şi “below” pentru mai mic.</li><li>Salturile cu semn se refera prin “greater” şi “less”.</li></ul>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-subtle-pale-blue-background-color has-background"><tbody><tr><td><strong>Operatie</strong></td><td><strong>Instructiune de salt conditionat daca ambii operanzi sunt considerati fara semn</strong></td><td><strong>Instructiune de salt conditionat daca unul dintre operanzi este cu semn</strong></td></tr><tr><td>&lt;&gt; or !=</td><td>JNE sau JNZ</td><td>JNE sau JNZ</td></tr><tr><td>= or ==</td><td>JE sau JZ</td><td>JE sau JZ</td></tr><tr><td>&gt;=</td><td>JNB</td><td>JNL</td></tr><tr><td>&gt;</td><td>JNBE sau JA</td><td>JNLE or JG</td></tr><tr><td>&lt;=</td><td>JNA</td><td>JNG</td></tr><tr><td>&lt;</td><td>JNAE sau JB</td><td>JNGE sau JL</td></tr></tbody></table></figure>
+
+
+
+<p><strong>Exemplu program assembler in care este evidentiata diferenta dintre Valori cu semn vs. Valori fara semn<br></strong></p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-text">.data</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">total</span><span class="enlighter-text"> dw </span><span class="enlighter-n2">0FFFFh</span><span class="enlighter-text">   </span><span class="enlighter-co0">; sari daca total &amp;lt; 10 (cu semn)</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">.code</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">CMP</span><span class="enlighter-text"> total, </span><span class="enlighter-n1">10</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">JL</span><span class="enlighter-text"> less10             </span><span class="enlighter-co0">;sari daca total &amp;lt; 10</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">…</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k6">less10:</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">                         </span><span class="enlighter-co0">;FFFFh = -1, codul va sari la less10 pt. ca –1 &amp;lt; 10.</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">                         </span><span class="enlighter-co0">;sari daca total &amp;lt; 10 (fara semn)</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">CMP</span><span class="enlighter-text"> total, </span><span class="enlighter-n1">10</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">JB</span><span class="enlighter-text"> less10             </span><span class="enlighter-co0">; sare daca total &amp;lt; 10</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">….</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k6">less10:</span><span class="enlighter-text">                </span><span class="enlighter-co0">;Acest cod nu va efectua saltul la &lt;strong&gt;less10&lt;/strong&gt; pentru ca valoarea</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">                       </span><span class="enlighter-co0">;FFFFh luata fara semn este 65535 &gt; 10.</span></div></div></div><div class="enlighter-raw">.data
+
+total dw 0FFFFh   ; sari daca total &amp;lt; 10 (cu semn)
+.code
+
+CMP total, 10
+
+JL less10             ;sari daca total &amp;lt; 10
+
+…
+
+less10:
+                         ;FFFFh = -1, codul va sari la less10 pt. ca –1 &amp;lt; 10.
+                         ;sari daca total &amp;lt; 10 (fara semn)
+CMP total, 10
+
+JB less10             ; sare daca total &amp;lt; 10
+
+….
+
+less10:                ;Acest cod nu va efectua saltul la &lt;strong&gt;less10&lt;/strong&gt; pentru ca valoarea
+                       ;FFFFh luata fara semn este 65535 &gt; 10.</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">.data
+
+total dw 0FFFFh   ; sari daca total &amp;lt; 10 (cu semn)
+.code
+
+CMP total, 10
+
+JL less10             ;sari daca total &amp;lt; 10
+
+…
+
+less10:
+                         ;FFFFh = -1, codul va sari la less10 pt. ca –1 &amp;lt; 10.
+                         ;sari daca total &amp;lt; 10 (fara semn)
+CMP total, 10
+
+JB less10             ; sare daca total &amp;lt; 10
+
+….
+
+less10:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Acest cod nu va efectua saltul la &lt;strong&gt;less10&lt;/strong&gt; pentru ca valoarea
+                       ;FFFFh luata fara semn este 65535 &gt; 10.</pre>
+
+
+
+<pre class="wp-block-preformatted"><strong>Intrebare:&nbsp;</strong>Cum ştie programul daca sa considere FFFFh ca fiind –1 or 65,535?
+<strong>Raspuns</strong>: Utilizatorul ii spune acest lucru prin tipul instructiunii de salt conditionat.</pre>
+
+
+
+<h4 class="wp-block-heading"><strong>Utilizarea salturilor conditionate</strong></h4>
+
+
+
+<ul class="wp-block-list"><li>Salturile conditionate sunt utilizate <em>de obicei</em> dupa o instructiune CMP.<em><br></em></li><li>Se pot utilizat salturi conditionate şi dupa o operatie aritmetica pentru ca şi acestea modifica bitii de <em>flag</em> in functie de rezultat.</li></ul>
+
+
+
+<h4 class="wp-block-heading"><strong>Expresia de tip If implementata in limbaj de asamblare</strong></h4>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-subtle-pale-blue-background-color has-background"><tbody><tr><td><strong>Limbaj evoluat</strong></td><td><strong>In Assembler (tot in pseudo-cod!):</strong></td></tr><tr><td><strong>if (op1 = op2) then<br></strong>&nbsp;<strong>&lt;expresie1&gt;<br></strong><strong>&lt;expresie 2&gt;<br></strong><strong>end if</strong></td><td>cmp op1, op2<br>jne fals<br>&lt; expresie 1&gt;<br>&lt; expresie 2&gt;<br>fals:<br>&lt;restul programului&gt;</td></tr></tbody></table></figure>
+
+
+
+<p><strong>Exemplu</strong> aplicatie assembler in care este utilizata structura de control de tip IF</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-text">.data</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">op1</span><span class="enlighter-text"> db </span><span class="enlighter-n1">10</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">op2</span><span class="enlighter-text"> db –</span><span class="enlighter-n1">12</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">op3</span><span class="enlighter-text"> db ?</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">.code</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> al, op1     </span><span class="enlighter-co0">;why?</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">cmp</span><span class="enlighter-text"> al, op2     </span><span class="enlighter-co0">;op1 = op2?</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">jne</span><span class="enlighter-text"> eticheta     </span><span class="enlighter-co0">;daca nu, sari</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> bl, op2     </span><span class="enlighter-co0">;expresia 1</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> op3, bl     </span><span class="enlighter-co0">;expresia 2</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k6">eticheta:</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">add</span><span class="enlighter-text"> al, op2</span></div></div></div><div class="enlighter-raw">.data
+
+    op1 db 10
+
+    op2 db –12
+
+    op3 db ?
+
+.code
+
+    mov al, op1     ;why?
+
+    cmp al, op2     ;op1 = op2?
+
+    jne eticheta     ;daca nu, sari
+
+    mov bl, op2     ;expresia 1
+
+    mov op3, bl     ;expresia 2
+
+eticheta:
+
+    add al, op2</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">.data
+
+	op1 db 10
+
+	op2 db –12
+
+	op3 db ?
+
+.code
+
+	mov al, op1 	;why?
+
+	cmp al, op2 	;op1 = op2?
+
+	jne eticheta 	;daca nu, sari
+
+	mov bl, op2 	;expresia 1
+
+	mov op3, bl 	;expresia 2
+
+eticheta:
+
+	add al, op2
+</pre>
+
+
+
+<h4 class="wp-block-heading"><strong>Expresia de tip IF-THEN-ELSE implementata in limbaj de asamblare</strong></h4>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-subtle-pale-blue-background-color has-background"><tbody><tr><td><strong>Limbaj evoluat</strong></td><td><strong>In Assembler (tot in pseudo-cod!):</strong></td></tr><tr><td><strong>if (temp &gt; max) then<br></strong>&nbsp;<strong>max = temp<br></strong><strong>else<br></strong><strong>max = max + 1<br></strong><strong>endif</strong></td><td>cmp op1, op2&nbsp;<br>jle else<br>&lt;statement1&gt;<br>&lt;statement2&gt;<br>jmp done<br>else:<br>&lt;statement3&gt;<br>&lt;statement4&gt;<br>done:</td></tr></tbody></table></figure>
+
+
+
+<p><strong>Exemplu&nbsp;</strong>aplicatie assembler in care este utilizata structura de control de tip IF-THEN-ELSE</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">mov</span><span class="enlighter-text"> ax, temp</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">mov</span><span class="enlighter-text"> bx, max</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">cmp</span><span class="enlighter-text"> ax, bx                     </span><span class="enlighter-co0">;compara temp cu max</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k6">if:</span><span class="enlighter-text">                            </span><span class="enlighter-co0">;"if"</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">jle</span><span class="enlighter-text"> els                 </span><span class="enlighter-co0">;sari daca temp &lt;= max</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> max, ax             </span><span class="enlighter-co0">;temp &gt; max "then"</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">jmp</span><span class="enlighter-text"> done                 </span><span class="enlighter-co0">;salt neconditionat</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k6">else:</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">inc</span><span class="enlighter-text"> bx                     </span><span class="enlighter-co0">; temp &lt;= max "else"</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> max, bx</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k6">done:</span></div></div></div><div class="enlighter-raw">mov ax, temp
+
+mov bx, max
+
+cmp ax, bx                     ;compara temp cu max
+
+if:                            ;"if"
+
+    jle els                 ;sari daca temp &lt;= max
+
+    mov max, ax             ;temp &gt; max "then"
+
+    jmp done                 ;salt neconditionat
+
+else:
+
+    inc bx                     ; temp &lt;= max "else"
+
+    mov max, bx
+
+done:</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">mov ax, temp
+
+mov bx, max
+
+cmp ax, bx             		;compara temp cu max
+
+if:                    		;"if"
+
+	jle els                 ;sari daca temp &lt;= max
+
+	mov max, ax             ;temp &gt; max "then"
+
+	jmp done             	;salt neconditionat
+
+else:
+
+	inc bx                 	; temp &lt;= max "else"
+
+	mov max, bx
+
+done:
+﻿</pre>
+
+
+
+<h4 class="wp-block-heading"><strong>Expresia de tip DO-WHILE implementata in limbaj de asamblare</strong></h4>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-subtle-pale-blue-background-color has-background"><tbody><tr><td><strong>Limbaj evoluat</strong></td><td><strong>In Assembler (tot in pseudo-cod!):</strong></td></tr><tr><td><strong>i=n;<br></strong>&nbsp;<strong>do<br></strong><strong>{<br></strong><strong>&lt;statement1&gt;<br></strong><strong>&lt;statement2&gt;<br></strong><strong>i=i-1;<br></strong><strong>} while (i&gt;=0)</strong></td><td>mov cx,n&nbsp;<br>repeat:<br>&lt;statement1&gt;<br>&lt;statement2&gt;<br>loop repeat</td></tr></tbody></table></figure>
+
+
+
+<p>Exemplu aplicatie assembler pentru determinarea sumei elementelor unui vector, ce implementeaza structura de control Do-While prin intermediul instructiunii <strong>Loop</strong>.</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-text">.model small</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">.</span><span class="enlighter-n1">286</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">.stack </span><span class="enlighter-n2">100h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">.data</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">vector</span><span class="enlighter-text"> db </span><span class="enlighter-n1">1</span><span class="enlighter-text">,</span><span class="enlighter-n1">2</span><span class="enlighter-text">,</span><span class="enlighter-n1">3</span><span class="enlighter-text">,</span><span class="enlighter-n1">4</span><span class="enlighter-text">,</span><span class="enlighter-n1">5</span><span class="enlighter-text">,</span><span class="enlighter-n1">6</span><span class="enlighter-text">,</span><span class="enlighter-n1">7</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">n</span><span class="enlighter-text"> db </span><span class="enlighter-n1">7</span><span class="enlighter-text">                </span><span class="enlighter-co0">;dimensiunea vectorului</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">suma</span><span class="enlighter-text"> db </span><span class="enlighter-n1">0</span><span class="enlighter-text">            </span><span class="enlighter-co0">;suma elementelor</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">.code</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,</span><span class="enlighter-k9">@data</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">mov</span><span class="enlighter-text"> DS,AX</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">xor</span><span class="enlighter-text"> SI,SI</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">xor</span><span class="enlighter-text"> CX,CX            </span><span class="enlighter-co0">;ne asiguram ca CX are valoarea 0</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">mov</span><span class="enlighter-text"> CL,n            </span><span class="enlighter-co0">;copiem in CL dimensiunea vectorului</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k6">repeat:</span><span class="enlighter-text">                </span><span class="enlighter-co0">;definim eticheta</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AL,vector[SI]</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">add</span><span class="enlighter-text"> suma,AL</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">inc</span><span class="enlighter-text"> SI                </span><span class="enlighter-co0">;marim valoarea din SI cu 1 pentru a trece la elementul urmator</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">loop</span><span class="enlighter-text"> repeat            </span><span class="enlighter-co0">;salt la eticheta cat timp CX diferit de 0</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,</span><span class="enlighter-n2">4c00h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">int</span><span class="enlighter-text"> </span><span class="enlighter-n2">21h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">end</span></div></div></div><div class="enlighter-raw">.model small
+
+.286
+
+.stack 100h
+
+.data
+
+vector db 1,2,3,4,5,6,7
+
+n db 7                ;dimensiunea vectorului
+
+suma db 0            ;suma elementelor
+
+.code
+
+mov AX,@data
+
+mov DS,AX
+
+xor SI,SI
+
+xor CX,CX            ;ne asiguram ca CX are valoarea 0
+
+mov CL,n            ;copiem in CL dimensiunea vectorului
+
+repeat:                ;definim eticheta
+
+mov AL,vector[SI]
+
+add suma,AL
+inc SI                ;marim valoarea din SI cu 1 pentru a trece la elementul urmator
+loop repeat            ;salt la eticheta cat timp CX diferit de 0
+
+mov AX,4c00h
+
+int 21h
+
+end</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">.model small
+
+.286
+
+.stack 100h
+
+.data
+
+vector db 1,2,3,4,5,6,7
+
+n db 7				;dimensiunea vectorului
+
+suma db 0			;suma elementelor
+
+.code
+
+mov AX,@data
+
+mov DS,AX
+
+xor SI,SI
+
+xor CX,CX			;ne asiguram ca CX are valoarea 0
+
+mov CL,n			;copiem in CL dimensiunea vectorului
+
+repeat:				;definim eticheta
+
+mov AL,vector[SI]
+
+add suma,AL
+inc SI				;marim valoarea din SI cu 1 pentru a trece la elementul urmator
+loop repeat			;salt la eticheta cat timp CX diferit de 0
+
+mov AX,4c00h
+
+int 21h
+
+end</pre>
+
+
+
+<h4 class="wp-block-heading"><strong>Expresia de tip WHILE-DO implementata in limbaj de asamblare</strong></h4>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-subtle-pale-blue-background-color has-background"><tbody><tr><td><strong>Limbaj evoluat</strong></td><td><strong>In Assembler (tot in pseudo-cod!):</strong></td></tr><tr><td><strong>i=n;<br></strong>&nbsp;<strong>while (i&gt;=0) do<br></strong><strong>{<br></strong><strong>&lt;statement1&gt;<br></strong><strong>&lt;statement2&gt;<br></strong><strong>i=i-1;<br></strong><strong>}</strong></td><td>mov cx,n<br>repeat:<br><code>cmp op1,op2 ;verificare conditie </code><br><code>jle exit ;conditie iesire &lt;statement1&gt; &lt;statement2&gt;</code><br>loop repeat<br>exit:</td></tr></tbody></table></figure>
+
+
+
+<h4 class="wp-block-heading"><strong>Expresia de tip CASE implementata in limbaj de asamblare</strong></h4>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-subtle-pale-blue-background-color has-background"><tbody><tr><td><strong>Limbaj evoluat</strong></td><td><strong>In Assembler (tot in pseudo-cod!):</strong></td></tr><tr><td><strong>switch (value) {<br></strong>&nbsp;<strong>case constant1:<br></strong><strong>&lt;statement1&gt;<br></strong><strong>break;<br></strong><strong>case constant2:<br></strong><strong>&lt;statement2&gt;<br></strong><strong>break;<br></strong><strong>…<br></strong><strong>default:<br></strong><strong>&lt;statements&gt;</strong></td><td>cmp value,constant1<br>je case1<br>cmp value,constant2<br>je case2<br>…<br>jmp default<br>case1:<br><br>jmp final<br>case2:<br><br>Jmp final<br>…<br>default:<br><br>final:</td></tr></tbody></table></figure>
+
+
+
+<h4 class="wp-block-heading"><strong><br></strong></h4>
+        <div class="postmeta">
+      <div class="post-categories">
+        <ul class="post-categories">
+	<li><a href="https://www.itcsolutions.eu/ro/category/programare/assembler-8086-ro/" rel="category tag">Assembler 8086</a></li>
+	<li><a href="https://www.itcsolutions.eu/ro/category/programare/" rel="category tag">Programare</a></li></ul>      </div>
+      <div class="post-tags">
+       Tags: <a href="https://www.itcsolutions.eu/ro/tag/assembler-ro/" rel="tag">Assembler</a>, <a href="https://www.itcsolutions.eu/ro/tag/intel-8086-ro/" rel="tag">Intel 8086</a>      </div>
+      <div class="clear"></div>
+    </div><!-- postmeta --> 
+  </div><!-- .entry-content -->
+  
+  <footer class="entry-meta">
+      </footer> <!-- .entry-meta --> 
+  
+</article>                    
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-3-moduri-de-adresare/" rel="prev">Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 3 – Moduri de adresare</a></div><div class="nav-next"><a href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-5-proceduri/" rel="next">Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 5 – Proceduri</a></div></div>
+	</nav>                    
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h2 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-4-structuri-de-control/#respond" style="display:none;">Cancel reply</a></small></h2><p class="must-log-in">You must be <a href="https://www.itcsolutions.eu/wp-login.php?redirect_to=https%3A%2F%2Fwww.itcsolutions.eu%2Fro%2Ftutorial-limbaj-de-asamblare-assembler-intel-8086-partea-4-structuri-de-control%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">Acest site folosește Akismet pentru a reduce spamul. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Află cum sunt procesate datele comentariilor tale</a>.</p>
+</div><!-- .comments-area -->                                <div class="clear"></div>
+            </div>          
+         </section>       
+        <div id="sidebar">    
+    <aside id="polylang-3" class="widget widget_polylang"><ul>
+	<li class="lang-item lang-item-793 lang-item-en no-translation lang-item-first"><a lang="en-US" hreflang="en-US" href="https://www.itcsolutions.eu/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAmVBMVEViZsViZMJiYrf9gnL8eWrlYkjgYkjZYkj8/PujwPybvPz4+PetraBEgfo+fvo3efkydfkqcvj8Y2T8UlL8Q0P8MzP9k4Hz8/Lu7u4DdPj9/VrKysI9fPoDc/EAZ7z7IiLHYkjp6ekCcOTk5OIASbfY/v21takAJrT5Dg6sYkjc3Nn94t2RkYD+y8KeYkjs/v7l5fz0dF22YkjWvcOLAAAAgElEQVR4AR2KNULFQBgGZ5J13KGGKvc/Cw1uPe62eb9+Jr1EUBFHSgxxjP2Eca6AfUSfVlUfBvm1Ui1bqafctqMndNkXpb01h5TLx4b6TIXgwOCHfjv+/Pz+5vPRw7txGWT2h6yO0/GaYltIp5PT1dEpLNPL/SdWjYjAAZtvRPgHJX4Xio+DSrkAAAAASUVORK5CYII=" alt="" width="16" height="11" style="width: 16px; height: 11px;"><span style="margin-left:0.3em;">English</span></a></li>
+	<li class="lang-item lang-item-794 lang-item-ro current-lang"><a lang="ro-RO" hreflang="ro-RO" href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-4-structuri-de-control/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAbFBMVEUAJsgAFMT13wDyAgLqAAB4muX8/G3581z5Vlb3RkZagt78/Ef5+T/08Tn1NTX1KSlQe9709Ez5+TX36S71GxvkAABHdNv4+CvzDw8AA7lqjuFBcNn29h/05Rg6adnfAAAAAK3nvQDrwgDkqgALguDCAAAAX0lEQVR4ARXHtWEDQBAEwNmn4BMz9V+eIzsTS8c7EWqR2mQgkJDTYHIZ5cRRg7XJWjG9tLIypqmVV7k0aN8f1vTw3OXaNft5mwyyG7NTxi/5+WPFSdYpPA+fSG60/4074PMLPA8bHzoAAAAASUVORK5CYII=" alt="" width="16" height="11" style="width: 16px; height: 11px;"><span style="margin-left:0.3em;">Română</span></a></li>
+</ul>
+</aside><aside id="search-3" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://www.itcsolutions.eu/ro/">
+	<label>
+		<input type="search" class="search-field" placeholder="Search..." value="" name="s">
+	</label>
+	<input type="submit" class="search-submit" value="Search">
+</form></aside><aside id="categories-3" class="widget widget_categories"><h3 class="widget-title">Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-622"><a href="https://www.itcsolutions.eu/ro/category/dispozitive/">Dispozitive</a> (1)
+</li>
+	<li class="cat-item cat-item-630"><a href="https://www.itcsolutions.eu/ro/category/multimedia-ro/">Multimedia</a> (12)
+<ul class="children">
+	<li class="cat-item cat-item-635"><a href="https://www.itcsolutions.eu/ro/category/multimedia-ro/audio-ro/">Audio</a> (1)
+</li>
+	<li class="cat-item cat-item-642"><a href="https://www.itcsolutions.eu/ro/category/multimedia-ro/flash-ro/">Flash</a> (5)
+</li>
+	<li class="cat-item cat-item-652"><a href="https://www.itcsolutions.eu/ro/category/multimedia-ro/flex-ro/">Flex</a> (1)
+</li>
+	<li class="cat-item cat-item-654"><a href="https://www.itcsolutions.eu/ro/category/multimedia-ro/photoshop-ro/">Photoshop</a> (5)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-885"><a href="https://www.itcsolutions.eu/ro/category/office-ro/">Office Ro</a> (7)
+<ul class="children">
+	<li class="cat-item cat-item-831"><a href="https://www.itcsolutions.eu/ro/category/office-ro/access-2003-ro/">Access 2003</a> (4)
+</li>
+	<li class="cat-item cat-item-807"><a href="https://www.itcsolutions.eu/ro/category/office-ro/excel-2010-ro/">Excel 2010</a> (1)
+</li>
+	<li class="cat-item cat-item-887"><a href="https://www.itcsolutions.eu/ro/category/office-ro/vba-ro/">VBA</a> (2)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-628"><a href="https://www.itcsolutions.eu/ro/category/programare/">Programare</a> (87)
+<ul class="children">
+	<li class="cat-item cat-item-633"><a href="https://www.itcsolutions.eu/ro/category/programare/android-ro/">Android</a> (7)
+</li>
+	<li class="cat-item cat-item-875"><a href="https://www.itcsolutions.eu/ro/category/programare/asp-net-ro/">ASP.NET</a> (4)
+</li>
+	<li class="cat-item cat-item-678"><a href="https://www.itcsolutions.eu/ro/category/programare/assembler-8086-ro/">Assembler 8086</a> (8)
+</li>
+	<li class="cat-item cat-item-618"><a href="https://www.itcsolutions.eu/ro/category/programare/cpp-ro/">C++</a> (9)
+</li>
+	<li class="cat-item cat-item-682"><a href="https://www.itcsolutions.eu/ro/category/programare/css-ro/">CSS</a> (2)
+</li>
+	<li class="cat-item cat-item-684"><a href="https://www.itcsolutions.eu/ro/category/programare/html-ro/">HTML</a> (2)
+</li>
+	<li class="cat-item cat-item-771"><a href="https://www.itcsolutions.eu/ro/category/programare/j2me-ro/">J2ME</a> (7)
+</li>
+	<li class="cat-item cat-item-795"><a href="https://www.itcsolutions.eu/ro/category/programare/java-ro/">Java</a> (22)
+</li>
+	<li class="cat-item cat-item-625"><a href="https://www.itcsolutions.eu/ro/category/programare/structuri-de-date/">Structuri de Date</a> (13)
+</li>
+	<li class="cat-item cat-item-857"><a href="https://www.itcsolutions.eu/ro/category/programare/vb-net-ro/">VB.NET</a> (21)
+</li>
+	<li class="cat-item cat-item-617"><a href="https://www.itcsolutions.eu/ro/category/programare/visual-studio-2013-ro/">Visual Studio 2013</a> (1)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-797"><a href="https://www.itcsolutions.eu/ro/category/security-ro/">Securitate Cibernetica</a> (2)
+</li>
+	<li class="cat-item cat-item-918"><a href="https://www.itcsolutions.eu/ro/category/sisteme-operare/">Sisteme de Operare</a> (11)
+<ul class="children">
+	<li class="cat-item cat-item-799"><a href="https://www.itcsolutions.eu/ro/category/sisteme-operare/windows-ro/">Windows</a> (7)
+</li>
+	<li class="cat-item cat-item-819"><a href="https://www.itcsolutions.eu/ro/category/sisteme-operare/windows-7-ro/">Windows 7</a> (5)
+</li>
+	<li class="cat-item cat-item-789"><a href="https://www.itcsolutions.eu/ro/category/sisteme-operare/windows-mobile-ro/">Windows Mobile</a> (1)
+</li>
+	<li class="cat-item cat-item-849"><a href="https://www.itcsolutions.eu/ro/category/sisteme-operare/windows-vista-ro/">Windows Vista</a> (5)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-419"><a href="https://www.itcsolutions.eu/ro/category/uncategorized-ro/">Uncategorized</a> (9)
+</li>
+			</ul>
+
+			</aside><aside id="archives-3" class="widget widget_archive"><h3 class="widget-title">Archives</h3>
+			<ul>
+					<li><a href="https://www.itcsolutions.eu/ro/2014/01/">January 2014</a>&nbsp;(2)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2012/03/">March 2012</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/10/">October 2011</a>&nbsp;(3)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/09/">September 2011</a>&nbsp;(3)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/08/">August 2011</a>&nbsp;(3)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/07/">July 2011</a>&nbsp;(3)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/06/">June 2011</a>&nbsp;(5)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/05/">May 2011</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/04/">April 2011</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/03/">March 2011</a>&nbsp;(4)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/02/">February 2011</a>&nbsp;(8)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/01/">January 2011</a>&nbsp;(2)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/12/">December 2010</a>&nbsp;(9)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/11/">November 2010</a>&nbsp;(13)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/06/">June 2010</a>&nbsp;(2)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/04/">April 2010</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/03/">March 2010</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/02/">February 2010</a>&nbsp;(10)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/01/">January 2010</a>&nbsp;(6)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/11/">November 2009</a>&nbsp;(5)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/10/">October 2009</a>&nbsp;(6)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/08/">August 2009</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/07/">July 2009</a>&nbsp;(6)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/06/">June 2009</a>&nbsp;(22)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/05/">May 2009</a>&nbsp;(10)</li>
+			</ul>
+
+			</aside>	
+</div><!-- sidebar -->        <div class="clear"></div>
+    </div><!-- pagewraps -->
+</div><!-- container -->	
+<div id="footer-wrapper">
+	<div class="container">
+      	<p>IT&amp;C Solutions. All Rights Reserved</p>
+      	<p><a href="https://www.classictemplate.com/">Powered by WordPress</a></p>
+    </div><!--end .container-->
+</div><!--end .footer-wrapper-->
+<script type="text/javascript" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/comment-r.download" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+<script type="text/javascript" src="./Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 4 – Structuri de control – IT&amp;C Solutions_files/enlighter.download" id="enlighterjs-js"></script>
+<script type="text/javascript" id="enlighterjs-js-after">
+/* <![CDATA[ */
+!function(e,n){if("undefined"!=typeof EnlighterJS){var o={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":4,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":false,"textOverflow":"break","linenumbers":true,"theme":"enlighter","language":"generic","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""}};(e.EnlighterJSINIT=function(){EnlighterJS.init(o.selectors.block,o.selectors.inline,o.options)})()}else{(n&&(n.error||n.log)||function(){})("Error: EnlighterJS resources not loaded yet!")}}(window,console);
+/* ]]> */
+</script>
+
+</body></html>

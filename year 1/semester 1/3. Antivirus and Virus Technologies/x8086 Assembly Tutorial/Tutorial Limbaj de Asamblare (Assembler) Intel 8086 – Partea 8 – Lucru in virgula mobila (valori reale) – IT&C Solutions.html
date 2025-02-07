@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<!-- saved from url=(0127)https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-8-lucru-in-virgula-mobila-valori-reale/ -->
+<html lang="ro-RO"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://www.itcsolutions.eu/xmlrpc.php">
+<title>Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 8 – Lucru in virgula mobila (valori reale) – IT&amp;C Solutions</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com/">
+<link rel="alternate" type="application/rss+xml" title="IT&amp;C Solutions » Feed" href="https://www.itcsolutions.eu/ro/feed/">
+<link rel="alternate" type="application/rss+xml" title="IT&amp;C Solutions » Comments Feed" href="https://www.itcsolutions.eu/ro/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="IT&amp;C Solutions » Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 8 – Lucru in virgula mobila (valori reale) Comments Feed" href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-8-lucru-in-virgula-mobila-valori-reale/feed/">
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.itcsolutions.eu\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="https://www.itcsolutions.eu/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2" type="text/css" media="all">
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="twenty-minutes-font-css" href="https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C600%2C700%2C800%2C900&amp;ver=6.6.2" type="text/css" media="all">
+<link rel="stylesheet" id="twenty-minutes-basic-style-css" href="https://www.itcsolutions.eu/wp-content/themes/twenty-minutes/style.css?ver=6.6.2" type="text/css" media="all">
+<link rel="stylesheet" id="twenty-minutes-responsive-css" href="https://www.itcsolutions.eu/wp-content/themes/twenty-minutes/css/responsive.css?ver=6.6.2" type="text/css" media="all">
+<link rel="stylesheet" id="twenty-minutes-default-css" href="https://www.itcsolutions.eu/wp-content/themes/twenty-minutes/css/default.css?ver=6.6.2" type="text/css" media="all">
+<link rel="stylesheet" id="enlighterjs-css" href="https://www.itcsolutions.eu/wp-content/plugins/enlighter/cache/enlighterjs.min.css?ver=5KG0XbvQb9WrQ+v" type="text/css" media="all">
+<script type="text/javascript" src="https://www.itcsolutions.eu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.itcsolutions.eu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://www.itcsolutions.eu/wp-content/themes/twenty-minutes/js/jquery.nivo.slider.js?ver=6.6.2" id="jquery-nivo-slider-js"></script>
+<script type="text/javascript" src="https://www.itcsolutions.eu/wp-content/themes/twenty-minutes/js/custom.js?ver=6.6.2" id="twenty-minutes-custom-js"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+
+<!-- Google Analytics snippet added by Site Kit -->
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=GT-5DFFMXJ" id="google_gtagjs-js" async=""></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["www.itcsolutions.eu"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-5DFFMXJ");
+/* ]]> */
+</script>
+
+<!-- End Google tag (gtag.js) snippet added by Site Kit -->
+<link rel="https://api.w.org/" href="https://www.itcsolutions.eu/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://www.itcsolutions.eu/wp-json/wp/v2/posts/1218"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.itcsolutions.eu/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.6.2">
+<link rel="canonical" href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-8-lucru-in-virgula-mobila-valori-reale/">
+<link rel="shortlink" href="https://www.itcsolutions.eu/?p=1218">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.itcsolutions.eu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.itcsolutions.eu%2Fro%2Ftutorial-limbaj-de-asamblare-assembler-intel-8086-partea-8-lucru-in-virgula-mobila-valori-reale%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.itcsolutions.eu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.itcsolutions.eu%2Fro%2Ftutorial-limbaj-de-asamblare-assembler-intel-8086-partea-8-lucru-in-virgula-mobila-valori-reale%2F&amp;format=xml">
+<meta name="generator" content="Site Kit by Google 1.138.0"><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-9065880-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-9065880-1');
+</script>
+
+<script data-ad-client="ca-pub-8545818972391308" async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	<style type="text/css"> 
+		a,	#sidebar ul li a:hover,
+		.post_lists h5 a:hover,
+		.logo h1 span,
+		.postmeta a:hover,
+		.copyright-wrapper a:hover	,
+		.sitenav ul li a:hover, .sitenav ul li.current_page_item a,
+		.current{ color:#da3813;}
+		.pagination ul li .current, .pagination ul li a:hover, 
+		#commentform input#submit:hover,
+		.toggle a,
+		#sidebar .search-form input.search-submit,
+		.pagination .nav-links span.current, 
+		.pagination .nav-links a:hover,
+		.wpcf7 input[type='submit']{ background-color:#da3813;}
+	</style> 
+
+<!-- Google AdSense meta tags added by Site Kit -->
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+<!-- End Google AdSense meta tags added by Site Kit -->
+	<style type="text/css">
+			.header{
+			background: url() no-repeat;
+			background-position: center top;
+		}
+		.logo h1 a { color:#111111;}
+		
+	</style>
+    
+    
+<!-- Google AdSense snippet added by Site Kit -->
+<script type="text/javascript" async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8545818972391308&amp;host=ca-host-pub-2644536267352236" crossorigin="anonymous"></script>
+
+<!-- End Google AdSense snippet added by Site Kit -->
+		<style type="text/css" id="wp-custom-css">
+			.contentbox p {
+	line-height: 1.5;
+	font-size: 1rem;
+}
+
+.contentbox ul {
+	line-height: 1.5;
+	font-size: 1rem;
+	padding-bottom: 0.5rem;
+}
+
+.contentbox ol {
+	line-height: 1.5;
+	font-size: 1rem;
+	padding-bottom: 0.5rem;
+}
+
+.entry-content h2 {
+	padding-top:1.5rem;
+}
+
+.entry-content h3 {
+	padding-top:1.5rem;
+}
+
+.entry-content h4 {
+	padding-top:1.5rem;
+}
+
+.google-auto-placed {
+	padding-bottom:30px;
+	padding-top: 30px;
+}		</style>
+		<script src="https://www.itcsolutions.eu/wp-includes/js/wp-emoji-release.min.js?ver=6.6.2" defer=""></script></head>
+<body class="post-template-default single single-post postid-1218 single-format-standard group-blog">
+  <div class="header">
+    <div class="container">
+      <div class="logo">
+  			          <h1><a href="https://www.itcsolutions.eu/ro/">IT&amp;C <span>Solutions</span></a></h1>
+                    <p>Solutions and tutorials for IT&amp;C development</p>
+              </div><!-- logo -->
+        <div class="header_right">             
+                          
+                    
+        <div class="clear"></div>
+      </div><!-- header_right -->
+      <div class="clear"></div>
+    </div><!-- container -->
+  </div><!--.header -->
+  <div id="menubar">
+    <div class="container">
+      <div class="toggle">
+        <a class="toggleMenu" href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-8-lucru-in-virgula-mobila-valori-reale/#" style="display: none;">Menu</a>
+      </div><!-- toggle --> 
+      <div class="sitenav">
+        <div class="menu-main-menu-ro-container"><ul id="menu-main-menu-ro" class="menu"><li id="menu-item-3410" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3410"><a href="https://www.itcsolutions.eu/ro/echipa-itcsolutions-eu/">Echipa itcsolutions.eu</a></li>
+</ul></div>      </div><!-- site-nav -->
+    </div>
+  </div><!--#menubar -->
+<div class="container">
+     <div class="pagewraps">     
+        <section class="site-content-wrap">
+           <div class="contentbox">            
+                                    <article id="post-1218" class="single-post post-1218 post type-post status-publish format-standard hentry category-assembler-8086-ro category-programare tag-assembler-ro tag-intel-8086-ro">
+  <header class="entry-header">
+    <h1 class="entry-title">Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 8 – Lucru in virgula mobila (valori reale)</h1>  </header> <!-- .entry-header -->
+  <div class="postmeta">
+    <div class="post-date">February 6, 2010 by Catalin B.</div><!-- post-date -->
+    <div class="post-comment"> <a href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-8-lucru-in-virgula-mobila-valori-reale/#respond">No Comments</a></div>
+    <div class="clear"></div>
+  </div> <!-- postmeta -->
+    <div class="entry-content">
+    
+<p>In acest tutorial destinat imbajului de asamblare pentru procesoare din familia Intel 8086 sunt prezentate modalitatile de lucru cu variabile si constante reale. Acest set de valori, in virgule mobila, necesita o alta abordare decat exemplele cu valori intregi din tutoarialele anterioare deoarece prelucrarile sunt realizate de catre coprocesorul matematic.</p>
+
+
+
+<span id="more-1218"></span>
+
+
+
+<h4 class="wp-block-heading"><strong>Variabile si constante reale<br></strong></h4>
+
+
+
+<p>Tipurile de date de tip real sunt:</p>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-subtle-pale-blue-background-color has-background"><thead><tr><th>Tip</th><th>Nr. biți</th><th>Cifre semnificative</th><th>Interval de valori</th><th>Declarare</th></tr></thead><tbody><tr><td><strong>Short real</strong></td><td>32</td><td>6-7</td><td>1.18 * 10<sup>-38</sup> → 3.40 * 10<sup>38</sup></td><td><strong>vb DD 1.2</strong></td></tr><tr><td><strong>Long real</strong></td><td>64</td><td>15-16</td><td>2.23 * 10<sup>-308</sup> → 1.79 * 10<sup>308</sup></td><td><strong>vb DQ 2.3</strong></td></tr><tr><td><strong>10-byte real</strong></td><td>80</td><td>19</td><td>3.37 * 10<sup>-4932</sup> → 1.18 * 10<sup>4932</sup></td><td><strong>vb DT 1.8</strong></td></tr></tbody></table><figcaption>Tipurile de date de tip real</figcaption></figure>
+
+
+
+<p class="has-very-light-gray-background-color has-background"><strong>Atenție ! La declararea variabilelor reale se utilizează . (punct) si nu , (virgula)</strong></p>
+
+
+
+<p>Declararea valorilor reale se poate realiza atat in format zecimal cat si hexazecimal. In format zecimal se utilizeaza reprezentarea:</p>
+
+
+
+<p><em>[+ | -] parte intreaga [parte zecimala] [E [+ | -] exponent]<br></em></p>
+
+
+
+<p>Numerele sunt considerate a fi in baza zece. De exemplu:</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">a</span><span class="enlighter-text">    DD    </span><span class="enlighter-n1">11</span><span class="enlighter-text">.</span><span class="enlighter-n1">765</span><span class="enlighter-text">            </span><span class="enlighter-co0">;forma zecimala</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">b</span><span class="enlighter-text">    DD    </span><span class="enlighter-n1">1</span><span class="enlighter-text">.</span><span class="enlighter-n1">1765</span><span class="enlighter-text">E+</span><span class="enlighter-n1">1</span><span class="enlighter-text">    </span><span class="enlighter-co0">;forma exponentiala zecimala</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">c</span><span class="enlighter-text">    DQ    </span><span class="enlighter-n1">1176</span><span class="enlighter-text">.</span><span class="enlighter-n1">5</span><span class="enlighter-text">E-</span><span class="enlighter-n1">2</span><span class="enlighter-text">    </span><span class="enlighter-co0">;forma exponentiala zecimala</span></div></div></div><div class="enlighter-raw">a    DD    11.765            ;forma zecimala
+b    DD    1.1765E+1    ;forma exponentiala zecimala
+c    DQ    1176.5E-2    ;forma exponentiala zecimala</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">a	DD	11.765            ;forma zecimala
+b	DD	1.1765E+1	;forma exponentiala zecimala
+c	DQ	1176.5E-2	;forma exponentiala zecimala
+</pre>
+
+
+
+<p>In format hexazecimal reprezentarea numerelor reale utilizeaza cifrele 0 → 9 si A → F. Numarul trebuie sa inceapa obligatoriu cu una din cifrele 0→9 si sa se termine cu eticheta <strong>r</strong> ce indica tipul numarului ca fiind real. Numarul de simboluri din reprezentarea hexazecimala este 8 pentru Short real, 16 pentru Long real si 20 pentru 10-Byte real. In caz ca primul simbol din numar este unul din caracterele A → F atunci se mai pune un 0 in fata, iar dimensiunea ca numar de simboluri creste cu unu. De exemplu:</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">a</span><span class="enlighter-text">    DD    </span><span class="enlighter-n1">3</span><span class="enlighter-text">F800000r</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">b</span><span class="enlighter-text">    DQ    </span><span class="enlighter-n1">3</span><span class="enlighter-text">D60000000000000r</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">c</span><span class="enlighter-text">    DT    </span><span class="enlighter-n1">0</span><span class="enlighter-text">A456C000000000000000r</span></div></div></div><div class="enlighter-raw">a    DD    3F800000r
+b    DQ    3D60000000000000r
+c    DT    0A456C000000000000000r</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">a	DD	3F800000r
+b	DQ	3D60000000000000r
+c	DT	0A456C000000000000000r
+</pre>
+
+
+
+<p>Pentru a usura lucrul cu date de tip real se pot defini propriile tipuri de date:</p>
+
+
+
+<pre class="wp-block-preformatted">float 	TYPEDEF	DD
+double	TYPEDEF	DQ
+long_double	TYPEDEF	DT
+</pre>
+
+
+
+<p>Formatul intern al numerelor reale este:</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><a href="http://www.itcsolutions.eu/wp-content/uploads/2010/02/asm_real.jpg"><img decoding="async" width="468" height="82" src="http://www.itcsolutions.eu/wp-content/uploads/2010/02/asm_real.jpg" alt="Valoare reala" class="wp-image-1240" srcset="https://www.itcsolutions.eu/wp-content/uploads/2010/02/asm_real.jpg 468w, https://www.itcsolutions.eu/wp-content/uploads/2010/02/asm_real-300x52.jpg 300w" sizes="(max-width: 468px) 100vw, 468px"></a><figcaption>Formatul real de reprezentare a valorilor reale</figcaption></figure></div>
+
+
+
+<ul class="wp-block-list"><li> exemplu de numar real in forma binara </li><li> forma interna generala a unui numar real in virgula mobila </li></ul>
+
+
+
+<p class="has-text-align-center has-large-font-size"><strong>(-1)<sup>S</sup>*M*2<sup>(E-Bias)</sup></strong></p>
+
+
+
+<p></p>
+
+
+
+<ul class="wp-block-list"><li><strong>S &nbsp;&nbsp;&nbsp;&nbsp;– Bit de semn; </strong>are valoarea 0 pentru pozitiv si 1 pentru negativ;</li><li><strong>M &nbsp;&nbsp;&nbsp;&nbsp;– Mantisa; </strong>este normalizata; are valori cuprinse in intervalul [1.00…0 , 1.11…1]; primele 2 formate nu mai reprezinta intern primul bit egal cu 1</li><li><strong>E &nbsp;&nbsp;&nbsp;&nbsp;– Exponent; </strong>reprezinta forma binara a exponentului; utilizat pentru a reface forma zecimala a numarului;</li><li><strong>Bias</strong> &nbsp;&nbsp;&nbsp;&nbsp;– permite reprezentarea valorilor negative ale exponentului; faciliteaza comparatia intre numere reale.<strong><br></strong></li></ul>
+
+
+
+<ul class="wp-block-list"><li> pentru short real (simpla precizie): </li></ul>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-subtle-pale-blue-background-color has-background"><tbody><tr><td class="has-text-align-center" data-align="center">31</td><td class="has-text-align-center" data-align="center">|          30                                                    23      |</td><td class="has-text-align-center" data-align="center">22                               0</td></tr><tr><td class="has-text-align-center" data-align="center">semn</td><td class="has-text-align-center" data-align="center">exponent</td><td class="has-text-align-center" data-align="center">parte zecimala</td></tr></tbody></table><figcaption>short real (simpla precizie)</figcaption></figure>
+
+
+
+<div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow"><div class="wp-block-group__inner-container"></div></div>
+
+
+
+<ul class="wp-block-list"><li><div style="text-align: justify;">pentru long real:</div> </li></ul>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-subtle-pale-blue-background-color has-background"><tbody><tr><td class="has-text-align-center" data-align="center">63</td><td class="has-text-align-center" data-align="center"> 62 &lt; – &gt; 52</td><td class="has-text-align-center" data-align="center">51 &lt; – &gt; 32</td><td class="has-text-align-center" data-align="center">31 &lt; – &gt; 0</td></tr><tr><td class="has-text-align-center" data-align="center">semn</td><td class="has-text-align-center" data-align="center">semn</td><td class="has-text-align-center" data-align="center">parte zecimala</td><td class="has-text-align-center" data-align="center">parte zecimala</td></tr></tbody></table><figcaption>Bit range pentru long real</figcaption></figure>
+
+
+
+<ul class="wp-block-list"><li> pentru real pe 10 octeti: </li></ul>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-subtle-pale-blue-background-color has-background"><tbody><tr><td class="has-text-align-center" data-align="center"><span style="color: black;">79</span></td><td class="has-text-align-center" data-align="center"><span style="color: black;">78 &lt; – &gt;  64</span></td><td class="has-text-align-center" data-align="center"><span style="color: black;">63</span></td><td class="has-text-align-center" data-align="center"><span style="color: black;">62 &lt;- &gt; 32</span></td><td class="has-text-align-center" data-align="center"><span style="color: black;">31 &lt; – &gt; 0</span></td></tr><tr><td class="has-text-align-center" data-align="center"><span style="color: #1f497d;"><strong>semn</strong></span></td><td class="has-text-align-center" data-align="center"><span style="color: #1f497d;"><strong>exponent</strong></span></td><td class="has-text-align-center" data-align="center">întreg</td><td class="has-text-align-center" data-align="center"><span style="color: #1f497d;"><strong>parte zecimala</strong></span></td><td class="has-text-align-center" data-align="center"><span style="color: #1f497d;"><strong>parte zecimala</strong></span></td></tr></tbody></table></figure>
+
+
+
+<p>Formele de reprezentare reprezinta formatul IEEE [<a href="http://en.wikipedia.org/wiki/IEEE_754" target="_blank" rel="noopener noreferrer">http://en.wikipedia.org/wiki/IEEE_754</a>], [<a href="http://grouper.ieee.org/groups/754/" target="_blank" rel="noopener noreferrer">http://grouper.ieee.org/groups/754/</a>] .</p>
+
+
+
+<p>Dupa cum se observa la numerele reale pe 10 octeti, partea intreaga este reprezentata de bitul 63. Acest bit permite atingerea unei precizii de 19 cifre. Partea intreaga este intotdeauna 1 la numere short real si long real si de aceea nu mai este memorata.</p>
+
+
+
+<p>Valoarea exponentiala reprezinta o putere a lui 2<sup>n</sup>. Pentru a se retine si valori negative de tipul 2<sup>-8</sup>, valoarea exponentului este ajustata adunand la ea valoarea 127 pentru numere reale simpla precizie (short real), 1023 pentru numere reale dubla precizie (long real) si 16383 pentru precizie extinsa (real pe 10 octeti).</p>
+
+
+
+<p>Valoarea de ajustare este scazuta la conversia inversa din format intern (binar) in format extern (zecimal).</p>
+
+
+
+<p><strong>Exemplu de transformare a unui numar real din format zecimal in format binar:<br></strong></p>
+
+
+
+<p>Se considera numarul real -134,25. Transformarea acestuia in formatul intern IEEE presupune:</p>
+
+
+
+<ol class="wp-block-list"><li> Identificarea semnului numarului; S = 1; </li><li> Transformare in format binar: <strong>10000110,01</strong> </li><li> Normalizare forma binara: <strong>1.000011001 x 2<sup>7</sup></strong> </li><li> Transformare exponent prin aplicare deplasare (bias): <strong>7 + 127 = 134</strong> </li><li> Transformare exponent in format binar: <strong>10000110</strong> </li><li> Obtinere format intern: </li></ol>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>
+<p style="text-align: center;"><strong>S</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>EXPONENT</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>MANTISA</strong></p>
+</td></tr><tr><td>
+<p style="text-align: center;"><strong>1</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>1</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>1</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>1</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>1</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>1</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>1</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>0</strong></p>
+</td></tr></tbody></table></figure>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><a href="http://www.itcsolutions.eu/wp-content/uploads/2010/02/asm_real2.jpg"><img fetchpriority="high" decoding="async" width="468" height="190" src="http://www.itcsolutions.eu/wp-content/uploads/2010/02/asm_real2.jpg" alt="Transformare valoare reala in format binar" class="wp-image-1241" srcset="https://www.itcsolutions.eu/wp-content/uploads/2010/02/asm_real2.jpg 468w, https://www.itcsolutions.eu/wp-content/uploads/2010/02/asm_real2-300x121.jpg 300w" sizes="(max-width: 468px) 100vw, 468px"></a><figcaption>Transformare valoare reala in format binar</figcaption></figure></div>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><a href="http://www.itcsolutions.eu/wp-content/uploads/2010/02/asm_real3.jpg"><img decoding="async" width="468" height="154" src="http://www.itcsolutions.eu/wp-content/uploads/2010/02/asm_real3.jpg" alt="Forma binara a unui numar real" class="wp-image-1242" srcset="https://www.itcsolutions.eu/wp-content/uploads/2010/02/asm_real3.jpg 468w, https://www.itcsolutions.eu/wp-content/uploads/2010/02/asm_real3-300x98.jpg 300w" sizes="(max-width: 468px) 100vw, 468px"></a><figcaption>Forma binara a unui numar real</figcaption></figure></div>
+
+
+
+<h4 class="wp-block-heading"> Arhitectura coprocesorului<strong> matematic<br></strong></h4>
+
+
+
+<ul class="wp-block-list"><li><div style="text-align: justify;">are propriile registre de date si de control: 8 registre de date organizate sub forma de stiva si 7 registre de control (asemenea registrelor flag);</div> </li><li> cele 8 registre de date sunt pe 80 de biti si sunt organizate sub forma de stiva, cu toate ca permit si acces direct; datele sunt incarcate in registrul din varf, ST(0) si coboara catre baza, registrul ST(7); </li><li> registrul din varful stivei este ST(0) sau ST, urmand apoi ST(1), ST(2), …, ST(7); </li><li> odata incarcate datele sunt convertite automat la format pe 10 octeti; </li><li> stiva registrelor coprocesorului este: </li></ul>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-subtle-pale-blue-background-color has-background"><tbody><tr><td class="has-text-align-center" data-align="center"><span style="color: black;"><strong>Registru</strong></span></td><td class="has-text-align-center" data-align="center"><span style="color: black;">79</span></td><td class="has-text-align-center" data-align="center"><span style="color: black;">78&lt; – &gt;63</span></td><td class="has-text-align-center" data-align="center"><span style="color: black;">62 &lt; – &gt; 0</span></td></tr><tr><td class="has-text-align-center" data-align="center"><span style="color: black;">ST(0)</span> </td><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center">&nbsp;</td></tr><tr><td class="has-text-align-center" data-align="center"><span style="color: black;">ST(1)</span></td><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center">&nbsp;</td></tr><tr><td class="has-text-align-center" data-align="center"><span style="color: black;">ST(2)</span></td><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center">&nbsp;</td></tr><tr><td class="has-text-align-center" data-align="center"><span style="color: black;">ST(3)</span></td><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center">&nbsp;</td></tr><tr><td class="has-text-align-center" data-align="center"><span style="color: black;">ST(4)</span></td><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center">&nbsp;</td></tr><tr><td class="has-text-align-center" data-align="center"><span style="color: black;">ST(5)</span></td><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center">&nbsp;</td></tr><tr><td class="has-text-align-center" data-align="center"><span style="color: black;">ST(6)</span></td><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center">&nbsp;</td></tr><tr><td class="has-text-align-center" data-align="center"><span style="color: black;">ST(7)</span></td><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center">&nbsp;</td></tr><tr><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center"><span style="color: black;">semn</span> </td><td class="has-text-align-center" data-align="center"> <span style="color: black;">exponent</span></td><td class="has-text-align-center" data-align="center"><span style="color: black;">parte zecimala</span></td></tr></tbody></table></figure>
+
+
+
+<h3 class="wp-block-heading"><strong>Tipuri de instructiuni<br></strong></h3>
+
+
+
+<p>Cele 8 registre de date pot fi accesate ca elemente ale unei stive sau ca elemente individuale asemenea registrelor procesorului. Toate instructiunile coprocesorului pentru prelucrarea valorilor reale încep cu <strong>F</strong>.</p>
+
+
+
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+<figure class="wp-block-table is-style-stripes"><table class="has-subtle-pale-blue-background-color has-background"><tbody><tr><td><sup>*</sup>Format instructiune</td><td>Sintaxa</td><td>Operatori impliciți                 </td></tr><tr><td>Classical stack                 </td><td><strong>F</strong>instructiune</td><td><strong>ST,ST(1)</strong>                 </td></tr><tr><td> Memory                 </td><td><strong>F</strong>instructiune <strong>variabila</strong></td><td><strong>ST</strong>                 </td></tr><tr><td>Register                 </td><td><strong>F</strong>instructiune <strong>ST(nr),ST</strong><br><strong>F</strong>instructiune <strong>ST,ST(nr)</strong></td><td>–                 </td></tr><tr><td>Register pop                 </td><td><strong>F</strong>instructiune<strong>P</strong><br><strong>ST(nr),ST</strong></td><td> –                 </td></tr></tbody></table></figure>
+</div></div>
+
+
+
+<p><sup>*</sup>– preluate din Micrsoft MASM Programmer’s Guide</p>
+
+
+
+<h4 class="wp-block-heading"><strong>Formatul Classical Stack<br></strong></h4>
+
+
+
+<ul class="wp-block-list"><li> sinatxa <strong>F</strong>instructiune </li><li> considera registrele coprocesorului ca parti componente ale unei stive; valorile sunt adaugate sau scoase din varful stivei, adica ST sau ST(0); </li><li> operatorii impliciti sunt ST(0) (sursa) si ST(1) (destinatie); </li><li> rezultatul instructiunii este pus in registrul destinatie, iar valoarea din sursa (adica ST) este scoasa din stiva; </li></ul>
+
+
+
+<p class="has-very-light-gray-background-color has-background"><strong>Atentie !</strong> Nu toate instructiunile de tip Classical Stack utilizeaza cei doi operanzi impliciti, ci doar acele instructiuni care in mod uzual au doi operanzi (de exemplu Fadd); de exemplu instructiuni de acest format sunt:</p>
+
+
+
+<ul class="wp-block-list"><li><strong>FLD1</strong> – incarca in ST valoarea 1;</li><li><strong>FLDZ</strong> – incarca in ST valoarea 0;</li><li><strong>FLDPI</strong> – incarca in ST valoarea lui pi, 3,14;</li><li><strong>FLDL2E</strong> – incarca in ST log<sub>2</sub>e;</li><li><strong>FLDL2T</strong> – incarca in ST log<sub>2</sub>10;</li><li><strong>FLDLG2</strong> – incarca in ST log<sub>10</sub>2;</li><li><strong>FLDLN2</strong> – incarca in ST log<sub>e</sub>2.</li></ul>
+
+
+
+<p><strong>Atentie !</strong> Pentru a vizualiza registrele coprocesorului in Turbo Debugger se deschide fereastra Numeric Processor din <strong>View → Numeric processor.<br></strong></p>
+
+
+
+<p><strong>Atentie !</strong> Instructiunea <strong>Fxch</strong> interschimba valorile din ST si ST(1) dar fara a scoate valoarea din ST<strong>.<br></strong></p>
+
+
+
+<p><strong>Atentie !</strong> Daca se dau mai mult de 8 instructiuni succesive de tip FLD (adica se incarca mai mult de 8 valori in registrele ST, ST(1), …, ST(7) fara a se scoate nici una dintre ele, coprocesorul indica situatia punand in registrul ST(0) valoarea NAN (Not a Number)<strong>.<br></strong></p>
+
+
+
+<p><strong>Exemplu aplicatie assembler ce prelucreaza valori reale: </strong>evaluarea expresiei: e = a + 1 + b * pi</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">DateIn</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">a</span><span class="enlighter-text"> DD </span><span class="enlighter-n1">1</span><span class="enlighter-text">.</span><span class="enlighter-n1">23</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">b</span><span class="enlighter-text"> DD </span><span class="enlighter-n1">3</span><span class="enlighter-text">.</span><span class="enlighter-n1">6</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">DateIn</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">DateOut</span><span class="enlighter-text">    SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">e</span><span class="enlighter-text"> DD ?</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">DateOut</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Main</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">ASSUME</span><span class="enlighter-text"> CS:Main, DS:DateIn, ES</span><span class="enlighter-k0">:</span><span class="enlighter-k0">DateOut</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k6">start:</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,DateIn</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> DS,AX</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,DateOut</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> ES,AX</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fld</span><span class="enlighter-text"> b    </span><span class="enlighter-co0">;#1</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fldpi</span><span class="enlighter-text">    </span><span class="enlighter-co0">;#2</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fmul</span><span class="enlighter-text">        </span><span class="enlighter-co0">;#3</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-co0">;are operanzi impliciti pe ST(1),ST</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fld1</span><span class="enlighter-text">        </span><span class="enlighter-co0">;#4</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fadd</span><span class="enlighter-text">        </span><span class="enlighter-co0">;#5</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fld</span><span class="enlighter-text"> a    </span><span class="enlighter-co0">;#6</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fadd</span><span class="enlighter-text">        </span><span class="enlighter-co0">;#7</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fstp</span><span class="enlighter-text"> es</span><span class="enlighter-k0">:</span><span class="enlighter-k0">e</span><span class="enlighter-text">    </span><span class="enlighter-co0">;#8</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-co0">;pune rezultatul in e si scoate valoarea din ST</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,</span><span class="enlighter-n2">4c00h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">int</span><span class="enlighter-text"> </span><span class="enlighter-n2">21h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Main</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">end</span><span class="enlighter-text"> start</span></div></div></div><div class="enlighter-raw">DateIn SEGMENT
+    a DD 1.23
+    b DD 3.6
+DateIn ENDS
+
+DateOut    SEGMENT
+    e DD ?
+DateOut ENDS
+
+Main SEGMENT
+    ASSUME CS:Main, DS:DateIn, ES:DateOut
+start:
+    mov AX,DateIn
+    mov DS,AX
+    mov AX,DateOut
+    mov ES,AX
+
+    Fld b    ;#1
+    Fldpi    ;#2
+    Fmul        ;#3
+;are operanzi impliciti pe ST(1),ST
+    Fld1        ;#4
+    Fadd        ;#5
+    Fld a    ;#6
+    Fadd        ;#7
+    Fstp es:e    ;#8
+;pune rezultatul in e si scoate valoarea din ST
+
+    mov AX,4c00h
+    int 21h
+Main ENDS
+
+end start</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">DateIn SEGMENT
+	a DD 1.23
+	b DD 3.6
+DateIn ENDS
+
+DateOut	SEGMENT
+	e DD ?
+DateOut ENDS
+
+Main SEGMENT
+	ASSUME CS:Main, DS:DateIn, ES:DateOut
+start:
+	mov AX,DateIn
+	mov DS,AX
+	mov AX,DateOut
+	mov ES,AX
+
+	Fld b	;#1
+	Fldpi	;#2
+	Fmul		;#3
+;are operanzi impliciti pe ST(1),ST
+	Fld1		;#4
+	Fadd		;#5
+	Fld a	;#6
+	Fadd		;#7
+	Fstp es:e	;#8
+;pune rezultatul in e si scoate valoarea din ST
+
+	mov AX,4c00h
+	int 21h
+Main ENDS
+
+end start
+
+</pre>
+
+
+
+<p>Pentru programul anterior stiva registrelor coprocesorului trece prin urmatoarele faze:</p>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-subtle-pale-blue-background-color has-background"><tbody><tr><td></td><td class="has-text-align-center" data-align="center"><strong>#1</strong></td><td class="has-text-align-center" data-align="center"><strong>#2</strong></td><td class="has-text-align-center" data-align="center"><strong>#3</strong></td><td class="has-text-align-center" data-align="center"><strong>#4</strong></td><td class="has-text-align-center" data-align="center"><strong>#5</strong></td><td class="has-text-align-center" data-align="center"><strong>#6</strong></td><td class="has-text-align-center" data-align="center"><strong>#7</strong></td><td class="has-text-align-center" data-align="center"><strong>#8</strong></td></tr><tr><td><strong>ST</strong></td><td class="has-text-align-center" data-align="center">3.6</td><td class="has-text-align-center" data-align="center">3.14</td><td class="has-text-align-center" data-align="center">11.304</td><td class="has-text-align-center" data-align="center">1</td><td class="has-text-align-center" data-align="center">12.304</td><td class="has-text-align-center" data-align="center">1.23</td><td class="has-text-align-center" data-align="center">13.534</td><td class="has-text-align-center" data-align="center"><strong>–</strong> </td></tr><tr><td><strong>ST(1)</strong></td><td class="has-text-align-center" data-align="center">–</td><td class="has-text-align-center" data-align="center">3.</td><td class="has-text-align-center" data-align="center">–</td><td class="has-text-align-center" data-align="center">11.304</td><td class="has-text-align-center" data-align="center">–</td><td class="has-text-align-center" data-align="center">12.304</td><td class="has-text-align-center" data-align="center">–</td><td class="has-text-align-center" data-align="center"><strong>–</strong></td></tr><tr><td><strong>ST(2)</strong></td><td class="has-text-align-center" data-align="center">–</td><td class="has-text-align-center" data-align="center">– </td><td class="has-text-align-center" data-align="center"> –</td><td class="has-text-align-center" data-align="center">– </td><td class="has-text-align-center" data-align="center">–</td><td class="has-text-align-center" data-align="center">–</td><td class="has-text-align-center" data-align="center">–</td><td class="has-text-align-center" data-align="center"><strong>–</strong></td></tr></tbody></table></figure>
+
+
+
+<h4 class="wp-block-heading"><strong>Formatul Memory<br></strong></h4>
+
+
+
+<ul class="wp-block-list"><li><div style="text-align: justify;">sintaxa <strong>F</strong>instructiune <strong>variabila</strong></div> </li></ul>
+
+
+
+<ul class="wp-block-list"><li> instructiuni care realizeaza transfer de valori in si din registrele coprocesorului; considera registrele coprocesorului incluse intr-o stiva; </li><li> operator implicit registrul ST sau ST(0); </li><li> pune sau scoate valori din varful stivei; exemple de astfel de instructiuni: </li></ul>
+
+
+
+<p>FLD nume_variabila – incarca pe stiva (adica in ST) valoarea variabilei;</p>
+
+
+
+<p>FST nume_variabila – copiaza (nu scoate) valoarea din varful stivei in variabila;</p>
+
+
+
+<p><strong>Exemplu interschimbarea in limbaj de asamblare a 2 valori reale utilizand coprocesorul matematic<br></strong></p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">DateIn</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">a</span><span class="enlighter-text"> DD </span><span class="enlighter-n1">1</span><span class="enlighter-text">.</span><span class="enlighter-n1">23</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">b</span><span class="enlighter-text"> DD </span><span class="enlighter-n1">3</span><span class="enlighter-text">.</span><span class="enlighter-n1">6</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">DateIn</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Main</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">ASSUME</span><span class="enlighter-text"> CS:Main, DS</span><span class="enlighter-k0">:</span><span class="enlighter-k0">DateIn</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k6">start:</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,DateIn</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> DS,AX</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fld</span><span class="enlighter-text"> a    </span><span class="enlighter-co0">;#1</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fld</span><span class="enlighter-text"> b    </span><span class="enlighter-co0">;#2</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fstp</span><span class="enlighter-text"> a    </span><span class="enlighter-co0">;#3</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">            </span><span class="enlighter-co0">;pune valoarea din ST in a si o scoate</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fstp</span><span class="enlighter-text"> b    </span><span class="enlighter-co0">;#4</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,</span><span class="enlighter-n2">4c00h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">int</span><span class="enlighter-text"> </span><span class="enlighter-n2">21h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Main</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">end</span><span class="enlighter-text"> start</span></div></div></div><div class="enlighter-raw">DateIn SEGMENT
+    a DD 1.23
+    b DD 3.6
+DateIn ENDS
+
+Main SEGMENT
+    ASSUME CS:Main, DS:DateIn
+start:
+    mov AX,DateIn
+    mov DS,AX
+
+    Fld a    ;#1
+    Fld b    ;#2
+    Fstp a    ;#3
+            ;pune valoarea din ST in a si o scoate
+    Fstp b    ;#4
+
+    mov AX,4c00h
+    int 21h
+Main ENDS
+end start</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">DateIn SEGMENT
+	a DD 1.23
+	b DD 3.6
+DateIn ENDS
+
+Main SEGMENT
+	ASSUME CS:Main, DS:DateIn
+start:
+	mov AX,DateIn
+	mov DS,AX
+
+	Fld a	;#1
+	Fld b	;#2
+	Fstp a	;#3
+			;pune valoarea din ST in a si o scoate
+	Fstp b	;#4
+
+	mov AX,4c00h
+	int 21h
+Main ENDS
+end start
+</pre>
+
+
+
+<p>Pentru programul anterior stiva registrelor coprocesorului trece prin urmatoarele faze:</p>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-subtle-pale-blue-background-color has-background"><tbody><tr><td>&nbsp;</td><td class="has-text-align-center" data-align="center"> <strong>#1</strong></td><td class="has-text-align-center" data-align="center"><strong>#2</strong></td><td class="has-text-align-center" data-align="center"><strong>#3</strong></td><td class="has-text-align-center" data-align="center"><strong>#4</strong></td></tr><tr><td><strong>ST</strong></td><td class="has-text-align-center" data-align="center">1.23</td><td class="has-text-align-center" data-align="center">3.6</td><td class="has-text-align-center" data-align="center">1.23</td><td class="has-text-align-center" data-align="center"><strong>–</strong></td></tr><tr><td><strong>ST(1)</strong></td><td class="has-text-align-center" data-align="center">–</td><td class="has-text-align-center" data-align="center">1.23</td><td class="has-text-align-center" data-align="center">–</td><td class="has-text-align-center" data-align="center"><strong>–</strong></td></tr><tr><td><strong>ST(2)</strong></td><td class="has-text-align-center" data-align="center">–</td><td class="has-text-align-center" data-align="center"> –</td><td class="has-text-align-center" data-align="center">–</td><td class="has-text-align-center" data-align="center"><strong>–</strong></td></tr></tbody></table></figure>
+
+
+
+<h4 class="wp-block-heading"><strong>Formatul Register<br></strong></h4>
+
+
+
+<ul class="wp-block-list"><li> sintaxa <strong>F</strong>instructiune<strong>P</strong> : <strong>ST(nr),ST</strong>; </li></ul>
+
+
+
+<ul class="wp-block-list"><li> instructiuni care trateaza registrele coprocesorului ca registre independente si ca parti ale unei stive; </li><li> operandul sursa trebuie sa fie ST; </li><li> primul operand este destinatia, iar cel de-al doilea este sursa; </li><li> rezultatul instructiunii este pus in destinatie, iar valoarea din sursa (ST – varful stivei) este scoasa din stiva; </li><li> astfel de instructiuni sunt cele ce implementeaza operatii matematice si care necesita scoaterea valorii sursei din stiva: </li></ul>
+
+
+
+<p><strong>Exemplu aplicatie assembler ce prelucreaza valori reale</strong>: evaluarea expresiei: e = a + b + a*b + a<sup>2</sup></p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">DateIn</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">a</span><span class="enlighter-text"> DD </span><span class="enlighter-n1">1</span><span class="enlighter-text">.</span><span class="enlighter-n1">23</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">b</span><span class="enlighter-text"> DD </span><span class="enlighter-n1">3</span><span class="enlighter-text">.</span><span class="enlighter-n1">6</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">DateIn</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">DateOut</span><span class="enlighter-text">    SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">e</span><span class="enlighter-text"> DD ?</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">DateOut</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Main</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">ASSUME</span><span class="enlighter-text"> CS:Main, DS:DateIn, ES</span><span class="enlighter-k0">:</span><span class="enlighter-k0">DateOut</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k6">start:</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,DateIn</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> DS,AX</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,DateOut</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> ES,AX</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fld</span><span class="enlighter-text"> a        </span><span class="enlighter-co0">;#1</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fld</span><span class="enlighter-text"> a        </span><span class="enlighter-co0">;#2</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fmul</span><span class="enlighter-text"> ST,ST    </span><span class="enlighter-co0">;#3</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fxch</span><span class="enlighter-text"> </span><span class="enlighter-m0">ST</span><span class="enlighter-text">(</span><span class="enlighter-n1">1</span><span class="enlighter-text">)    </span><span class="enlighter-co0">;#4</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fld</span><span class="enlighter-text"> b        </span><span class="enlighter-co0">;#5</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fadd</span><span class="enlighter-text"> </span><span class="enlighter-m0">ST</span><span class="enlighter-text">(</span><span class="enlighter-n1">2</span><span class="enlighter-text">),ST    </span><span class="enlighter-co0">;#6</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fmul</span><span class="enlighter-text"> ST,</span><span class="enlighter-m0">ST</span><span class="enlighter-text">(</span><span class="enlighter-n1">1</span><span class="enlighter-text">)    </span><span class="enlighter-co0">;#7</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fadd</span><span class="enlighter-text"> ST,</span><span class="enlighter-m0">ST</span><span class="enlighter-text">(</span><span class="enlighter-n1">1</span><span class="enlighter-text">)    </span><span class="enlighter-co0">;#8</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fadd</span><span class="enlighter-text"> ST,</span><span class="enlighter-m0">ST</span><span class="enlighter-text">(</span><span class="enlighter-n1">2</span><span class="enlighter-text">)    </span><span class="enlighter-co0">;#9</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Ffree</span><span class="enlighter-text"> </span><span class="enlighter-m0">ST</span><span class="enlighter-text">(</span><span class="enlighter-n1">2</span><span class="enlighter-text">)    </span><span class="enlighter-co0">;#10</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">                </span><span class="enlighter-co0">;eliberez registrul ST(2)</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Ffree</span><span class="enlighter-text"> </span><span class="enlighter-m0">ST</span><span class="enlighter-text">(</span><span class="enlighter-n1">1</span><span class="enlighter-text">)    </span><span class="enlighter-co0">;#11</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fstp</span><span class="enlighter-text"> ES</span><span class="enlighter-k0">:</span><span class="enlighter-k0">e</span><span class="enlighter-text">        </span><span class="enlighter-co0">;#12</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,</span><span class="enlighter-n2">4c00h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">int</span><span class="enlighter-text"> </span><span class="enlighter-n2">21h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Main</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">end</span><span class="enlighter-text"> start</span></div></div></div><div class="enlighter-raw">DateIn SEGMENT
+    a DD 1.23
+    b DD 3.6
+DateIn ENDS
+
+DateOut    SEGMENT
+    e DD ?
+DateOut ENDS
+
+Main SEGMENT
+    ASSUME CS:Main, DS:DateIn, ES:DateOut
+start:
+    mov AX,DateIn
+    mov DS,AX
+    mov AX,DateOut
+    mov ES,AX
+
+    Fld a        ;#1
+    Fld a        ;#2
+    Fmul ST,ST    ;#3
+    Fxch ST(1)    ;#4
+    Fld b        ;#5
+    Fadd ST(2),ST    ;#6
+    Fmul ST,ST(1)    ;#7
+    Fadd ST,ST(1)    ;#8
+    Fadd ST,ST(2)    ;#9
+    Ffree ST(2)    ;#10
+                ;eliberez registrul ST(2)
+    Ffree ST(1)    ;#11
+    Fstp ES:e        ;#12
+
+    mov AX,4c00h
+    int 21h
+Main ENDS
+end start</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">DateIn SEGMENT
+	a DD 1.23
+	b DD 3.6
+DateIn ENDS
+
+DateOut	SEGMENT
+	e DD ?
+DateOut ENDS
+
+Main SEGMENT
+	ASSUME CS:Main, DS:DateIn, ES:DateOut
+start:
+	mov AX,DateIn
+	mov DS,AX
+	mov AX,DateOut
+	mov ES,AX
+
+	Fld a		;#1
+	Fld a		;#2
+	Fmul ST,ST	;#3
+	Fxch ST(1)	;#4
+	Fld b		;#5
+	Fadd ST(2),ST	;#6
+	Fmul ST,ST(1)	;#7
+	Fadd ST,ST(1)	;#8
+	Fadd ST,ST(2)	;#9
+	Ffree ST(2)	;#10
+				;eliberez registrul ST(2)
+	Ffree ST(1)	;#11
+	Fstp ES:e		;#12
+
+	mov AX,4c00h
+	int 21h
+Main ENDS
+end start
+
+</pre>
+
+
+
+<p>Pentru programul anterior stiva registrelor coprocesorului trece prin urmatoarele faze:</p>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-subtle-pale-blue-background-color has-background"><tbody><tr><td>&nbsp;</td><td><strong>#1</strong></td><td><strong>#2</strong></td><td> <strong>#3</strong></td><td><strong>#4</strong></td><td><strong>#5</strong></td><td><strong>#6</strong></td><td><strong>#7</strong></td><td><strong>#8</strong></td><td><strong>#9</strong></td><td><strong>#10</strong></td><td><strong>#11</strong></td><td><strong>#12</strong></td></tr><tr><td><strong>ST</strong></td><td>1.23</td><td>1.23</td><td>1.5129</td><td>1.23</td><td>3.6</td><td>3.6</td><td>4.428</td><td>5.658</td><td>10.7709</td><td>10.7709</td><td>10.7709</td><td><strong>–</strong></td></tr><tr><td><strong>ST(1)</strong></td><td>–</td><td>1.23</td><td>1.23</td><td>1.5129</td><td>1.23</td><td>1.23</td><td>1.23</td><td>1.23</td><td>1.23</td><td>1.23</td><td> –</td><td><strong>–</strong></td></tr><tr><td><strong>ST(2)</strong></td><td>–</td><td> –</td><td>–</td><td> –</td><td>1.5129</td><td>5.1129</td><td>5.1129</td><td>5.1129</td><td>5.1129</td><td> –</td><td>–</td><td><strong>–</strong></td></tr></tbody></table></figure>
+
+
+
+<h4 class="wp-block-heading"><strong>Formatul Register<br></strong></h4>
+
+
+
+<ul class="wp-block-list"><li> sintaxa <strong>F</strong>instructiune <strong>ST(nr),ST</strong> sau <strong>F</strong>instructiune <strong>ST,ST(nr)</strong>; </li></ul>
+
+
+
+<ul class="wp-block-list"><li> instructiuni care trateaza registrele coprocesorului ca registre independente si nu ca parti ale unei stive; </li><li> indiferent de sintaxa, unul dintre operanzi trebuie sa fie ST; </li><li> primul operand este destinatia, iar cel de-al doilea este sursa; </li><li> rezultatul instructiunii este pus in destinatie, sursa ramanand nemodificata; </li><li> astfel de instructiuni sunt cele ce implementeaza operatii matematice si care necesita scoaterea valorii din varful stivei; </li></ul>
+
+
+
+<p><strong>Exemplu aplicatie assembler ce prelucreaza valori reale</strong>: evaluarea expresiei: e = a + b + c + d</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">DateIn</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">a</span><span class="enlighter-text"> DD </span><span class="enlighter-n1">1</span><span class="enlighter-text">.</span><span class="enlighter-n1">23</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">b</span><span class="enlighter-text"> DD </span><span class="enlighter-n1">3</span><span class="enlighter-text">.</span><span class="enlighter-n1">6</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">c</span><span class="enlighter-text"> DD </span><span class="enlighter-n1">3</span><span class="enlighter-text">.</span><span class="enlighter-n1">5</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">d</span><span class="enlighter-text"> DD </span><span class="enlighter-n1">7</span><span class="enlighter-text">.</span><span class="enlighter-n1">43</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">DateIn</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">DateOut</span><span class="enlighter-text">    SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">e</span><span class="enlighter-text"> DD ?</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">DateOut</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Main</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">ASSUME</span><span class="enlighter-text"> CS:Main, DS:DateIn, ES</span><span class="enlighter-k0">:</span><span class="enlighter-k0">DateOut</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k6">start:</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,DateIn</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> DS,AX</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,DateOut</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> ES,AX</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fld</span><span class="enlighter-text"> a        </span><span class="enlighter-co0">;#1</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fld</span><span class="enlighter-text"> b        </span><span class="enlighter-co0">;#2</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fld</span><span class="enlighter-text"> c        </span><span class="enlighter-co0">;#3</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fld</span><span class="enlighter-text"> d        </span><span class="enlighter-co0">;#4</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Faddp</span><span class="enlighter-text"> </span><span class="enlighter-m0">ST</span><span class="enlighter-text">(</span><span class="enlighter-n1">3</span><span class="enlighter-text">),ST    </span><span class="enlighter-co0">;#5</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Faddp</span><span class="enlighter-text"> </span><span class="enlighter-m0">ST</span><span class="enlighter-text">(</span><span class="enlighter-n1">2</span><span class="enlighter-text">),ST    </span><span class="enlighter-co0">;#6</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Faddp</span><span class="enlighter-text"> </span><span class="enlighter-m0">ST</span><span class="enlighter-text">(</span><span class="enlighter-n1">1</span><span class="enlighter-text">),ST    </span><span class="enlighter-co0">;#7</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fstp</span><span class="enlighter-text"> ES</span><span class="enlighter-k0">:</span><span class="enlighter-k0">e</span><span class="enlighter-text">        </span><span class="enlighter-co0">;#8</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,</span><span class="enlighter-n2">4c00h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">int</span><span class="enlighter-text"> </span><span class="enlighter-n2">21h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Main</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">end</span><span class="enlighter-text"> start</span></div></div></div><div class="enlighter-raw">DateIn SEGMENT
+    a DD 1.23
+    b DD 3.6
+    c DD 3.5
+    d DD 7.43
+DateIn ENDS
+
+DateOut    SEGMENT
+    e DD ?
+DateOut ENDS
+
+Main SEGMENT
+    ASSUME CS:Main, DS:DateIn, ES:DateOut
+start:
+    mov AX,DateIn
+    mov DS,AX
+    mov AX,DateOut
+    mov ES,AX
+
+    Fld a        ;#1
+    Fld b        ;#2
+    Fld c        ;#3
+    Fld d        ;#4
+    Faddp ST(3),ST    ;#5
+    Faddp ST(2),ST    ;#6
+    Faddp ST(1),ST    ;#7
+    Fstp ES:e        ;#8
+
+    mov AX,4c00h
+    int 21h
+Main ENDS
+end start</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">DateIn SEGMENT
+	a DD 1.23
+	b DD 3.6
+	c DD 3.5
+	d DD 7.43
+DateIn ENDS
+
+DateOut	SEGMENT
+	e DD ?
+DateOut ENDS
+
+Main SEGMENT
+	ASSUME CS:Main, DS:DateIn, ES:DateOut
+start:
+	mov AX,DateIn
+	mov DS,AX
+	mov AX,DateOut
+	mov ES,AX
+
+	Fld a		;#1
+	Fld b		;#2
+	Fld c		;#3
+	Fld d		;#4
+	Faddp ST(3),ST	;#5
+	Faddp ST(2),ST	;#6
+	Faddp ST(1),ST	;#7
+	Fstp ES:e		;#8
+
+	mov AX,4c00h
+	int 21h
+Main ENDS
+end start
+</pre>
+
+
+
+<p>Pentru programul anterior stiva registrelor coprocesorului trece prin urmatoarele faze:</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>&nbsp;</td><td>                     <strong>#1</strong></td><td>                     <strong>#2</strong></td><td><strong>#3</strong></td><td>                     <strong>#4</strong></td><td>
+                    <strong>#5</strong>
+                </td><td>
+                    <strong>#6</strong>
+                </td><td>
+                    <strong>#7</strong>
+                </td><td>
+                    <strong>#8</strong>
+                </td><td>
+                    <strong>#9</strong>
+                </td><td>
+                    <strong>#10</strong>
+                </td><td>
+                    <strong>#11</strong>
+                </td><td>
+                    <strong>#12</strong><p></p>
+                </td></tr><tr><td><strong>ST</strong>                 </td><td>                     1.23</td><td>                     1.23</td><td>                     1.5129</td><td>                     1.23</td><td>
+                    3.6
+                </td><td>
+                    3.6
+                </td><td>
+                    4.428
+                </td><td>
+                    5.658
+                </td><td>
+                    10.7709
+                </td><td>
+                    10.7709
+                </td><td>
+                    10.7709
+                </td><td>
+                    <strong>–</strong>
+                </td></tr><tr><td>
+                    <strong>ST(1)</strong>
+                </td><td>
+                    –
+                </td><td>                     1.23</td><td>                     1.23</td><td>                     1.5129</td><td>
+                    1.23
+                </td><td>
+                    1.23
+                </td><td>
+                    1.23
+                </td><td>
+                    1.23
+                </td><td>
+                    1.23
+                </td><td>
+                    1.23
+                </td><td>
+                    –
+                </td><td>
+                    <strong>–</strong>
+                </td></tr><tr><td>
+                    <strong>ST(2)</strong>
+                </td><td>
+                    –
+                </td><td>
+                    –
+                </td><td>
+                    –
+                </td><td>
+                    –
+                </td><td>
+                    1.5129
+                </td><td>
+                    5.1129
+                </td><td>
+                    5.1129
+                </td><td>
+                    5.1129
+                </td><td>
+                    5.1129
+                </td><td>
+                    –
+                </td><td>
+                    –
+                </td><td>
+                    <strong>–</strong>
+                </td></tr></tbody></table></figure>
+
+
+
+<p>Exemplu complet de program in limbaj de asamblare ce rezolva ecuatia de gradul al 2-lea: aX<sup>2</sup>+bX+c=0 unde a = 3.8, b = 8.2 si c = 1.6.</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">DateIn</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">a</span><span class="enlighter-text"> DD </span><span class="enlighter-n1">3</span><span class="enlighter-text">.</span><span class="enlighter-n1">8</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">b</span><span class="enlighter-text"> DD </span><span class="enlighter-n1">8</span><span class="enlighter-text">.</span><span class="enlighter-n1">2</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">c</span><span class="enlighter-text"> DD </span><span class="enlighter-n1">1</span><span class="enlighter-text">.</span><span class="enlighter-n1">6</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">DateIn</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">DateOut</span><span class="enlighter-text">    SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">x1</span><span class="enlighter-text"> DD ?</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">x2</span><span class="enlighter-text"> DD ?</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">DateOut</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Main</span><span class="enlighter-text"> SEGMENT</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">ASSUME</span><span class="enlighter-text"> CS:Main, DS</span><span class="enlighter-k0">:</span><span class="enlighter-k0">DateIn</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k6">start:</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,DateIn</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> DS,AX</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fld1</span><span class="enlighter-text">        </span><span class="enlighter-co0">;incarc valoarea 1 in ST - #1</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fadd</span><span class="enlighter-text"> ST,ST    </span><span class="enlighter-co0">;adun ST cu ST si obtin 2 - #2</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">FLD</span><span class="enlighter-text"> ST    </span><span class="enlighter-co0">;incarc valoarea din ST - #3</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fmul</span><span class="enlighter-text"> a    </span><span class="enlighter-co0">;obtin 2*a - #4</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fmul</span><span class="enlighter-text"> </span><span class="enlighter-m0">ST</span><span class="enlighter-text">(</span><span class="enlighter-n1">1</span><span class="enlighter-text">),ST    </span><span class="enlighter-co0">;calculez valoarea lui 4*a - #5</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fxch</span><span class="enlighter-text">        </span><span class="enlighter-co0">;interschimb ST cu ST(1) - #6</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fmul</span><span class="enlighter-text"> c    </span><span class="enlighter-co0">;inmultesc ST cu c si obtin valoarea lui 4*a*c - #7</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fld</span><span class="enlighter-text"> b        </span><span class="enlighter-co0">;incarc valoarea lui b in ST - #8</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fmul</span><span class="enlighter-text"> ST,ST    </span><span class="enlighter-co0">;inmultesc ST cu ST si obtin b*b - #9</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">FsubR</span><span class="enlighter-text">        </span><span class="enlighter-co0">;scadere inversa (adica ST(1) = ST-ST(1) si scoate </span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-co0">;valoarea din ST  - #10</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">            </span><span class="enlighter-co0">;doar Fsub ar fi scazut ST(1) = ST(1)-ST</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">            </span><span class="enlighter-co0">;am obtinut valoarea lui b*b - 4*a*c</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-co0">;ATENTIE PROGRAMUL NU VALIDEAZA DACA VALOAREA DIN CARE FACE RADICAL </span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-co0">;ESTE SAU NU MAI MICA DECAT ZERO (tema !!!)</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fsqrt</span><span class="enlighter-text">        </span><span class="enlighter-co0">;radical din ST adica din b*b-4*a*c - #11</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fld</span><span class="enlighter-text"> b        </span><span class="enlighter-co0">;incarc valoarea lui b - #12</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fchs</span><span class="enlighter-text">        </span><span class="enlighter-co0">;schim semnul valorii din ST - #13</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fxch</span><span class="enlighter-text">        </span><span class="enlighter-co0">;interschimb valorile din ST si ST(1) - #14</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fld</span><span class="enlighter-text"> ST    </span><span class="enlighter-co0">;incarc valoarea lui ST (valoarea radicalului) - #15</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fadd</span><span class="enlighter-text"> ST,</span><span class="enlighter-m0">ST</span><span class="enlighter-text">(</span><span class="enlighter-n1">2</span><span class="enlighter-text">)    </span><span class="enlighter-co0">;adun in ST ST+ST(2) si obtin -b + valoare </span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-co0">;radical - #16</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fxch</span><span class="enlighter-text">            </span><span class="enlighter-co0">;interschimb valorile din ST si ST(1) - #17</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fsubp</span><span class="enlighter-text"> </span><span class="enlighter-m0">ST</span><span class="enlighter-text">(</span><span class="enlighter-n1">2</span><span class="enlighter-text">),ST    </span><span class="enlighter-co0">;fac ST(2) = ST(2) - ST si apoi scot valoarea </span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-co0">;lui ST - #18</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">ASSUME</span><span class="enlighter-text"> DS</span><span class="enlighter-k0">:</span><span class="enlighter-k0">DateOut</span><span class="enlighter-text">        </span><span class="enlighter-co0">;schimb segmentul de date</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,DateOut        </span><span class="enlighter-co0">;pentru a scrie valoarea rezultatelor</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> DS,AX</span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fdiv</span><span class="enlighter-text"> ST,</span><span class="enlighter-m0">ST</span><span class="enlighter-text">(</span><span class="enlighter-n1">2</span><span class="enlighter-text">)    </span><span class="enlighter-co0">;fac ST = ST / ST(2) - #19</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fstp</span><span class="enlighter-text"> x1        </span><span class="enlighter-co0">;scot rezultatul in x1 - #20</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">FdivR</span><span class="enlighter-text">        </span><span class="enlighter-co0">;impartire inversa adica ST(1) = ST /ST(1)</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">            </span><span class="enlighter-co0">;si scot valoarea din ST - #21</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">            </span><span class="enlighter-co0">;pe impartire normala Fdiv face ST(1) = ST(1)/ST</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">Fstp</span><span class="enlighter-text"> x2    </span><span class="enlighter-co0">;scot rezultatul in x2 - #22</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">mov</span><span class="enlighter-text"> AX,</span><span class="enlighter-n2">4c00h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">int</span><span class="enlighter-text"> </span><span class="enlighter-n2">21h</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Main</span><span class="enlighter-text"> ENDS</span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">end</span><span class="enlighter-text"> start</span></div></div></div><div class="enlighter-raw">DateIn SEGMENT
+    a DD 3.8
+    b DD 8.2
+    c DD 1.6
+DateIn ENDS
+
+DateOut    SEGMENT
+    x1 DD ?
+    x2 DD ?
+DateOut ENDS
+
+Main SEGMENT
+    ASSUME CS:Main, DS:DateIn
+start:
+    mov AX,DateIn
+    mov DS,AX
+
+    Fld1        ;incarc valoarea 1 in ST - #1
+    Fadd ST,ST    ;adun ST cu ST si obtin 2 - #2
+    FLD ST    ;incarc valoarea din ST - #3
+    Fmul a    ;obtin 2*a - #4
+
+    Fmul ST(1),ST    ;calculez valoarea lui 4*a - #5
+    Fxch        ;interschimb ST cu ST(1) - #6
+    Fmul c    ;inmultesc ST cu c si obtin valoarea lui 4*a*c - #7
+
+    Fld b        ;incarc valoarea lui b in ST - #8
+    Fmul ST,ST    ;inmultesc ST cu ST si obtin b*b - #9
+    FsubR        ;scadere inversa (adica ST(1) = ST-ST(1) si scoate 
+;valoarea din ST  - #10
+            ;doar Fsub ar fi scazut ST(1) = ST(1)-ST
+            ;am obtinut valoarea lui b*b - 4*a*c
+
+;ATENTIE PROGRAMUL NU VALIDEAZA DACA VALOAREA DIN CARE FACE RADICAL 
+;ESTE SAU NU MAI MICA DECAT ZERO (tema !!!)
+
+    Fsqrt        ;radical din ST adica din b*b-4*a*c - #11
+    Fld b        ;incarc valoarea lui b - #12
+    Fchs        ;schim semnul valorii din ST - #13
+    Fxch        ;interschimb valorile din ST si ST(1) - #14
+    
+    Fld ST    ;incarc valoarea lui ST (valoarea radicalului) - #15
+    Fadd ST,ST(2)    ;adun in ST ST+ST(2) si obtin -b + valoare 
+;radical - #16
+    Fxch            ;interschimb valorile din ST si ST(1) - #17
+    Fsubp ST(2),ST    ;fac ST(2) = ST(2) - ST si apoi scot valoarea 
+;lui ST - #18
+    
+    ASSUME DS:DateOut        ;schimb segmentul de date
+    mov AX,DateOut        ;pentru a scrie valoarea rezultatelor
+    mov DS,AX
+
+    Fdiv ST,ST(2)    ;fac ST = ST / ST(2) - #19
+    Fstp x1        ;scot rezultatul in x1 - #20
+    FdivR        ;impartire inversa adica ST(1) = ST /ST(1)
+            ;si scot valoarea din ST - #21
+            ;pe impartire normala Fdiv face ST(1) = ST(1)/ST
+    Fstp x2    ;scot rezultatul in x2 - #22
+    
+
+    mov AX,4c00h
+    int 21h
+Main ENDS
+end start</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">DateIn SEGMENT
+	a DD 3.8
+	b DD 8.2
+	c DD 1.6
+DateIn ENDS
+
+DateOut	SEGMENT
+	x1 DD ?
+	x2 DD ?
+DateOut ENDS
+
+Main SEGMENT
+	ASSUME CS:Main, DS:DateIn
+start:
+	mov AX,DateIn
+	mov DS,AX
+
+	Fld1		;incarc valoarea 1 in ST - #1
+	Fadd ST,ST	;adun ST cu ST si obtin 2 - #2
+	FLD ST	;incarc valoarea din ST - #3
+	Fmul a	;obtin 2*a - #4
+
+	Fmul ST(1),ST	;calculez valoarea lui 4*a - #5
+	Fxch		;interschimb ST cu ST(1) - #6
+	Fmul c	;inmultesc ST cu c si obtin valoarea lui 4*a*c - #7
+
+	Fld b		;incarc valoarea lui b in ST - #8
+	Fmul ST,ST	;inmultesc ST cu ST si obtin b*b - #9
+	FsubR		;scadere inversa (adica ST(1) = ST-ST(1) si scoate 
+;valoarea din ST  - #10
+			;doar Fsub ar fi scazut ST(1) = ST(1)-ST
+			;am obtinut valoarea lui b*b - 4*a*c
+
+;ATENTIE PROGRAMUL NU VALIDEAZA DACA VALOAREA DIN CARE FACE RADICAL 
+;ESTE SAU NU MAI MICA DECAT ZERO (tema !!!)
+
+	Fsqrt		;radical din ST adica din b*b-4*a*c - #11
+	Fld b		;incarc valoarea lui b - #12
+	Fchs		;schim semnul valorii din ST - #13
+	Fxch		;interschimb valorile din ST si ST(1) - #14
+	
+	Fld ST	;incarc valoarea lui ST (valoarea radicalului) - #15
+	Fadd ST,ST(2)	;adun in ST ST+ST(2) si obtin -b + valoare 
+;radical - #16
+	Fxch			;interschimb valorile din ST si ST(1) - #17
+	Fsubp ST(2),ST	;fac ST(2) = ST(2) - ST si apoi scot valoarea 
+;lui ST - #18
+	
+	ASSUME DS:DateOut		;schimb segmentul de date
+	mov AX,DateOut		;pentru a scrie valoarea rezultatelor
+	mov DS,AX
+
+	Fdiv ST,ST(2)	;fac ST = ST / ST(2) - #19
+	Fstp x1		;scot rezultatul in x1 - #20
+	FdivR		;impartire inversa adica ST(1) = ST /ST(1)
+			;si scot valoarea din ST - #21
+			;pe impartire normala Fdiv face ST(1) = ST(1)/ST
+	Fstp x2	;scot rezultatul in x2 - #22
+	
+
+	mov AX,4c00h
+	int 21h
+Main ENDS
+end start
+</pre>
+
+
+
+<p>Pentru programul anterior stiva registrelor coprocesorului trece prin urmatoarele faze:</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>&nbsp;</td><td>
+<p style="text-align: center;"><strong>#1</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>#2</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>#3</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>#4</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>#5</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>#6</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>#7</strong></p>
+</td><td> <p style="text-align: center;"><strong>#8</strong></p></td><td>
+<p style="text-align: center;"><strong>#9</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>#10</strong></p>
+</td></tr><tr><td> <p style="text-align: justify;"><strong>ST</strong></p></td><td>
+<p style="text-align: center;">1</p>
+</td><td>
+<p style="text-align: center;">2</p>
+</td><td>
+<p style="text-align: center;">2</p>
+</td><td>
+<p style="text-align: center;">7.6</p>
+</td><td>
+<p style="text-align: center;">7.6</p>
+</td><td>
+<p style="text-align: center;">15.2</p>
+</td><td>
+<p style="text-align: center;">24.32</p>
+</td><td>
+<p style="text-align: center;">8.2</p>
+</td><td>
+<p style="text-align: center;">67.24</p>
+</td><td>
+<p style="text-align: center;"><strong>42.92</strong></p>
+</td></tr><tr><td> <p style="text-align: justify;"><strong>ST(1)</strong></p></td><td>
+<p style="text-align: center;">–</p>
+</td><td>&nbsp;</td><td>
+<p style="text-align: center;">2</p>
+</td><td>
+<p style="text-align: center;">2</p>
+</td><td>
+<p style="text-align: center;">15.2</p>
+</td><td>
+<p style="text-align: center;">7.6</p>
+</td><td>
+<p style="text-align: center;">7.6</p>
+</td><td>
+<p style="text-align: center;">24.32</p>
+</td><td>
+<p style="text-align: center;">24.32</p>
+</td><td>
+<p style="text-align: center;"><strong>7.6</strong></p>
+</td></tr><tr><td> <p style="text-align: justify;"><strong>ST(2)</strong></p></td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">7.6</p>
+</td><td>
+<p style="text-align: center;">7.6</p>
+</td><td>
+<p style="text-align: center;"><strong>–</strong></p>
+</td></tr><tr><td> <p style="text-align: justify;"><strong>ST(3)</strong></p></td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;"><strong>–</strong></p>
+</td></tr><tr><td> <p style="text-align: justify;"><strong>ST(4)</strong></p></td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;"><strong>–</strong></p>
+</td></tr></tbody></table></figure>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>&nbsp;</td><td>
+<p style="text-align: center;"><strong>#11</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>#12</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>#13</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>#14</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>#15</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>#16</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>#17</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>#18</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>#19</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>#20</strong></p>
+</td><td>
+<p style="text-align: center;"><strong>#21</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>ST</strong></p>
+</td><td>
+<p style="text-align: center;">6.55</p>
+</td><td>
+<p style="text-align: center;">8.2</p>
+</td><td>
+<p style="text-align: center;">-8.2</p>
+</td><td>
+<p style="text-align: center;">6.55</p>
+</td><td>
+<p style="text-align: center;">6.55</p>
+</td><td>
+<p style="text-align: center;">-1.64</p>
+</td><td>
+<p style="text-align: center;">6.55</p>
+</td><td>
+<p style="text-align: center;">-1.64</p>
+</td><td>
+<p style="text-align: center;">0.21</p>
+</td><td>
+<p style="text-align: center;">-14.75</p>
+</td><td>
+<p style="text-align: center;"><strong>-1.94</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>ST(1)</strong></p>
+</td><td>
+<p style="text-align: center;">7.6</p>
+</td><td>
+<p style="text-align: center;">6.55</p>
+</td><td>
+<p style="text-align: center;">6.55</p>
+</td><td>
+<p style="text-align: center;">-8.2</p>
+</td><td>
+<p style="text-align: center;">6.55</p>
+</td><td>
+<p style="text-align: center;">6.55</p>
+</td><td>
+<p style="text-align: center;">-1.64</p>
+</td><td>
+<p style="text-align: center;">-14.75</p>
+</td><td>
+<p style="text-align: center;">-14.75</p>
+</td><td>
+<p style="text-align: center;">7.6</p>
+</td><td>
+<p style="text-align: center;"><strong>–</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>ST(2)</strong></p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">7.6</p>
+</td><td>
+<p style="text-align: center;">7.6</p>
+</td><td>
+<p style="text-align: center;">7.6</p>
+</td><td>
+<p style="text-align: center;">-8.2</p>
+</td><td>
+<p style="text-align: center;">-8.2</p>
+</td><td>
+<p style="text-align: center;">-8.2</p>
+</td><td>
+<p style="text-align: center;">7.6</p>
+</td><td>
+<p style="text-align: center;">7.6</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;"><strong>–</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>ST(3)</strong></p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">7.6</p>
+</td><td>
+<p style="text-align: center;">7.6</p>
+</td><td>
+<p style="text-align: center;">7.6</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;"><strong>–</strong></p>
+</td></tr><tr><td>
+<p style="text-align: justify;"><strong>ST(4)</strong></p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;">–</p>
+</td><td>
+<p style="text-align: center;"><strong>–</strong></p>
+</td></tr></tbody></table></figure>
+
+
+
+<h4 class="wp-block-heading"><strong>Alte tipuri de instructiuni<br></strong></h4>
+
+
+
+<p><strong>ATENtie ! </strong>In cazul instructiunilor cu 2 operanzi , primul este destinatia iar al doilea este sursa. Rezultatul operatiei se pune in destinatie, deci aceste instructiuni sunt echivalente operatiei destinatie = destinatie &lt;operatie&gt; sursa. In cazul instructiunilor care au un <strong>R</strong> la sfarsit (de ex: FsubR, FdivR) operatia are loc invers, adica: destinatie = sursa &lt;operatie&gt; destinatie. <strong><br></strong></p>
+
+
+
+<p>Instructiunile care au un <strong>P</strong> la sfarsit scot valoarea din ST.</p>
+
+
+
+<p><strong>Operatii aritmetice:<br></strong></p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>
+<p><strong>FADD [operanzi]<br></strong></p>
+<p><strong>FADDP op1,op2<br></strong></p>
+<p><strong>FIADD vb</strong></p>
+</td><td>
+<p>aduna doua numere reale</p>
+<p>aduna cei doi operanzi si descarca stiva</p>
+<p>aduna un intreg de 16/32 de biti la ST</p>
+</td></tr><tr><td>
+<p><strong>FSUB [operanzi]<br></strong></p>
+<p><strong>FSUB op1,op2<br></strong></p>
+<p><strong>FSUB vb<br></strong></p>
+<p><strong>FSUBR [operanzi]<br></strong></p>
+<p><strong>FSUBRPop1,op2<br></strong></p>
+<p><strong>FSUBR vb</strong></p>
+</td><td>
+<p>scade numere reale</p>
+<p>scade op2 din op1 si se descarca stiva</p>
+<p>scade intreg de 16/32 de biti din ST</p>
+<p>scade inversa numerele reale</p>
+<p>scade op1 din op2 si se descarca stiva</p>
+<p>scade ST dintr-un intreg de 16/32 de biti</p>
+</td></tr><tr><td>
+<p><strong>FMUL [operanzi] FMULP op1,op2 FMUL vb</strong></p>
+</td><td>
+<p>inmultire numere reale</p>
+<p>inmultire de numere reale (op1 * op2), cu descarcarea stivei inmultire ST cu intreg din memorie, de 16/32 de biti</p>
+</td></tr><tr><td>
+<p><strong>FDIV [operanzi]<br></strong></p>
+<p><strong>FDIVP op1,op2<br></strong></p>
+<p><strong>FIDIV vb<br></strong></p>
+<p><strong>FDIVR [operanzi]<br></strong></p>
+<p><strong>FDIVRP opl/op2<br></strong></p>
+<p>&nbsp;</p>
+<p><strong>FDIVR vb</strong></p>
+</td><td>
+<p>impartire de numere reale (op1/op2)</p>
+<p>impartire op1/op2 si descarcarea stivei</p>
+<p>impartirea lui ST la un intreg de 16/32 de biti</p>
+<p>impartire inversa de numere reale (op2/op1)</p>
+<p>impartire inversa de numere reale (op2/op1) cu descarcarea stivei</p>
+<p>impartirea unui intreg de 16/32 de biti la ST</p>
+</td></tr><tr><td>
+<p><strong>FSQRT<br></strong></p>
+<p><strong>FSCALE<br></strong></p>
+<p><strong>FPREM<br></strong></p>
+<p><strong>FRNDINT<br></strong></p>
+<p><strong>FXTRACT<br></strong></p>
+<p>&nbsp;</p>
+<p><strong>FABS<br></strong></p>
+<p><strong>FCHS</strong></p>
+</td><td>
+<p>radacina patrata din ST</p>
+<p>ST←ST*2<sup>ST(1)</sup>, ST(1) interpretat ca intreg impartire modulo: ST / ST(1)</p>
+<p>rotunjire varf stiva, ST, la intreg ‘</p>
+<p>descompune numarul din varful stivei in doua numere: exponent si mantisa; dupa care mantisa este depusa in stiva.</p>
+<p>ST = |ST|</p>
+<p>ST = -ST</p>
+</td></tr></tbody></table></figure>
+
+
+
+<p><strong>Instructiuni matematice pentru calcule complexe in limbaj</strong></p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>
+<p><strong>FCOS</strong></p>
+</td><td>
+<p>cosinusul lui ST</p>
+</td></tr><tr><td>
+<p><strong>FPATAN</strong></p>
+</td><td>
+<p>arctangent de ST(1 )/ST si extrage (descarca) ST</p>
+</td></tr><tr><td>
+<p><strong>FPTAN</strong></p>
+</td><td>
+<p>tangenta partiala de ST (Y/X – rezultat), Y inlocuieste ST, X este depus in stiva</p>
+</td></tr><tr><td>
+<p><strong>FSIN</strong></p>
+</td><td>
+<p style="text-align: justify;">sinusul lui ST</p>
+</td></tr><tr><td>
+<p><strong>FSINCOS</strong></p>
+</td><td>
+<p>(temp)← ST, ST = sin (temp) si depune in stiva cos(temp)</p>
+</td></tr><tr><td>
+<p><strong>F2XM1</strong></p>
+</td><td>
+<p style="text-align: justify;">2<sup>ST</sup>-1; -1≤ST≤1</p>
+</td></tr><tr><td>
+<p><strong>FYL2X</strong></p>
+</td><td>
+<p style="text-align: justify;">ST(1) = ST(1) * log<sub>2</sub>(ST(0)) si descarca stiva</p>
+</td></tr><tr><td>
+<p><strong>FYL2XP1</strong></p>
+</td><td>
+<p style="text-align: justify;">ST(1) = ST(1) * log<sub>2</sub>(ST(0)+1) si descarca stiva</p>
+</td></tr></tbody></table></figure>
+
+
+
+<p><strong>Instructiuni de comparare si de control<br></strong></p>
+
+
+
+<p>O parte din flag-urile celor 7 registre (pe 16 biti) de control gestioneaza operatiile coprocesorului si starea curenta a acestuia.</p>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td><strong>Nr. registru</strong></td><td><strong>Registre de control</strong></td><td></td></tr><tr><td><strong>1</strong></td><td>Cuvânt de control</td><td>&nbsp;</td></tr><tr><td><strong>2</strong></td><td>Cuvânt de stare</td><td>&nbsp;</td></tr><tr><td><strong>3</strong></td><td>Cuvânt Eticheta (Tag)</td><td>&nbsp;</td></tr><tr><td><strong>4</strong></td><td></td><td><strong>Instruction Pointer</strong></td></tr><tr><td><strong>5</strong></td><td></td></tr><tr><td><strong>6</strong></td><td></td><td><strong>Operand pointer</strong></td></tr><tr><td><strong>7</strong></td><td></td></tr></tbody></table></figure>
+
+
+
+<p>Registrul asociat cuvantului de stare este cel mai folosit, restul fiind utilizati de programatorii de sistem.</p>
+
+
+
+<p>Modul in care sunt aranjati bitii din octetul superior este identic cu modul de aranjare a flag-urilor din registrul de flag al procesorului. Situatia un este intamplatoare si faciliteaza controlul executiei programului in cazul coprocesorului (acesta nu are instructiuni de salt conditionat si atunci trebuie sa trimita procesorului informatia).</p>
+
+
+
+<p>Octetul superior al cuvantului de stare:</p>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td><strong>15</strong></td><td><strong>14</strong></td><td><strong>13</strong></td><td><strong>12</strong></td><td><strong>11</strong></td><td><strong>10</strong></td><td><strong>9</strong></td><td><strong>8</strong></td></tr><tr><td></td><td>C3</td><td></td><td></td><td>&nbsp;</td><td>C2</td><td>C1</td><td><strong>C0</strong></td></tr></tbody></table><figcaption>Octetul superior al registrului de flag-uri al procesorului</figcaption></figure>
+
+
+
+<p>Octetul inferior al registrului de flag-uri al procesorului:</p>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td class="has-text-align-center" data-align="center"><strong>7</strong></td><td class="has-text-align-center" data-align="center"><strong>6</strong></td><td><strong>5</strong></td><td class="has-text-align-center" data-align="center"><strong>4</strong></td><td class="has-text-align-center" data-align="center"><strong>3</strong></td><td class="has-text-align-center" data-align="center"><strong>2</strong></td><td><strong>1</strong></td><td class="has-text-align-center" data-align="center"><strong>0</strong></td></tr><tr><td class="has-text-align-center" data-align="center">SF</td><td class="has-text-align-center" data-align="center">ZF</td><td>&nbsp;</td><td class="has-text-align-center" data-align="center">AF</td><td class="has-text-align-center" data-align="center">&nbsp;</td><td class="has-text-align-center" data-align="center">PF</td><td></td><td class="has-text-align-center" data-align="center"><strong>CF</strong></td></tr></tbody></table><figcaption>Octetul inferior al registrului de flag-uri al procesorului</figcaption></figure>
+
+
+
+<p>Coprocesorul are instructiuni care seteaza flag-urile din cuvantul de stare (unul dintre registrele de stare). Acest registru este utilizat pentru a controla executia programului si pentru a introduce structuri de control prin intermediul salturilor conditionate. Singura problema este ca, coprocesorul matematic nu are instructiuni de salt, doar procesorul are. Din acest motiv cuvantul de stare trebuie incarcat in memorie in Flag-urile procesorului astfel incat sa se pastreze semnificatia valorilor. Solutia este data de incarcarea octetului superior din cuvantul de stare in octetul inferior din registrul de flag-uri al procesorului prin secventa:</p>
+
+
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-enlighter enlighter-l-assembly enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">Fstsw</span><span class="enlighter-text">     variabila_de_tip_word    </span><span class="enlighter-co0">;pun valoarea cuvantului de stare intr-o variabila    </span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">Fwait</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">mov</span><span class="enlighter-text">     AX, variabila_de_tip_word    </span><span class="enlighter-co0">;incarc valoarea variabilei in AX</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">sahf</span><span class="enlighter-text">                    </span><span class="enlighter-co0">;incarc valoarea din AH in registrul de Flag al </span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-co0">;procesorului</span></div></div></div><div class="enlighter-raw">Fstsw     variabila_de_tip_word    ;pun valoarea cuvantului de stare intr-o variabila    
+Fwait
+mov     AX, variabila_de_tip_word    ;incarc valoarea variabilei in AX
+sahf                    ;incarc valoarea din AH in registrul de Flag al 
+;procesorului</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="asm" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">Fstsw 	variabila_de_tip_word	;pun valoarea cuvantului de stare intr-o variabila	
+Fwait
+mov 	AX, variabila_de_tip_word	;incarc valoarea variabilei in AX
+sahf					;incarc valoarea din AH in registrul de Flag al 
+;procesorului
+</pre>
+
+
+
+<p>Odata incarcata aceasta valoare se pot instructiuni de salt conditionat pe baza valorilor din registrele coprocesorului matematic.</p>
+
+
+
+<p>Coprocesorul are o serie de instructiuni care analizeaza valoare din registrul ST in relatie cu valoarea altui operand si raporteaza rezultatul intr-un cod de conditie (dat de bitii C0, C1, C2, C3) ai cuvantului de stare. Operatiile de baza sunt de comparare si de testare(comparare cu zero).</p>
+
+
+
+<p>Modul in care sunt afectati bitii C0, C1, C2, C3 este:</p>
+
+
+
+<figure class="wp-block-table has-subtle-pale-blue-background-color has-background is-style-stripes"><table><thead><tr><th><strong>Dup</strong>a<strong> FCOM</strong></th><th><strong>Dup</strong>a<strong> FTEST</strong></th><th><strong>C3</strong></th><th><strong>C2</strong></th><th><strong>C0</strong></th></tr></thead><tbody><tr><td><strong>ST &gt; sursa</strong>                 </td><td>ST &gt; 0                 </td><td>                     0</td><td>                     0</td><td>                     <strong>0</strong></td></tr><tr><td><strong>ST &lt; sursa</strong>                 </td><td>ST &lt; 0                 </td><td>                     0 </td><td>                     0</td><td>                     <strong>1</strong></td></tr><tr><td><strong>ST = sursa</strong>                 </td><td>ST = 0                 </td><td>                     1</td><td>                     0</td><td>                     <strong>0</strong></td></tr><tr><td><strong>Nu se poate compara</strong>                 </td><td>Nu se poate testa; ST are valoarea NAN                 </td><td>                     1</td><td>                     1</td><td>                     <strong>1</strong></td></tr></tbody></table></figure>
+
+
+
+<p>Alte instrucțiuni de comparare a valorilor reale:</p>
+
+
+
+<figure class="wp-block-table is-style-stripes"><table class="has-subtle-pale-blue-background-color has-background"><tbody><tr><td><strong>FCOM op</strong></td><td><strong>compara ST cu operandul (registru sau rnemorie)</strong>                 </td></tr><tr><td><strong>FCOMP op</strong>                 </td><td><strong>compara ST cu operandul (registru sau memorie) si descarca                         stiva</strong>                 </td></tr><tr><td><strong>FCOMPP</strong>                 </td><td><strong>compara ST cu ST(1) si extrage ambele valori din                         stiva</strong>                 </td></tr><tr><td><strong>FICOM vb</strong>                 </td><td> <strong>compara ST cu un intreg de 16/32 de biti</strong>                 </td></tr><tr><td><strong>FICOMP vb</strong>                 </td><td><strong>compara ST cu un intreg de 16/32 de biti si extrage ST din                         stiva</strong>                 </td></tr><tr><td><strong>FUCOM op</strong>                 </td><td><strong>comparare cu NaN (Not a Number)</strong>                 </td></tr><tr><td><strong>FUCOMP op</strong>                 </td><td> <strong>comparare cu NaN (Not a Number) si extrage varful                         stivei</strong>                 </td></tr><tr><td><strong>FUCOMPP op</strong>                 </td><td><strong>compara ST cu ST(1) si extrage arabele valori din                         stiva</strong>                 </td></tr><tr><td><strong>FTST</strong>                 </td><td><strong>compara SI cu 0.0</strong>                 </td></tr><tr><td><strong>FXAM</strong>                 </td><td><strong>examineaza ST si stabileste codurile de conditie</strong>                                  </td></tr><tr><td><strong>FINIT</strong>                 </td><td><strong>reseteaza coprocesorul si cuvintele de stare si                         control</strong>                 </td></tr><tr><td> <strong>FFREE [reg]</strong>                 </td><td><strong>marcheaza registrul indicat ca fiind eliberat</strong>                 </td></tr></tbody></table></figure>
+        <div class="postmeta">
+      <div class="post-categories">
+        <ul class="post-categories">
+	<li><a href="https://www.itcsolutions.eu/ro/category/programare/assembler-8086-ro/" rel="category tag">Assembler 8086</a></li>
+	<li><a href="https://www.itcsolutions.eu/ro/category/programare/" rel="category tag">Programare</a></li></ul>      </div>
+      <div class="post-tags">
+       Tags: <a href="https://www.itcsolutions.eu/ro/tag/assembler-ro/" rel="tag">Assembler</a>, <a href="https://www.itcsolutions.eu/ro/tag/intel-8086-ro/" rel="tag">Intel 8086</a>      </div>
+      <div class="clear"></div>
+    </div><!-- postmeta --> 
+  </div><!-- .entry-content -->
+  
+  <footer class="entry-meta">
+      </footer> <!-- .entry-meta --> 
+  
+</article>                    
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-7-lucru-cu-segmente/" rel="prev">Tutorial Limbaj de Asamblare (Assembler) Intel 8086 – Partea 7 – Lucru cu segmente</a></div><div class="nav-next"><a href="https://www.itcsolutions.eu/ro/librarie-de-functii-si-proceduri-pentru-lucru-cu-matrici-masive-bidimensionale-in-limbajul-c-introducere/" rel="next">Librarie de functii si proceduri pentru lucru cu matrici (masive bidimensionale) in limbajul C si C++ – Introducere</a></div></div>
+	</nav>                    
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h2 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-8-lucru-in-virgula-mobila-valori-reale/#respond" style="display:none;">Cancel reply</a></small></h2><p class="must-log-in">You must be <a href="https://www.itcsolutions.eu/wp-login.php?redirect_to=https%3A%2F%2Fwww.itcsolutions.eu%2Fro%2Ftutorial-limbaj-de-asamblare-assembler-intel-8086-partea-8-lucru-in-virgula-mobila-valori-reale%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">Acest site folosește Akismet pentru a reduce spamul. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Află cum sunt procesate datele comentariilor tale</a>.</p>
+</div><!-- .comments-area -->                                <div class="clear"></div>
+            </div>          
+         </section>       
+        <div id="sidebar">    
+    <aside id="polylang-3" class="widget widget_polylang"><ul>
+	<li class="lang-item lang-item-793 lang-item-en no-translation lang-item-first"><a lang="en-US" hreflang="en-US" href="https://www.itcsolutions.eu/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAmVBMVEViZsViZMJiYrf9gnL8eWrlYkjgYkjZYkj8/PujwPybvPz4+PetraBEgfo+fvo3efkydfkqcvj8Y2T8UlL8Q0P8MzP9k4Hz8/Lu7u4DdPj9/VrKysI9fPoDc/EAZ7z7IiLHYkjp6ekCcOTk5OIASbfY/v21takAJrT5Dg6sYkjc3Nn94t2RkYD+y8KeYkjs/v7l5fz0dF22YkjWvcOLAAAAgElEQVR4AR2KNULFQBgGZ5J13KGGKvc/Cw1uPe62eb9+Jr1EUBFHSgxxjP2Eca6AfUSfVlUfBvm1Ui1bqafctqMndNkXpb01h5TLx4b6TIXgwOCHfjv+/Pz+5vPRw7txGWT2h6yO0/GaYltIp5PT1dEpLNPL/SdWjYjAAZtvRPgHJX4Xio+DSrkAAAAASUVORK5CYII=" alt="" width="16" height="11" style="width: 16px; height: 11px;"><span style="margin-left:0.3em;">English</span></a></li>
+	<li class="lang-item lang-item-794 lang-item-ro current-lang"><a lang="ro-RO" hreflang="ro-RO" href="https://www.itcsolutions.eu/ro/tutorial-limbaj-de-asamblare-assembler-intel-8086-partea-8-lucru-in-virgula-mobila-valori-reale/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAbFBMVEUAJsgAFMT13wDyAgLqAAB4muX8/G3581z5Vlb3RkZagt78/Ef5+T/08Tn1NTX1KSlQe9709Ez5+TX36S71GxvkAABHdNv4+CvzDw8AA7lqjuFBcNn29h/05Rg6adnfAAAAAK3nvQDrwgDkqgALguDCAAAAX0lEQVR4ARXHtWEDQBAEwNmn4BMz9V+eIzsTS8c7EWqR2mQgkJDTYHIZ5cRRg7XJWjG9tLIypqmVV7k0aN8f1vTw3OXaNft5mwyyG7NTxi/5+WPFSdYpPA+fSG60/4074PMLPA8bHzoAAAAASUVORK5CYII=" alt="" width="16" height="11" style="width: 16px; height: 11px;"><span style="margin-left:0.3em;">Română</span></a></li>
+</ul>
+</aside><aside id="search-3" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://www.itcsolutions.eu/ro/">
+	<label>
+		<input type="search" class="search-field" placeholder="Search..." value="" name="s">
+	</label>
+	<input type="submit" class="search-submit" value="Search">
+</form></aside><aside id="categories-3" class="widget widget_categories"><h3 class="widget-title">Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-622"><a href="https://www.itcsolutions.eu/ro/category/dispozitive/">Dispozitive</a> (1)
+</li>
+	<li class="cat-item cat-item-630"><a href="https://www.itcsolutions.eu/ro/category/multimedia-ro/">Multimedia</a> (12)
+<ul class="children">
+	<li class="cat-item cat-item-635"><a href="https://www.itcsolutions.eu/ro/category/multimedia-ro/audio-ro/">Audio</a> (1)
+</li>
+	<li class="cat-item cat-item-642"><a href="https://www.itcsolutions.eu/ro/category/multimedia-ro/flash-ro/">Flash</a> (5)
+</li>
+	<li class="cat-item cat-item-652"><a href="https://www.itcsolutions.eu/ro/category/multimedia-ro/flex-ro/">Flex</a> (1)
+</li>
+	<li class="cat-item cat-item-654"><a href="https://www.itcsolutions.eu/ro/category/multimedia-ro/photoshop-ro/">Photoshop</a> (5)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-885"><a href="https://www.itcsolutions.eu/ro/category/office-ro/">Office Ro</a> (7)
+<ul class="children">
+	<li class="cat-item cat-item-831"><a href="https://www.itcsolutions.eu/ro/category/office-ro/access-2003-ro/">Access 2003</a> (4)
+</li>
+	<li class="cat-item cat-item-807"><a href="https://www.itcsolutions.eu/ro/category/office-ro/excel-2010-ro/">Excel 2010</a> (1)
+</li>
+	<li class="cat-item cat-item-887"><a href="https://www.itcsolutions.eu/ro/category/office-ro/vba-ro/">VBA</a> (2)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-628"><a href="https://www.itcsolutions.eu/ro/category/programare/">Programare</a> (87)
+<ul class="children">
+	<li class="cat-item cat-item-633"><a href="https://www.itcsolutions.eu/ro/category/programare/android-ro/">Android</a> (7)
+</li>
+	<li class="cat-item cat-item-875"><a href="https://www.itcsolutions.eu/ro/category/programare/asp-net-ro/">ASP.NET</a> (4)
+</li>
+	<li class="cat-item cat-item-678"><a href="https://www.itcsolutions.eu/ro/category/programare/assembler-8086-ro/">Assembler 8086</a> (8)
+</li>
+	<li class="cat-item cat-item-618"><a href="https://www.itcsolutions.eu/ro/category/programare/cpp-ro/">C++</a> (9)
+</li>
+	<li class="cat-item cat-item-682"><a href="https://www.itcsolutions.eu/ro/category/programare/css-ro/">CSS</a> (2)
+</li>
+	<li class="cat-item cat-item-684"><a href="https://www.itcsolutions.eu/ro/category/programare/html-ro/">HTML</a> (2)
+</li>
+	<li class="cat-item cat-item-771"><a href="https://www.itcsolutions.eu/ro/category/programare/j2me-ro/">J2ME</a> (7)
+</li>
+	<li class="cat-item cat-item-795"><a href="https://www.itcsolutions.eu/ro/category/programare/java-ro/">Java</a> (22)
+</li>
+	<li class="cat-item cat-item-625"><a href="https://www.itcsolutions.eu/ro/category/programare/structuri-de-date/">Structuri de Date</a> (13)
+</li>
+	<li class="cat-item cat-item-857"><a href="https://www.itcsolutions.eu/ro/category/programare/vb-net-ro/">VB.NET</a> (21)
+</li>
+	<li class="cat-item cat-item-617"><a href="https://www.itcsolutions.eu/ro/category/programare/visual-studio-2013-ro/">Visual Studio 2013</a> (1)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-797"><a href="https://www.itcsolutions.eu/ro/category/security-ro/">Securitate Cibernetica</a> (2)
+</li>
+	<li class="cat-item cat-item-918"><a href="https://www.itcsolutions.eu/ro/category/sisteme-operare/">Sisteme de Operare</a> (11)
+<ul class="children">
+	<li class="cat-item cat-item-799"><a href="https://www.itcsolutions.eu/ro/category/sisteme-operare/windows-ro/">Windows</a> (7)
+</li>
+	<li class="cat-item cat-item-819"><a href="https://www.itcsolutions.eu/ro/category/sisteme-operare/windows-7-ro/">Windows 7</a> (5)
+</li>
+	<li class="cat-item cat-item-789"><a href="https://www.itcsolutions.eu/ro/category/sisteme-operare/windows-mobile-ro/">Windows Mobile</a> (1)
+</li>
+	<li class="cat-item cat-item-849"><a href="https://www.itcsolutions.eu/ro/category/sisteme-operare/windows-vista-ro/">Windows Vista</a> (5)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-419"><a href="https://www.itcsolutions.eu/ro/category/uncategorized-ro/">Uncategorized</a> (9)
+</li>
+			</ul>
+
+			</aside><aside id="archives-3" class="widget widget_archive"><h3 class="widget-title">Archives</h3>
+			<ul>
+					<li><a href="https://www.itcsolutions.eu/ro/2014/01/">January 2014</a>&nbsp;(2)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2012/03/">March 2012</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/10/">October 2011</a>&nbsp;(3)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/09/">September 2011</a>&nbsp;(3)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/08/">August 2011</a>&nbsp;(3)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/07/">July 2011</a>&nbsp;(3)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/06/">June 2011</a>&nbsp;(5)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/05/">May 2011</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/04/">April 2011</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/03/">March 2011</a>&nbsp;(4)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/02/">February 2011</a>&nbsp;(8)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2011/01/">January 2011</a>&nbsp;(2)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/12/">December 2010</a>&nbsp;(9)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/11/">November 2010</a>&nbsp;(13)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/06/">June 2010</a>&nbsp;(2)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/04/">April 2010</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/03/">March 2010</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/02/">February 2010</a>&nbsp;(10)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2010/01/">January 2010</a>&nbsp;(6)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/11/">November 2009</a>&nbsp;(5)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/10/">October 2009</a>&nbsp;(6)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/08/">August 2009</a>&nbsp;(1)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/07/">July 2009</a>&nbsp;(6)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/06/">June 2009</a>&nbsp;(22)</li>
+	<li><a href="https://www.itcsolutions.eu/ro/2009/05/">May 2009</a>&nbsp;(10)</li>
+			</ul>
+
+			</aside>	
+</div><!-- sidebar -->        <div class="clear"></div>
+    </div><!-- pagewraps -->
+</div><!-- container -->	
+<div id="footer-wrapper">
+	<div class="container">
+      	<p>IT&amp;C Solutions. All Rights Reserved</p>
+      	<p><a href="https://www.classictemplate.com/">Powered by WordPress</a></p>
+    </div><!--end .container-->
+</div><!--end .footer-wrapper-->
+<script type="text/javascript" src="https://www.itcsolutions.eu/wp-includes/js/comment-reply.min.js?ver=6.6.2" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+<script type="text/javascript" src="https://www.itcsolutions.eu/wp-content/plugins/enlighter/cache/enlighterjs.min.js?ver=5KG0XbvQb9WrQ+v" id="enlighterjs-js"></script>
+<script type="text/javascript" id="enlighterjs-js-after">
+/* <![CDATA[ */
+!function(e,n){if("undefined"!=typeof EnlighterJS){var o={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":4,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":false,"textOverflow":"break","linenumbers":true,"theme":"enlighter","language":"generic","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""}};(e.EnlighterJSINIT=function(){EnlighterJS.init(o.selectors.block,o.selectors.inline,o.options)})()}else{(n&&(n.error||n.log)||function(){})("Error: EnlighterJS resources not loaded yet!")}}(window,console);
+/* ]]> */
+</script>
+
+</body></html>

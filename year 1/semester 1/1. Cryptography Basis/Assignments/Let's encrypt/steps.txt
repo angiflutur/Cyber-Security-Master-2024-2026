@@ -1,0 +1,150 @@
+!!! For all the scenarios I used "secret_message.txt" as File Input which contains: "This is a secret message from Angelica-Costela Flutur."
+
+1. Generate and display the hash value (you can choose between MD5, SHA-1 or SHA-256)
+
+-----STEPS---------------------------------
+	For this exercise, I chose MD5. The implemented flow in Cryptool is as follows:
+
+- used components:
+	- File Input (secret_message.txt) -> loads the text file into CrypTool
+	- MD5 -> computes the hash of the file content
+	- String Encode (settings: Presentation Format = Hexadecimal) -> to convert the binary hash in hexadecimal format
+	- Text Output -> displays the final hash value
+
+- connections between components:
+	- File Input (Stream Output) -> MD5 (Input Stream)
+	- MD5 (Hashed Value - ICrypToolStream) -> String Encode (Stream input - ICrypToolStream)
+	- String Encode (Text Output) -> Text Output (Input Data)
+
+-----RESULT----------------------------------
+	8C 06 F1 EE 73 29 2E BB D8 74 DA A0 F7 C5 6A C2
+
+
+2. Choose a classic cipher (Playfair, Vigenere, XOR) and a password and encrypt the file
+
+-----STEPS---------------------------------
+	For this exercise, I chose the Playfair cipher. The implemented flow in CrypTool is as follows:
+
+- used components:
+	- File Input (secret_message.txt) -> loads the text file into CrypTool
+	- String Encode (settings: Presentation format = Text) -> converts the file input from stream format to text format (since Playfair doesn't accept stream input)
+	- Text Input (Password: "ANGI") -> contains the key of the Playfair cipher
+	- Playfair Cipher (default settings) -> to encrypt the text input with the given key
+	- Text Output -> shows the encrypted message
+
+- connections between components:
+	- File Input (Stream Output) -> String Encode (Stream Input - ICrypToolStream)
+	- String Encode (Text Output) -> Playfair Cipher (Text Input)
+	- Text Input ("ANGI") -> Playfair Cipher (Key phrase - Text Input)
+	- Playfair Cipher (Text Output) -> Text Output (Input Data)
+
+-----RESULT----------------------------------
+	UFGTGTGQFDSDSOMXQGEMDTPONGEMONKCFKTUDMICPRUQSW
+
+3. Choose a setting and encrypt the text using Enigma
+
+-----STEPS---------------------------------
+Since Enigma requires a text input, I preprocessed the file input using String Encode (similar to the Playfair scenario).
+
+- used components:
+	- File Input (secret_message.txt) -> loads the text file into CrypTool
+	- String Encode (Settings: Presentation Format = Text) -> converts the file stream into text format
+	- Enigma (Configured with the settings below) -> encrypts the text
+		- Initial rotor: NRQ
+		- Plugboard: C is L and L is C
+	- Text Output -> displays the encrypted message
+
+- connections between components:
+	- File Input (Stream Output) -> String Encode (Stream Input - ICrypToolStream)
+	- String Encode (Text Output) -> Enigma (Text Input)
+	- Enigma (Text Output) -> Text Output (Input Data)
+
+-----RESULT----------------------------------
+	Vjhe tc b ixlacd axjlbyz qpxc Cgoqbpoz-Bjaibxr Mtrgak.
+
+4. Choose a password and encrypt the text using AES in ECB mode
+
+-----STEPS---------------------------------
+	For this exercise I will use the password "angiangiangiangi", which is 16 bytes long, as required by AES in ECB mode.
+
+- used components:
+	- File Input -> loads the text file into CrypTool
+	- Text Input (password "angiangiangiangi") -> contains the password to be used for encryption
+	- String Decode (input format = text) -> to convert the password from text to bytes (because AES requires the key to be in byte format)
+	- AES (Configured with the settings below) -> encrypts the text using the password as the key
+		- Action = encrypt
+		- keysize = 128
+		- chaining mode = ECB
+		- padding mode = zeros
+	- String encode (settings: Presentation format = hexadecimal)-> converts the encrypted text into hexadecimal
+	- Text output -> displays the encrypted message
+
+- connections between components:
+	- File Input (Stream Output) -> AES (input)
+	- Text input -> String Decode 
+	- String Decode -> AES (key)
+	- AES (Output stream) -> String encode
+	- String encode -> text output
+
+-----RESULT----------------------------------
+	27 C4 29 E2 0A FF E6 A0 F9 60 A9 E0 A9 19 C6 14 95 30 78 41 1A F5 33 88 EF 4F 8E 51 7F 67 57 BC 12 3C 15 8E 21 07 23 CC A9 42 EF 7C 16 3A 81 18 8C 9B 55 2D 93 15 B2 C0 17 7F 80 76 DF AC CC C3
+
+5. Choose a password and encrypt the text using AES in CBC mode
+
+-----STEPS---------------------------------
+	For this exercise I used the same components as in exercise 4, with the only differences being:
+	- AES configured with CBC mode
+	- Added a Text Input for the IV: "angelicacostelaf", a 16 byte string
+	- Used String Decode to convert the IV into bytes and passed the output to AES IV
+
+-----RESULT----------------------------------
+	80 0E 09 A3 BB 1E 37 B9 55 F1 8D D7 26 54 64 70 49 5D EC 44 41 6E 39 2C 18 00 1F 27 79 0C AB 57 58 75 EF 88 79 97 29 0C 15 1A 5C FF F6 9F 52 ED 26 BE 13 F2 A7 69 48 C7 4F 79 E4 96 DC E6 A5 84
+
+6. Choose a password and encrypt the text using 3DES in CBC mode
+
+-----STEPS---------------------------------
+for this exercise i used the same components as in exercise 4 and 5, with the only differences being: 
+	For this exercise I will use:
+	- password: "angelicacostelaflutur123" which is 26 bytes long
+	- IV: "abcdef12" which is 8 bytes long
+
+- used components:
+	Same as exercises 4 and 5, with the only change being:
+	- 3DES: configured with chaining mode = CBC and enabled TripleDES option
+
+- connections between components:
+	Same as exercises 4 and 5.
+
+-----RESULT----------------------------------
+	89 E4 38 63 C0 76 0D BA A0 E8 EA C4 1B F8 46 A5 7B 60 87 FA 7D 80 2D A7 9C AC EA 52 FA F5 99 D4 D4 5B 7C E6 39 6B 59 D1 B3 A3 3D 71 5F BF CE 9E 39 BE 04 0B 6A 04 F6 57
+
+7. Choose a HMAC and generate the corresponding value
+
+-----STEPS---------------------------------
+	For this exercise i used the HMAC component with the hash function set to SHA1.
+	The password used is "angiangiangiangi".
+
+-----RESULT----------------------------------
+	27 CD 7B F1 83 A0 7E 10 5F 66 32 A3 55 87 55 E3 D3 00 94 10
+
+8. Choose any PRNG available in CrypTool and implement a scenario in which the text is encrypted using an OTP approach.
+	For this exercise i used Random Number Generator with the settings:
+		- Algorithm: Random.Random
+		- Output length (bytes): 54 bytes (the same length as File Input)
+		- seed: 17
+-----STEPS---------------------------------
+
+- used components:
+	- File Input + string encode + string decode -> because XOR component takes bytes as input
+	- Random Number Generator -> to generate 54 random bytes using Random.Random algorithm with seed 17
+				  -> this will act as the key for the XOR encryption
+	- XOR -> it takes the input file in byte format and the random byte stream and encrypts the message
+	- string encode + text output -> contains the final encrypted message
+
+- connections between components:
+	- File input -> String encode -> String Decode
+	- Random Number Generator -> XOR (XOR key input)
+	- XOR -> String encode -> Text output.
+
+-----RESULT----------------------------------
+	AA 6C E8 C5 57 DC A8 7B 66 75 E9 37 C7 A7 8B FA D8 BA B4 B9 A5 1E B7 BD 81 B8 C1 8B C9 D7 85 BA A4 66 2B 51 29 BF 9C E8 85 34 6E B5 7B C8 F9 6E CD 20 BE 7A E4 02

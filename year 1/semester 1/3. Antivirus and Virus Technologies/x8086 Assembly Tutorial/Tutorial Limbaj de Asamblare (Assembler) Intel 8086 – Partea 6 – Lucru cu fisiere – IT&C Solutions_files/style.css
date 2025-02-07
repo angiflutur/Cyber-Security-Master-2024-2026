@@ -1,0 +1,292 @@
+/*
+Theme Name: Twenty Minutes
+Theme URI: 
+Author: ClassicTemplate
+Author URI: https://www.classictemplate.com/
+Description: Twenty Minutes is a popular free WordPress theme. It is perfect for multiple businesses. The theme is built in WordPress default functionality so it is very easy to set up. Also, it is compatible with WordPress popular plugins as well as WordPress latest version. 
+Version: 1.3.1
+License: GNU General Public License version 2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twenty-minutes
+Tags:news,blog,grid-layout,right-sidebar,custom-logo,full-width-template,custom-colors,custom-header,featured-images,editor-style,custom-background,custom-menu,threaded-comments,theme-options, translation-ready
+
+Twenty Minutes WordPress Theme has been created by ClassicTemplate(https://www.classictemplate.com/), 2016.
+Twenty Minutes WordPress Theme is released under the terms of GNU GPL
+
+*/
+body{ 
+margin:0; 
+padding:0;
+line-height:20px; 
+font-size:13px;
+ background-color:#fff; 
+ color:#5c5c5c; 
+ font-family:Arial, Helvetica, sans-serif; 
+ box-sizing:border-box;  
+ -ms-word-wrap:break-word; 
+ word-wrap:break-word;
+ }
+*{ 
+ margin:0;
+ padding:0;
+ outline:none;
+}
+img{
+ border:none;
+ margin:0;
+ padding:0;
+ height:auto
+ }
+.wp-caption, .wp-caption-text, .sticky, .gallery-caption, .aligncenter{ 
+ margin:0;
+ padding:0;
+}
+p{
+ margin:0;
+ padding:0;
+}
+a{
+ text-decoration:none;
+ color:#dc403b;
+}
+a:hover{color:#000;}
+ol,ul{ margin:0; padding:0;}
+.entry-content ol li, .entry-content ul li{ margin-left:15px;}
+ul li ul, ul li ul li ul, ol li ol, ol li ol li ol{
+ margin-left:10px;
+}
+h1,h2,h3,h4,h5,h6{ 
+ color:#484f5e;
+ font-family:'Roboto', sans-serif;
+ margin:0 0 20px;
+ padding:0;
+ line-height:1.1;
+ font-weight:400;
+ }
+h1{font-size:32px;}
+h2{font-size:30px;}
+h3{font-size:24px;}
+h4{font-size:20px;}
+h5{font-size:18px;}
+h6{font-size:14px;}
+.clear{clear:both;}
+.alignnone{
+ width:100% !important;
+}
+img.alignleft, .alignleft{ 
+ float:left;
+ margin:0 15px 0 0;
+ padding:5px;
+ border:1px solid #cccccc;
+}
+img.alignright, .alignright{ 
+ float:right;
+ margin:0 0 0 15px;
+ padding:5px;
+ border:1px solid #cccccc;
+}
+.textwidget select{ width:100%;}
+table{ width:100%}
+.left{float:left;}
+.right{float:right;}
+.space50{clear:both;
+ height:50px;}
+.space100{clear:both; height:100px;}
+/*default pagination*/
+.pagination{
+ display:table;
+ clear:both;
+}
+.pagination .nav-links{margin:20px 0;}
+.pagination .nav-links a{ margin-right:5px;
+ background:#646262;
+ color:#fff;
+ padding:5px 10px;
+}
+.pagination .nav-links span.current, .pagination .nav-links a:hover { padding:5px 10px; background:#dc403b; color:#fff;}
+
+#comment-nav-above .nav-previous, #comment-nav-below .nav-previous{ float:none !important;
+ margin:10px 0;
+}
+ol.comment-list li{list-style:none;
+ margin-bottom:5px;
+}
+.container{ width:1150px; margin:0 auto; position:relative;}
+/*header menu css*/
+#menubar{ background-color:#fff; border-top:1px solid #ccc; border-bottom:1px solid #ccc;}
+.toggle{display: block;}
+.toggle a{ color:#ffffff; background:url(images/mobilemenu.png) no-repeat right center #da3813; padding:10px 10px; font-size:16px; text-align:left; display:none;}
+.toggle a:hover{color:#ffffff !important;}
+.sitenav{ padding:0; }
+.sitenav ul { margin:0; padding:0; font-family:'Roboto', sans-serif; font-weight:400; font-size:15px; }
+.sitenav ul li{ display:inline-block; margin:0; position:relative; text-align:center;}
+.sitenav ul li a{ padding:20px 25px; display:block; color:#222; border-right:1px solid #ccc; }
+.sitenav ul li ul li{display:block; position:relative; float:none; top:-1px; border-bottom:1px solid #ddd;}
+.sitenav ul li ul li a{display:block; padding-top:10px; padding-bottom:10px; position:relative; top:1px; text-align:left; border-right:none !important;  }
+.sitenav ul li a:hover, .sitenav ul li.current_page_item a{ color:#da3813; }
+
+.sitenav ul li ul{display:none; z-index:9999999; position:relative;}
+.sitenav ul li:hover > ul{display:block; width:200px; position:absolute; left:0; text-align:left; background-color:#ffffff;  box-shadow:0 2px 2px #333; }
+.sitenav ul li:hover ul li ul{display:none; position:relative;}
+.sitenav ul li:hover ul li:hover > ul{display:block; position:absolute; left:200px; top:1px;}
+
+/*dropdown arrow*/
+.sitenav .menu li > a.parent {  padding-right: 2em; position: relative;}
+.sitenav .menu li > a.parent::after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #ccc transparent transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 0.3em;
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0.8751em;
+    top: 48%;
+}
+.sitenav .menu li ul li a.parent { padding-right: 0;}
+.sitenav .menu li ul li a.parent::after { right: 0.8751em; top: 46%;}
+
+/* = header top sign in  css
+-------------------------------------------------------------- */
+.header{width:100%; background-color:#fff; }
+
+.logo{float:left; padding:15px 0; width:25.5%;text-align:left; }
+.logo h1{font-weight:900; margin:0; line-height:50px; font-size:40px; }
+.logo h1 span{ color:#da3813; font-weight:300;}
+.logo p{ color:#333 }
+.logo a{ color:#111111}
+.header_right{font:normal 14px/18px 'Roboto'; float:right; text-align:right; width:70%; color:#111; padding:30px 0 0;}
+
+/* Three Section Cat CSS
+-------------------------------------------*/
+.ReadMore{ background-color:#da3813; color:#fff ; padding:5px 15px; font:normal 18px/22px 'Roboto'; text-transform:uppercase; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;}
+a.ReadMore:hover{ background-color:#865628; color:#fff; }
+.last_column{clear:right; margin-right:0 !important; }
+.MoreLink{ background-color:#262626; color:#fff ;display: inline-block; padding:6px 15px;}
+
+/* = Page lay out css
+-------------------------------------------------------------- */
+.site-content-wrap{ width:855px; float:left;}
+h1.entry-title{ font-size:18px !important; border-bottom:1px solid #eeeeee; padding:0 0 15px 0; margin:0 0 15px 0; font-weight:bold; text-transform:uppercase;}
+.contentbox{ background-color:#fff; padding:25px;}
+.fullwidth{ width:100%; float:none;}
+.fullwidth p{ margin-bottom:15px;}
+.pagewraps{ padding:25px 0;}
+.pagewraps p{ margin-bottom:20px; line-height:20px;}
+
+/*multicategory section css*/
+.thumbbox{ background-color:#dedede;}
+.post_lists{  background-color:#fff; width:46.4%; float:left; margin: 0 40px 40px 0; min-height:370px;}
+.post_lists h5{ font-size:18px; color:#464545; border-bottom:1px solid #e8e6e6; padding-bottom:10px; margin-bottom:5px; font-weight:600;}
+.post_lists h5 a{color:#464545;}
+.post_lists h5 a:hover{color:#dc403b;}
+.post_lists p{ margin-bottom:10px;}
+.post_lists .thumbbox{ height:200px; overflow:hidden;}
+.post_lists img{ width: 100%; margin:0 auto; display:block;}
+.post_lists .read-more a{ font-size:12px;}
+.contentspace{ padding:20px 0; position:relative;}
+.last_column{ margin-right:0 !important;}
+.datebx{ text-transform:uppercase; font-weight:bold; font-size:12px; color:#5a5b5b; display:block; margin-bottom:15px;}
+.commentbx{ color:#333;}
+.commentbx a{ color:#fff;}
+.postmeta{ font-size:12px; color:#828181; margin:0; position:relative; word-wrap:break-word;}
+.postmeta a{color:#828181;}
+.postmeta span{ margin-right:3px;}
+.post-date, .post-comment, .post-categories{ display:inline; } 
+.post-thumb{float:left; margin:5px 25px 5px 0;}
+
+.post_lists .post-date{ background:url(images/icon-date.png) no-repeat left 2px; padding:0 10px 0 15px;}
+.post_lists .post-comment{ background:url(images/icon-comment.png) no-repeat left 2px; padding:0 0 0 18px;}
+.post_lists:nth-child(2n+2) { margin-right:0;}
+
+/* = sidebar
+-------------------------------------------------------------- */
+#sidebar{ width:272px; float:right; }
+aside.widget{margin-bottom:30px; background-color:#fff; border-bottom:5px solid #eee;}
+aside.widget ul{ list-style:disc; }
+h3.widget-title{ padding:0 0 15px 0; color:#363636; border-bottom:1px solid #edecec; font-size:18px; font-weight:bold; text-transform:uppercase;}
+#sidebar ul li{ list-style:inside none disc; border-bottom:1px dashed #d0cfcf; padding:8px 0;}
+#sidebar ul li a{ padding:0 0 0 10px; color:#3b3b3b;  display:inline-block; }
+#sidebar ul li a:hover{ color:#dc403b;}
+#sidebar ul li:last-child{ border:none;}
+#sidebar.left{ float:left;}
+h3.hdrtitle{ display:none;}
+/* = Footer css
+-------------------------------------------------------------- */
+#footer-wrapper{ background-color:#eeeeee; color:#111; position:relative; padding:30px 0; text-align:center; }
+#footer-wrapper p{ line-height:24px;}
+/* Buttons */
+.button{ background-color:#ff6565; border-bottom:4px solid #e44545; color:#fff; padding:8px 20px; display:inline-block; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -o-border-radius:2px; -ms-border-radius:2px; }
+.button:hover{background-color:#34c6f6; border-color:#1898c2; color:#fff;}
+
+/* woocommerce CSS
+================================================*/
+a.added_to_cart{background:#e1472f; padding:5px; display:inline-block; color:#fff; line-height:1;}
+a.added_to_cart:hover{background:#000000;}
+a.button.added:before{content:'' !important;}
+#bbpress-forums ul li{padding:0;}
+#subscription-toggle a.subscription-toggle{padding:5px 10px; display:inline-block; color:#e1472f; margin-top:4px;}
+textarea.wp-editor-area{border:1px #ccc solid;}
+.woocommerce input[type=text], .woocommerce textarea{border:1px #ccc solid; padding:4px;}
+form.woocommerce-ordering select{ padding:5px; color:#777777;}
+.woocommerce table.shop_table th, .woocommerce-page table.shop_table th{ font-family:'Roboto',san-serif; color:#da3813;}
+.woocommerce ul.products li.product .price, .woocommerce-page ul.products li.product .price{ color:inherit !important;}
+h1.product_title, p.price{ margin-bottom:10px;}
+.woocommerce table.shop_table th, .woocommerce-page table.shop_table th{ font-family:'Roboto',san-serif; color:#da3813;}
+.woocommerce ul.products li, #payment ul.payment_methods li{ list-style:none !important;}
+.woocommerce ul.products li.product .price, .woocommerce-page ul.products li.product .price{ color:inherit !important;}
+.woocommerce table.shop_table th, .woocommerce table.shop_table td{ border-bottom:0px !important}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {clip: rect(1px, 1px, 1px, 1px);position: absolute !important;	height: 1px;width: 1px;	overflow: hidden;}
+.screen-reader-text:focus {	background-color: #f1f1f1;	border-radius: 3px;	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);	clip: auto !important;	color: #21759b;	display: block;
+	font-size: 14px;font-size: 0.875rem;font-weight: bold;	height: auto;left: 5px;	line-height: normal;padding: 15px 23px 14px;text-decoration: none;	top: 5px;	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+/* ============= Contact Page =========== */
+.wpcf7{ margin:30px 0 0; padding:0;}
+.wpcf7 input[type="text"], .wpcf7 input[type="tel"], .wpcf7 input[type="email"]{ width:40%; border:1px solid #cccccc; box-shadow:inset 1px 1px 2px #ccc; height:35px; padding:0 15px; color:#797979; margin-bottom:0;}
+.wpcf7 textarea{width:60%; border:1px solid #cccccc; box-shadow:inset 1px 1px 2px #ccc; height:150px; color:#797979; margin-bottom:25px; padding:10px; padding-right:0;}
+.wpcf7 input[type="submit"]{background-color:#da3813; width:auto; border:none; cursor:pointer; font:18px 'Roboto',san-serif; color:#ffffff; padding:10px 40px; border-radius:3px;}	
+
+/* ============= Comment Form ============ */
+h1.screen-reader-text{font:22px 'Roboto',san-serif;}
+.site-nav-previous, .nav-previous{ float:left;}
+.site-nav-next, .nav-next{ float:right;}
+h3#reply-title{font:400 18px 'Roboto',san-serif;}
+#comments{ margin:30px 0 0; padding:0;}
+nav#nav-below{ margin-top:15px;}
+.post_tags a{word-wrap:break-word; padding:10px 5px 5px 0;}
+
+/* Widget Sidebar */
+#sidebar table{width:100%; text-align:center;}
+#calendar_wrap caption{font-weight:700; padding-bottom:10px; text-transform:uppercase;}
+#prev{text-align:left;}
+#next{text-align:right;}
+#sidebar select{ width:100%; height:25px;}
+#sidebar select option{width:240px;}
+.comment-author-link, .comment-author-link a{font-weight:700 !important; color:#000;}
+#sidebar .widget-title a{color:#fff;}
+
+
+#sidebar .search-form{ margin-bottom:20px;}
+#sidebar .search-form input.search-field{ background-color:#fff; width:80%; padding: 12px 15px 12px 15px; box-sizing:border-box; border:1px solid #ddd; }
+#sidebar .search-form input.search-submit{ background:url(images/search-icon.png) no-repeat center center #efc62c; padding: 12px 0 12px 0; font-size:0; width:20%; height:43px; float:right; border:0; cursor:pointer;}
+
+.infomessage{display:block;}
+body.wp-custom-logo .logo h1{display:none;}
+.tagline{clear:both; display:block;}
+#sidebar h1, h2, h3, h4, h5, h6{margin: 0 0 10px;}
+#recentcomments li{background-image:none !important;}
+#recentcomments li a{padding-left:0px !important;}
+.header_right table{width:100%; text-align:center;}
+.tparea{width:34%; float:right; text-align:left;}
+.contentbox .post-thumb img{width:100%;}
+.infomessage img{height:100%; display:block;}
+.infomessage1{ padding: 40px 0 20px 0;}
+.textwidget select{ width:100%;}
+table{ width:100%}
