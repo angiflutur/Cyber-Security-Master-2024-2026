@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -6,23 +7,29 @@
 
     <title>@ViewBag.Title</title>
 
-    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
     <nav class="navbar bg-light navbar-expand-sm">
         <div class="container-fluid">
             <span class="navbar-brand mb-0">MVCStore</span>
+            <!-- !!!! new/updated code { -->
+            <div class="d-sm-inline-flex justify-content-between">
+                <partial name="_LoginPartial" />
+            </div>
+            <!-- } -->
         </div>
     </nav>
 
     <div class="container-fluid">
+        @if (TempData["message"] != null)
+        {
+            <div class="alert alert-success">@TempData["message"]</div>
+        }
+
         @RenderBody()
     </div>
 
     @await RenderSectionAsync("Scripts", required: false)
-    @if (TempData["message"] != null)
-    {
-        <div class="alert alert-success">@TempData["message"]</div>
-    }
 </body>
 </html>

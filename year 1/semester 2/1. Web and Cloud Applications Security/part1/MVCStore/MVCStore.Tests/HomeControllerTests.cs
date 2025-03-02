@@ -90,7 +90,7 @@ namespace MVCStore.Tests
             // Act
             ProductsListViewModel result = controller.Index(2)?.ViewData.Model as ProductsListViewModel ?? new();
             // Assert
-            PagingInfo pageInfo = result.PagingInfo;
+            PagingInfoViewModel pageInfo = result.PagingInfo;
             Assert.Equal(2, pageInfo.CurrentPage);
             Assert.Equal(3, pageInfo.ItemsPerPage);
             Assert.Equal(5, pageInfo.TotalItems);
