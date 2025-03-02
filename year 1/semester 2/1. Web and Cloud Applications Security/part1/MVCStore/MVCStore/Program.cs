@@ -19,11 +19,14 @@ namespace MVCStore
 
             var app = builder.Build();
             app.UseStaticFiles();
+            // !!!! new/updated code {
+            app.MapControllerRoute("pagination",
+                "Products/Page{productPage}",
+                new { Controller = "Home", action = "Index" });
+            //}
             app.MapDefaultControllerRoute();
 
-            // !!!! new/updated code {
             SeedData.EnsurePopulated(app);
-            //}
 
             app.Run();
         }
