@@ -1,0 +1,24 @@
+ordine dificultate (ChatGPT): 5, 4, 3, 2, 1, 6
+
+Implementation requirements (all mandatory)
+• use only instructions for the x8086 processors on 16 bits
+• implement at least 1 new procedure for each team member (the procedure must receive at
+least 1 input arguments (pointers or values) on stack and must return a result by the stack or
+by a register – NO global variables
+• no compiler errors with TASM or TLINK
+
+
+1. Rewrite the INFECT_FILE routine as a procedure to give the host a random name, and make it a hidden file. Furthermore, make the viral program visible, but make sure you come up with a strategy to avoid re-infection at the level of the FIND_FILES routine so that INFECT_FILE is never even called to infect something that should not be infected. (CSpawn - ex 3, pag 48)
+
+2. Add a procedure to CSpawn which will demand a password before executing the host, and will exit without executing the host if it doesn't get the right password. You can hard-code the required password. The password will be different for each infected file and will be generated based on the host name (you can choose the pattern). (CSpawn - ex 4, pag 48)
+
+3. Modify Justin to use a buffer of only 256 bytes to infect a file. To move the host you must sequentially read and write 256 byte chunks of it, starting at the end. In this way, Justin should not have to move to a new segment. Allocate the buffer on the stack. What is the advantage of this modification? What are its disadvantages? (Justin - ex 1, pag 67)
+
+4. A virus can simply load itself into memory just below the 640K boundary and hope that no program ever tries to use that memory. Since it is the highest available conventional memory, it might be reasonable to think that most of the time this location won't be used for anything. Modify Sequin to use this memory area and try it. Is this strategy justifiable? Or does the virus crash rapidly if you use the computer normally? (ex 5, pag 97)
+
+5. Implement, using at least 1 procedure, the 32-bit register (check the Crypto course) LFSR. The
+initial seed should be based on residual data from RAM (choose at least 2 sources and XOR
+them). The LFSR must be able to generate a sequence of 100 bits and print them on the screen.
+
+6. Using any of the given viruses, create a simple ransomware virus that will encrypt (with XOR) the
+hosts and will store the key in memory.
