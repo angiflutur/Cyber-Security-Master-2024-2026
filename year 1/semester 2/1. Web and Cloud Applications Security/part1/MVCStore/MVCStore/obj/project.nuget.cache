@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "f/rNo5//gsU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Angi\\Desktop\\Cyber-Security-Master-2024-2026\\year 1\\semester 2\\1. Web and Cloud Applications Security\\part1\\MVCStore\\MVCStore\\MVCStore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Angi\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\Angi\\.nuget\\packages\\moq\\4.20.72\\moq.4.20.72.nupkg.sha512",
+    "C:\\Users\\Angi\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
