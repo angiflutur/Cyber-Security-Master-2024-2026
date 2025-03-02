@@ -1,3 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+using MVCStore.Data;
+using MVCStore.Models;
+
 namespace MVCStore
 {
     public class Program
@@ -6,10 +10,21 @@ namespace MVCStore
         {
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<ApplicationDbContext>(opts => {
+                opts.UseSqlServer(
+                builder.Configuration["ConnectionStrings:DefaultConnection"]);
+            });
+
+            builder.Services.AddScoped<IStoreRepository, EFStoreRepository>();
+
             var app = builder.Build();
-            //app.MapGet("/", () => "Hello World!");
             app.UseStaticFiles();
             app.MapDefaultControllerRoute();
+
+            // !!!! new/updated code {
+            SeedData.EnsurePopulated(app);
+            //}
+
             app.Run();
         }
     }
