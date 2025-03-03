@@ -27,13 +27,16 @@
                    asp-route-productId="@item.ProductID">
                     Edit
                 </a>
-                <form asp-action="Delete"
-                      method="post" style="display: inline">
-                    <input type="hidden" name="ProductId" value="@item.ProductID" />
-                    <button type="submit" class="btn btn-danger btn-sm">
-                        Delete
-                    </button>
-                </form>
+                @if (User.IsInRole("ProductManagement"))
+                {
+                    <form asp-action="Delete"
+                          method="post" style="display: inline">
+                        <input type="hidden" name="ProductId" value="@item.ProductID" />
+                        <button type="submit" class="btn btn-danger btn-sm">
+                            Delete
+                        </button>
+                    </form>
+                }
             </td>
         </tr>
     }

@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using MVCStore.Data;
 using Microsoft.EntityFrameworkCore;
-using MVCStore.Data;
-using MVCStore.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace MVCStore
 {
@@ -10,39 +9,24 @@ namespace MVCStore
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
-            // Add services to the container.
             builder.Services.AddDbContext<ApplicationDbContext>(opts => {
                 opts.UseSqlServer(
                 builder.Configuration["ConnectionStrings:DefaultConnection"]);
             });
-            builder.Services.AddScoped<IStoreRepository, EFStoreRepository>();
-            builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            // !!!! new/updated code {
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
-            //}
+            builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+        .AddRoleManager<RoleManager<IdentityRole>>()
+        .AddDefaultUI()
+        .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            var app = builder.Build();
+            builder.Services.AddScoped<IStoreRepository, EFStoreRepository>();
 
             // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseMigrationsEndPoint();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
-
-            app.UseHttpsRedirection();
+            var app = builder.Build();
             app.UseStaticFiles();
-
-            app.UseRouting();
 
             // !!!! new/updated code {
             app.UseAuthentication();
@@ -52,15 +36,15 @@ namespace MVCStore
             app.MapControllerRoute("pagination",
                 "Products/Page{productPage}",
                 new { Controller = "Home", action = "Index" });
-            //}
             app.MapDefaultControllerRoute();
-            // !!!! new/updated code {
             app.MapRazorPages();
-            //}
+
+            SeedData.EnsurePopulated(app);
             Task.Run(async () =>
             {
                 await SeedDataIdentity.EnsurePopulatedAsync(app);
             }).Wait();
+
             app.Run();
         }
     }

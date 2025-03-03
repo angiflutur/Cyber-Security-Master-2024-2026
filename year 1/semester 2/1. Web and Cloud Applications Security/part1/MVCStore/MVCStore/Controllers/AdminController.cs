@@ -40,6 +40,7 @@ namespace MVCStore.Controllers
         {
             return View("Edit", new Product());
         }
+        [Authorize(Roles = "ProductManagement")]
         [HttpPost]
         public async Task<IActionResult> Delete(int productId)
         {
