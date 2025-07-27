@@ -1,3 +1,6 @@
+# https://github.com/critoma/quantum
+# https://github.com/critoma/blockchain
+
 # quantum
 Quantum Computing and PQC - Post Quantum Crypto
 
