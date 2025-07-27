@@ -1,0 +1,15 @@
+HTTP(s) and Java Servlet/JSP
+
+HTTP, Session Hijacking, TLS Config for Apache Tomcat/TomEE, Java Servlet and Java Server Pages (JSP) - Model-View-Controller (MVC) 
+
+Presentations:
+https://github.com/critoma/dad/blob/master/presentations/c04_JEE_XML_WebDev_Servlet_GCloudPaaS.pdf
+https://github.com/critoma/dad/blob/master/presentations/c05_JEE_WebDev_JSP_Clusters.pdf
+
+Lectures:
+https://github.com/critoma/dad/tree/master/lectures/c04
+https://github.com/critoma/dad/tree/master/lectures/c05
+
+Labs:
+https://github.com/critoma/dad/tree/master/labs/s04_jweb_httpservlet
+https://github.com/critoma/dad/tree/master/labs/s05_jweb_jsp_pics

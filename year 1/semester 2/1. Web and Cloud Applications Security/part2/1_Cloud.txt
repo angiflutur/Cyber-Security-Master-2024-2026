@@ -1,0 +1,15 @@
+Cloud - IaaS, CaaS, PaaS, SaaS
+
+Docker images and containers:
+
+https://hub.docker.com/u/critoma
+docker pull critoma/amd64_u24_noble_ism_security
+
+Docker Commands (line 385 - 475):
+https://github.com/critoma/dad/blob/master/lectures/c02/cmdCompile.txt
+
+Cloud Presentations:
+
+
+https://github.com/critoma/dad/blob/master/presentations/c12_FullCloudAndInfra.pdf
+

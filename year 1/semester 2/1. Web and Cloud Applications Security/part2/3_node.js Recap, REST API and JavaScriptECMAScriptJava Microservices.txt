@@ -1,0 +1,13 @@
+HTTP REST API and Microservices
+
+JavaScript/ECMAScript with node.js RECAP, REST API (wout ORM) & websocket:
+https://github.com/critoma/dad/blob/master/presentations/c09_JEE_REST-NodeJsCloudsAwsLamdaFog.pdf
+
+https://github.com/critoma/dad/blob/master/lectures/c09/cmdCompile.txt
+https://github.com/critoma/dad/tree/master/lectures/c09/nodejs
+
+Java REST API and Microservices (Javalin) with different frontends (Angular, Vue.js and React):
+https://github.com/critoma/dad/blob/master/lectures/c05/c11_jse_RESTAPI.zip
+https://github.com/critoma/dad/blob/master/lectures/c05/c05_microservices_javalin.zip
+https://github.com/critoma/dad/blob/master/lectures/c09/c05_restapi_microservices.zip
+https://github.com/critoma/dad/blob/master/lectures/c04/c04_restapi_servlets.zip

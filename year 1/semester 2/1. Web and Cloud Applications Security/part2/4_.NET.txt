@@ -1,0 +1,12 @@
+https://github.com/liviucotfas/ase-web-and-cloud-applications-security
+
+Learn ASP .NET Core:
+
+https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-7.0&tabs=visual-studio
+
+
+Projects:
+
+MVCStore: https://portal.ism.ase.ro/mod/resource/view.php?id=537
+MVCStore: https://portal.ism.ase.ro/mod/resource/view.php?id=542
+IronBankWeb: https://portal.ism.ase.ro/mod/resource/view.php?id=543
